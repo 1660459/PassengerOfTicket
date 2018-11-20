@@ -71,7 +71,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1026, 172);
+            this.panel1.Size = new System.Drawing.Size(1023, 172);
             this.panel1.TabIndex = 0;
             // 
             // label2
@@ -166,7 +166,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(12, 390);
+            this.button3.Location = new System.Drawing.Point(9, 390);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(220, 43);
             this.button3.TabIndex = 1;
@@ -197,7 +197,7 @@
             // button4
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(20, 390);
+            this.button4.Location = new System.Drawing.Point(17, 390);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(203, 43);
             this.button4.TabIndex = 1;
