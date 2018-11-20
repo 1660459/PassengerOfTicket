@@ -572,7 +572,7 @@
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.pictureBox1);
             this.panel9.Controls.Add(this.label12);
-            this.panel9.Location = new System.Drawing.Point(58, -1);
+            this.panel9.Location = new System.Drawing.Point(58, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(405, 61);
             this.panel9.TabIndex = 8;
