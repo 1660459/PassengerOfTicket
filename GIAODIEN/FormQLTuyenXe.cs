@@ -10,22 +10,27 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class Form3 : Form
+    public partial class FormQLTuyenXe : Form
     {
-        public Form3()
+        public FormQLTuyenXe()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
-            Form4 frm4 = new Form4();
-            frm4.ShowDialog();
+
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormTuyenXe frm = new FormTuyenXe();
+            frm.ShowDialog();
         }
     }
 }

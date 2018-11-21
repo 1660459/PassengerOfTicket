@@ -10,22 +10,26 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class Form3 : Form
+    public partial class FormTuyenXe : Form
     {
-        public Form3()
+        public FormTuyenXe()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Form4 frm4 = new Form4();
-            frm4.ShowDialog();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

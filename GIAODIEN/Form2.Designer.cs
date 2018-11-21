@@ -81,6 +81,8 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -94,6 +96,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.comboBox3);
             this.panel2.Controls.Add(this.label4);
@@ -121,7 +124,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Location = new System.Drawing.Point(2, 73);
+            this.panel2.Location = new System.Drawing.Point(2, 55);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(587, 600);
             this.panel2.TabIndex = 2;
@@ -170,7 +173,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(208, 519);
+            this.button2.Location = new System.Drawing.Point(69, 519);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(214, 32);
             this.button2.TabIndex = 29;
@@ -404,6 +407,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.label17);
@@ -420,7 +424,7 @@
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.comboBox6);
             this.panel1.Controls.Add(this.panel9);
-            this.panel1.Location = new System.Drawing.Point(595, 73);
+            this.panel1.Location = new System.Drawing.Point(595, 55);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(511, 600);
             this.panel1.TabIndex = 3;
@@ -475,7 +479,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(159, 519);
+            this.button1.Location = new System.Drawing.Point(34, 519);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(214, 32);
             this.button1.TabIndex = 43;
@@ -606,7 +610,7 @@
             this.panel12.Controls.Add(this.label19);
             this.panel12.Location = new System.Drawing.Point(2, 5);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1104, 66);
+            this.panel12.Size = new System.Drawing.Size(1104, 49);
             this.panel12.TabIndex = 4;
             // 
             // button3
@@ -632,16 +636,39 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "HỆ THỐNG QUẢN LÍ VÉ XE";
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(312, 519);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(214, 32);
+            this.button4.TabIndex = 36;
+            this.button4.Text = "XÓA";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Red;
+            this.button5.Location = new System.Drawing.Point(283, 519);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(214, 32);
+            this.button5.TabIndex = 49;
+            this.button5.Text = "XÓA";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 673);
+            this.ClientSize = new System.Drawing.Size(1109, 652);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form2";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -713,5 +740,7 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

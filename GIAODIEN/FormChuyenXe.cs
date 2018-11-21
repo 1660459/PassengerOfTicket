@@ -10,14 +10,29 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class Form4 : Form
+    public partial class FormChuyenXe : Form
     {
-        public Form4()
+        public FormChuyenXe()
         {
             InitializeComponent();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }
@@ -32,12 +47,22 @@ namespace GIAODIEN
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormChuyenXe_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

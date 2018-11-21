@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class Form3 : Form
+    public partial class FormGN : Form
     {
-        public Form3()
+        public FormGN()
         {
             InitializeComponent();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Form4 frm4 = new Form4();
-            frm4.ShowDialog();
+
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }
