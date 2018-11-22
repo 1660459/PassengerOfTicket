@@ -1,6 +1,0 @@
-C:\Users\User\Documents\GitHub\16CK2_LTUDQL1_1819_NHOM26\XULY\bin\Debug\XULY.exe.config
-C:\Users\User\Documents\GitHub\16CK2_LTUDQL1_1819_NHOM26\XULY\bin\Debug\XULY.exe
-C:\Users\User\Documents\GitHub\16CK2_LTUDQL1_1819_NHOM26\XULY\bin\Debug\XULY.pdb
-C:\Users\User\Documents\GitHub\16CK2_LTUDQL1_1819_NHOM26\XULY\obj\Debug\XULY.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\GitHub\16CK2_LTUDQL1_1819_NHOM26\XULY\obj\Debug\XULY.exe
-C:\Users\User\Documents\GitHub\16CK2_LTUDQL1_1819_NHOM26\XULY\obj\Debug\XULY.pdb

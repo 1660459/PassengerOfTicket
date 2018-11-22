@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class FormChuyenXe : Form
+    public partial class FormQLChuyenXe : Form
     {
-        public FormChuyenXe()
+        public FormQLChuyenXe()
         {
             InitializeComponent();
         }
@@ -34,8 +34,8 @@ namespace GIAODIEN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormDangNhap frm = new FormDangNhap();
-            frm.ShowDialog();
+            FormChuyenXe frm = new FormChuyenXe();
+            frm.Show();
         }
     }
 }

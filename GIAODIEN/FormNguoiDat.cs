@@ -10,32 +10,16 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class FormChuyenXe : Form
+    public partial class FormNguoiDat : Form
     {
-        public FormChuyenXe()
+        public FormNguoiDat()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FormDangNhap frm = new FormDangNhap();
-            frm.ShowDialog();
         }
     }
 }

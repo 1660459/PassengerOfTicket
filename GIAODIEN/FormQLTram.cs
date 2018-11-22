@@ -10,18 +10,22 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class FormTram : Form
+    public partial class FormQLTram : Form
     {
-        public FormTram()
+        public FormQLTram()
         {
             InitializeComponent();
         }
 
-
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            FormTram frm = new FormTram();
+            frm.Show();
         }
     }
 }

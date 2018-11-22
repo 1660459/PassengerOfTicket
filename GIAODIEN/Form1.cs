@@ -32,7 +32,7 @@ namespace GIAODIEN
 
         }
 
-       
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,10 +45,10 @@ namespace GIAODIEN
 
         }
 
-       
-        
 
-        
+
+
+
 
         private void button3_Click_1(object sender, EventArgs e)
         {
@@ -76,7 +76,7 @@ namespace GIAODIEN
 
         private void button5_Click_1(object sender, EventArgs e)
         {
-            FormChuyenXecs frmcx = new FormChuyenXecs();
+            FormQLChuyenXe frmcx = new FormQLChuyenXe();
             this.Hide();
             frmcx.ShowDialog();
             this.Show();
@@ -84,10 +84,18 @@ namespace GIAODIEN
 
         private void button6_Click_1(object sender, EventArgs e)
         {
-            FormQLNHAXE frm = new FormQLNHAXE();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            FormDangNhap frm = new FormDangNhap();
+            frm.Show();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

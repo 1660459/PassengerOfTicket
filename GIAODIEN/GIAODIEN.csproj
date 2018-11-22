@@ -68,35 +68,29 @@
     <Compile Include="Form30.Designer.cs">
       <DependentUpon>Form30.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form4.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.cs">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form45.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form45.Designer.cs">
       <DependentUpon>Form45.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form5Xecs.cs">
+    <Compile Include="FormAdMin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form5Xecs.Designer.cs">
-      <DependentUpon>Form5Xecs.cs</DependentUpon>
+    <Compile Include="FormAdMin.Designer.cs">
+      <DependentUpon>FormAdMin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="FormChuyenXe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormChuyenXe.Designer.cs">
       <DependentUpon>FormChuyenXe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormChuyenXecs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormChuyenXecs.Designer.cs">
-      <DependentUpon>FormChuyenXecs.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGN.cs">
       <SubType>Form</SubType>
@@ -110,17 +104,47 @@
     <Compile Include="FormLoaiXe.Designer.cs">
       <DependentUpon>FormLoaiXe.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNguoiDat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNguoiDat.Designer.cs">
+      <DependentUpon>FormNguoiDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLChuyenXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLChuyenXe.Designer.cs">
+      <DependentUpon>FormQLChuyenXe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLNHAXE.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormQLNHAXE.Designer.cs">
       <DependentUpon>FormQLNHAXE.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLTaiXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLTaiXe.Designer.cs">
+      <DependentUpon>FormQLTaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLTram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLTram.Designer.cs">
+      <DependentUpon>FormQLTram.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQLTuyenXe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormQLTuyenXe.Designer.cs">
       <DependentUpon>FormQLTuyenXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLXe.Designer.cs">
+      <DependentUpon>FormQLXe.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTaiXe.cs">
       <SubType>Form</SubType>
@@ -134,11 +158,23 @@
     <Compile Include="FormTram.Designer.cs">
       <DependentUpon>FormTram.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTTKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTTKhachHang.Designer.cs">
+      <DependentUpon>FormTTKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormTuyenXe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormTuyenXe.Designer.cs">
       <DependentUpon>FormTuyenXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXe.Designer.cs">
+      <DependentUpon>FormXe.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -154,20 +190,17 @@
     <EmbeddedResource Include="Form30.resx">
       <DependentUpon>Form30.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form45.resx">
       <DependentUpon>Form45.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form5Xecs.resx">
-      <DependentUpon>Form5Xecs.cs</DependentUpon>
+    <EmbeddedResource Include="FormAdMin.resx">
+      <DependentUpon>FormAdMin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChuyenXe.resx">
       <DependentUpon>FormChuyenXe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormChuyenXecs.resx">
-      <DependentUpon>FormChuyenXecs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGN.resx">
       <DependentUpon>FormGN.cs</DependentUpon>
@@ -175,11 +208,23 @@
     <EmbeddedResource Include="FormLoaiXe.resx">
       <DependentUpon>FormLoaiXe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQLChuyenXe.resx">
+      <DependentUpon>FormQLChuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLNHAXE.resx">
       <DependentUpon>FormQLNHAXE.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormQLTaiXe.resx">
+      <DependentUpon>FormQLTaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLTram.resx">
+      <DependentUpon>FormQLTram.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLTuyenXe.resx">
       <DependentUpon>FormQLTuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLXe.resx">
+      <DependentUpon>FormQLXe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTaiXe.resx">
       <DependentUpon>FormTaiXe.cs</DependentUpon>

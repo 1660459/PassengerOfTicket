@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class FormTram : Form
+    public partial class FormXe : Form
     {
-        public FormTram()
+        public FormXe()
         {
             InitializeComponent();
         }
 
 
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void button2_Click_1(object sender, EventArgs e)
         {

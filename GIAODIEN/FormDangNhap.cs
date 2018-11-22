@@ -10,16 +10,22 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class FormTram : Form
+    public partial class FormDangNhap : Form
     {
-        public FormTram()
+        public FormDangNhap()
         {
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormAdMin frm = new FormAdMin();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
+        }
 
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }

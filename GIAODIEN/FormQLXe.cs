@@ -10,16 +10,20 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class FormTram : Form
+    public partial class FormQLXe : Form
     {
-        public FormTram()
+        public FormQLXe()
         {
             InitializeComponent();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormXe frm = new FormXe();
+            frm.Show();
+        }
 
-
-        private void button2_Click_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

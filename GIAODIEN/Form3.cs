@@ -19,7 +19,7 @@ namespace GIAODIEN
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Form4 frm4 = new Form4();
+            FormTTKhachHang frm4 = new FormTTKhachHang();
             frm4.ShowDialog();
         }
 

@@ -38,7 +38,7 @@ namespace GIAODIEN
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Form5Xecs frm3 = new Form5Xecs();
+            FormAdMin frm3 = new FormAdMin();
             frm3.ShowDialog();
         }
 

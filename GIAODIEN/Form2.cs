@@ -46,5 +46,16 @@ namespace GIAODIEN
         {
             this.Close();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            FormNguoiDat frm = new FormNguoiDat();
+            frm.Show();
+        }
     }
 }
