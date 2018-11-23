@@ -113,7 +113,7 @@ ADD
 CONSTRAINT ve_chuyen_fk
 FOREIGN KEY(chuyen_id_chuyen)
 REFERENCES Chuyen,
-CONSTRAINT ve_khachhang1_fk
+CONSTRAINT ve_khachhang_fk
 FOREIGN KEY(khachhang_id_khachhang)
 REFERENCES KhachHang,
 CONSTRAINT ve_ghe_fk
