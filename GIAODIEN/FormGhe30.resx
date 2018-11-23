@@ -1,0 +1,993 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnGhe1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 92</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnGhe1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 70</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnGhe1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnGhe1.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnGhe1.Name" xml:space="preserve">
+    <value>btnGhe1</value>
+  </data>
+  <data name="&gt;&gt;btnGhe1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe1.ZOrder" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="btnGhe26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 92</value>
+  </data>
+  <data name="btnGhe26.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 66</value>
+  </data>
+  <data name="btnGhe26.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnGhe26.Text" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="&gt;&gt;btnGhe26.Name" xml:space="preserve">
+    <value>btnGhe26</value>
+  </data>
+  <data name="&gt;&gt;btnGhe26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe26.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe26.ZOrder" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="btnGhe29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 23</value>
+  </data>
+  <data name="btnGhe29.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 65</value>
+  </data>
+  <data name="btnGhe29.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnGhe29.Text" xml:space="preserve">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;btnGhe29.Name" xml:space="preserve">
+    <value>btnGhe29</value>
+  </data>
+  <data name="&gt;&gt;btnGhe29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe29.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe29.ZOrder" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="btnGhe28.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 23</value>
+  </data>
+  <data name="btnGhe28.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe28.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 65</value>
+  </data>
+  <data name="btnGhe28.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnGhe28.Text" xml:space="preserve">
+    <value>28</value>
+  </data>
+  <data name="&gt;&gt;btnGhe28.Name" xml:space="preserve">
+    <value>btnGhe28</value>
+  </data>
+  <data name="&gt;&gt;btnGhe28.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe28.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe28.ZOrder" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="btnGhe27.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 92</value>
+  </data>
+  <data name="btnGhe27.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe27.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 66</value>
+  </data>
+  <data name="btnGhe27.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnGhe27.Text" xml:space="preserve">
+    <value>27</value>
+  </data>
+  <data name="&gt;&gt;btnGhe27.Name" xml:space="preserve">
+    <value>btnGhe27</value>
+  </data>
+  <data name="&gt;&gt;btnGhe27.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe27.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe27.ZOrder" xml:space="preserve">
+    <value>26</value>
+  </data>
+  <data name="btnGhe2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 92</value>
+  </data>
+  <data name="btnGhe2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 70</value>
+  </data>
+  <data name="btnGhe2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnGhe2.Text" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;btnGhe2.Name" xml:space="preserve">
+    <value>btnGhe2</value>
+  </data>
+  <data name="&gt;&gt;btnGhe2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe2.ZOrder" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="btnGhe4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 166</value>
+  </data>
+  <data name="btnGhe4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 66</value>
+  </data>
+  <data name="btnGhe4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnGhe4.Text" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;btnGhe4.Name" xml:space="preserve">
+    <value>btnGhe4</value>
+  </data>
+  <data name="&gt;&gt;btnGhe4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe4.ZOrder" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="btnGhe3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 166</value>
+  </data>
+  <data name="btnGhe3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 66</value>
+  </data>
+  <data name="btnGhe3.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnGhe3.Text" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnGhe3.Name" xml:space="preserve">
+    <value>btnGhe3</value>
+  </data>
+  <data name="&gt;&gt;btnGhe3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe3.ZOrder" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="btnGhe10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 368</value>
+  </data>
+  <data name="btnGhe10.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 65</value>
+  </data>
+  <data name="btnGhe10.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnGhe10.Text" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;btnGhe10.Name" xml:space="preserve">
+    <value>btnGhe10</value>
+  </data>
+  <data name="&gt;&gt;btnGhe10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe10.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe10.ZOrder" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="btnGhe8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 303</value>
+  </data>
+  <data name="btnGhe8.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 63</value>
+  </data>
+  <data name="btnGhe8.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnGhe8.Text" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;btnGhe8.Name" xml:space="preserve">
+    <value>btnGhe8</value>
+  </data>
+  <data name="&gt;&gt;btnGhe8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe8.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe8.ZOrder" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="btnGhe7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 303</value>
+  </data>
+  <data name="btnGhe7.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 63</value>
+  </data>
+  <data name="btnGhe7.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnGhe7.Text" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnGhe7.Name" xml:space="preserve">
+    <value>btnGhe7</value>
+  </data>
+  <data name="&gt;&gt;btnGhe7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe7.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe7.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="btnGhe6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 235</value>
+  </data>
+  <data name="btnGhe6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 65</value>
+  </data>
+  <data name="btnGhe6.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnGhe6.Text" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;btnGhe6.Name" xml:space="preserve">
+    <value>btnGhe6</value>
+  </data>
+  <data name="&gt;&gt;btnGhe6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe6.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="btnGhe5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 235</value>
+  </data>
+  <data name="btnGhe5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 65</value>
+  </data>
+  <data name="btnGhe5.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnGhe5.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;btnGhe5.Name" xml:space="preserve">
+    <value>btnGhe5</value>
+  </data>
+  <data name="&gt;&gt;btnGhe5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe5.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="btnGhe12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 434</value>
+  </data>
+  <data name="btnGhe12.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 68</value>
+  </data>
+  <data name="btnGhe12.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnGhe12.Text" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;btnGhe12.Name" xml:space="preserve">
+    <value>btnGhe12</value>
+  </data>
+  <data name="&gt;&gt;btnGhe12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe12.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe12.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="btnGhe9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 368</value>
+  </data>
+  <data name="btnGhe9.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 65</value>
+  </data>
+  <data name="btnGhe9.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="btnGhe9.Text" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;btnGhe9.Name" xml:space="preserve">
+    <value>btnGhe9</value>
+  </data>
+  <data name="&gt;&gt;btnGhe9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe9.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe9.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="btnGhe11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 434</value>
+  </data>
+  <data name="btnGhe11.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 68</value>
+  </data>
+  <data name="btnGhe11.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnGhe11.Text" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;btnGhe11.Name" xml:space="preserve">
+    <value>btnGhe11</value>
+  </data>
+  <data name="&gt;&gt;btnGhe11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe11.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe11.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="btnGhe13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 505</value>
+  </data>
+  <data name="btnGhe13.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 70</value>
+  </data>
+  <data name="btnGhe13.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="btnGhe13.Text" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;btnGhe13.Name" xml:space="preserve">
+    <value>btnGhe13</value>
+  </data>
+  <data name="&gt;&gt;btnGhe13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe13.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe13.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btnGhe15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>331, 505</value>
+  </data>
+  <data name="btnGhe15.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe15.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 70</value>
+  </data>
+  <data name="btnGhe15.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnGhe15.Text" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;btnGhe15.Name" xml:space="preserve">
+    <value>btnGhe15</value>
+  </data>
+  <data name="&gt;&gt;btnGhe15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe15.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe15.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="btnGhe14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>175, 505</value>
+  </data>
+  <data name="btnGhe14.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 70</value>
+  </data>
+  <data name="btnGhe14.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnGhe14.Text" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;btnGhe14.Name" xml:space="preserve">
+    <value>btnGhe14</value>
+  </data>
+  <data name="&gt;&gt;btnGhe14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe14.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe14.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnGhe17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 505</value>
+  </data>
+  <data name="btnGhe17.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 70</value>
+  </data>
+  <data name="btnGhe17.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="btnGhe17.Text" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;btnGhe17.Name" xml:space="preserve">
+    <value>btnGhe17</value>
+  </data>
+  <data name="&gt;&gt;btnGhe17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe17.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe17.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnGhe19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 434</value>
+  </data>
+  <data name="btnGhe19.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 68</value>
+  </data>
+  <data name="btnGhe19.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="btnGhe19.Text" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;btnGhe19.Name" xml:space="preserve">
+    <value>btnGhe19</value>
+  </data>
+  <data name="&gt;&gt;btnGhe19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe19.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe19.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnGhe18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 434</value>
+  </data>
+  <data name="btnGhe18.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 68</value>
+  </data>
+  <data name="btnGhe18.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="btnGhe18.Text" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;btnGhe18.Name" xml:space="preserve">
+    <value>btnGhe18</value>
+  </data>
+  <data name="&gt;&gt;btnGhe18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe18.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe18.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnGhe21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 369</value>
+  </data>
+  <data name="btnGhe21.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 63</value>
+  </data>
+  <data name="btnGhe21.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="btnGhe21.Text" xml:space="preserve">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;btnGhe21.Name" xml:space="preserve">
+    <value>btnGhe21</value>
+  </data>
+  <data name="&gt;&gt;btnGhe21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe21.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe21.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnGhe20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 369</value>
+  </data>
+  <data name="btnGhe20.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 63</value>
+  </data>
+  <data name="btnGhe20.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="btnGhe20.Text" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;btnGhe20.Name" xml:space="preserve">
+    <value>btnGhe20</value>
+  </data>
+  <data name="&gt;&gt;btnGhe20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe20.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe20.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnGhe23.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 305</value>
+  </data>
+  <data name="btnGhe23.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe23.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 63</value>
+  </data>
+  <data name="btnGhe23.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="btnGhe23.Text" xml:space="preserve">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;btnGhe23.Name" xml:space="preserve">
+    <value>btnGhe23</value>
+  </data>
+  <data name="&gt;&gt;btnGhe23.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe23.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe23.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnGhe22.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 305</value>
+  </data>
+  <data name="btnGhe22.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe22.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 63</value>
+  </data>
+  <data name="btnGhe22.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="btnGhe22.Text" xml:space="preserve">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;btnGhe22.Name" xml:space="preserve">
+    <value>btnGhe22</value>
+  </data>
+  <data name="&gt;&gt;btnGhe22.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe22.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe22.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnGhe25.Location" type="System.Drawing.Point, System.Drawing">
+    <value>656, 240</value>
+  </data>
+  <data name="btnGhe25.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe25.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 65</value>
+  </data>
+  <data name="btnGhe25.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="btnGhe25.Text" xml:space="preserve">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;btnGhe25.Name" xml:space="preserve">
+    <value>btnGhe25</value>
+  </data>
+  <data name="&gt;&gt;btnGhe25.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe25.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe25.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnGhe24.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 240</value>
+  </data>
+  <data name="btnGhe24.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe24.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 65</value>
+  </data>
+  <data name="btnGhe24.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="btnGhe24.Text" xml:space="preserve">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;btnGhe24.Name" xml:space="preserve">
+    <value>btnGhe24</value>
+  </data>
+  <data name="&gt;&gt;btnGhe24.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe24.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe24.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20.25pt, style=Bold</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>652, 181</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>151, 39</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>CỬA XE</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 20.25pt, style=Bold</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 23</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 39</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>TÀI XẾ</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnGhe16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>500, 505</value>
+  </data>
+  <data name="btnGhe16.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnGhe16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 70</value>
+  </data>
+  <data name="btnGhe16.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnGhe16.Text" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;btnGhe16.Name" xml:space="preserve">
+    <value>btnGhe16</value>
+  </data>
+  <data name="&gt;&gt;btnGhe16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnGhe16.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnGhe16.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>837, 589</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Chọn Ghế</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormGhe30</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>

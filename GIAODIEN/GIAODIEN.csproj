@@ -62,17 +62,17 @@
     <Compile Include="FormQuanLyKhachHang.Designer.cs">
       <DependentUpon>FormQuanLyKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form30.cs">
+    <Compile Include="FormGhe30.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form30.Designer.cs">
-      <DependentUpon>Form30.cs</DependentUpon>
+    <Compile Include="FormGhe30.Designer.cs">
+      <DependentUpon>FormGhe30.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form45.cs">
+    <Compile Include="FormGhe45.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form45.Designer.cs">
-      <DependentUpon>Form45.cs</DependentUpon>
+    <Compile Include="FormGhe45.Designer.cs">
+      <DependentUpon>FormGhe45.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAdMin.cs">
       <SubType>Form</SubType>
@@ -181,11 +181,11 @@
     <EmbeddedResource Include="FormQuanLyKhachHang.resx">
       <DependentUpon>FormQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form30.resx">
-      <DependentUpon>Form30.cs</DependentUpon>
+    <EmbeddedResource Include="FormGhe30.resx">
+      <DependentUpon>FormGhe30.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form45.resx">
-      <DependentUpon>Form45.cs</DependentUpon>
+    <EmbeddedResource Include="FormGhe45.resx">
+      <DependentUpon>FormGhe45.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAdMin.resx">
       <DependentUpon>FormAdMin.cs</DependentUpon>

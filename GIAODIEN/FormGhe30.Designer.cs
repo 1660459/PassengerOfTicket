@@ -1,6 +1,6 @@
 ﻿namespace GIAODIEN
 {
-    partial class Form30
+    partial class FormGhe30
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGhe30));
             this.btnGhe1 = new System.Windows.Forms.Button();
             this.btnGhe26 = new System.Windows.Forms.Button();
             this.btnGhe29 = new System.Windows.Forms.Button();
@@ -63,292 +64,194 @@
             // 
             // btnGhe1
             // 
-            this.btnGhe1.Location = new System.Drawing.Point(12, 75);
+            resources.ApplyResources(this.btnGhe1, "btnGhe1");
             this.btnGhe1.Name = "btnGhe1";
-            this.btnGhe1.Size = new System.Drawing.Size(120, 57);
-            this.btnGhe1.TabIndex = 0;
-            this.btnGhe1.Text = "1";
             this.btnGhe1.UseVisualStyleBackColor = true;
             // 
             // btnGhe26
             // 
-            this.btnGhe26.Location = new System.Drawing.Point(375, 75);
+            resources.ApplyResources(this.btnGhe26, "btnGhe26");
             this.btnGhe26.Name = "btnGhe26";
-            this.btnGhe26.Size = new System.Drawing.Size(120, 54);
-            this.btnGhe26.TabIndex = 1;
-            this.btnGhe26.Text = "26";
             this.btnGhe26.UseVisualStyleBackColor = true;
             this.btnGhe26.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnGhe29
             // 
-            this.btnGhe29.Location = new System.Drawing.Point(492, 19);
+            resources.ApplyResources(this.btnGhe29, "btnGhe29");
             this.btnGhe29.Name = "btnGhe29";
-            this.btnGhe29.Size = new System.Drawing.Size(118, 53);
-            this.btnGhe29.TabIndex = 2;
-            this.btnGhe29.Text = "29";
             this.btnGhe29.UseVisualStyleBackColor = true;
             // 
             // btnGhe28
             // 
-            this.btnGhe28.Location = new System.Drawing.Point(375, 19);
+            resources.ApplyResources(this.btnGhe28, "btnGhe28");
             this.btnGhe28.Name = "btnGhe28";
-            this.btnGhe28.Size = new System.Drawing.Size(120, 53);
-            this.btnGhe28.TabIndex = 3;
-            this.btnGhe28.Text = "28";
             this.btnGhe28.UseVisualStyleBackColor = true;
             // 
             // btnGhe27
             // 
-            this.btnGhe27.Location = new System.Drawing.Point(492, 75);
+            resources.ApplyResources(this.btnGhe27, "btnGhe27");
             this.btnGhe27.Name = "btnGhe27";
-            this.btnGhe27.Size = new System.Drawing.Size(118, 54);
-            this.btnGhe27.TabIndex = 4;
-            this.btnGhe27.Text = "27";
             this.btnGhe27.UseVisualStyleBackColor = true;
             // 
             // btnGhe2
             // 
-            this.btnGhe2.Location = new System.Drawing.Point(131, 75);
+            resources.ApplyResources(this.btnGhe2, "btnGhe2");
             this.btnGhe2.Name = "btnGhe2";
-            this.btnGhe2.Size = new System.Drawing.Size(125, 57);
-            this.btnGhe2.TabIndex = 5;
-            this.btnGhe2.Text = "2";
             this.btnGhe2.UseVisualStyleBackColor = true;
             this.btnGhe2.Click += new System.EventHandler(this.button6_Click);
             // 
             // btnGhe4
             // 
-            this.btnGhe4.Location = new System.Drawing.Point(131, 135);
+            resources.ApplyResources(this.btnGhe4, "btnGhe4");
             this.btnGhe4.Name = "btnGhe4";
-            this.btnGhe4.Size = new System.Drawing.Size(125, 54);
-            this.btnGhe4.TabIndex = 6;
-            this.btnGhe4.Text = "4";
             this.btnGhe4.UseVisualStyleBackColor = true;
             // 
             // btnGhe3
             // 
-            this.btnGhe3.Location = new System.Drawing.Point(12, 135);
+            resources.ApplyResources(this.btnGhe3, "btnGhe3");
             this.btnGhe3.Name = "btnGhe3";
-            this.btnGhe3.Size = new System.Drawing.Size(120, 54);
-            this.btnGhe3.TabIndex = 7;
-            this.btnGhe3.Text = "3";
             this.btnGhe3.UseVisualStyleBackColor = true;
             // 
             // btnGhe10
             // 
-            this.btnGhe10.Location = new System.Drawing.Point(131, 299);
+            resources.ApplyResources(this.btnGhe10, "btnGhe10");
             this.btnGhe10.Name = "btnGhe10";
-            this.btnGhe10.Size = new System.Drawing.Size(125, 53);
-            this.btnGhe10.TabIndex = 8;
-            this.btnGhe10.Text = "10";
             this.btnGhe10.UseVisualStyleBackColor = true;
             // 
             // btnGhe8
             // 
-            this.btnGhe8.Location = new System.Drawing.Point(131, 246);
+            resources.ApplyResources(this.btnGhe8, "btnGhe8");
             this.btnGhe8.Name = "btnGhe8";
-            this.btnGhe8.Size = new System.Drawing.Size(125, 51);
-            this.btnGhe8.TabIndex = 9;
-            this.btnGhe8.Text = "8";
             this.btnGhe8.UseVisualStyleBackColor = true;
             // 
             // btnGhe7
             // 
-            this.btnGhe7.Location = new System.Drawing.Point(12, 246);
+            resources.ApplyResources(this.btnGhe7, "btnGhe7");
             this.btnGhe7.Name = "btnGhe7";
-            this.btnGhe7.Size = new System.Drawing.Size(120, 51);
-            this.btnGhe7.TabIndex = 10;
-            this.btnGhe7.Text = "7";
             this.btnGhe7.UseVisualStyleBackColor = true;
             // 
             // btnGhe6
             // 
-            this.btnGhe6.Location = new System.Drawing.Point(131, 191);
+            resources.ApplyResources(this.btnGhe6, "btnGhe6");
             this.btnGhe6.Name = "btnGhe6";
-            this.btnGhe6.Size = new System.Drawing.Size(125, 53);
-            this.btnGhe6.TabIndex = 11;
-            this.btnGhe6.Text = "6";
             this.btnGhe6.UseVisualStyleBackColor = true;
             // 
             // btnGhe5
             // 
-            this.btnGhe5.Location = new System.Drawing.Point(12, 191);
+            resources.ApplyResources(this.btnGhe5, "btnGhe5");
             this.btnGhe5.Name = "btnGhe5";
-            this.btnGhe5.Size = new System.Drawing.Size(120, 53);
-            this.btnGhe5.TabIndex = 12;
-            this.btnGhe5.Text = "5";
             this.btnGhe5.UseVisualStyleBackColor = true;
             // 
             // btnGhe12
             // 
-            this.btnGhe12.Location = new System.Drawing.Point(131, 353);
+            resources.ApplyResources(this.btnGhe12, "btnGhe12");
             this.btnGhe12.Name = "btnGhe12";
-            this.btnGhe12.Size = new System.Drawing.Size(125, 55);
-            this.btnGhe12.TabIndex = 13;
-            this.btnGhe12.Text = "12";
             this.btnGhe12.UseVisualStyleBackColor = true;
             // 
             // btnGhe9
             // 
-            this.btnGhe9.Location = new System.Drawing.Point(12, 299);
+            resources.ApplyResources(this.btnGhe9, "btnGhe9");
             this.btnGhe9.Name = "btnGhe9";
-            this.btnGhe9.Size = new System.Drawing.Size(120, 53);
-            this.btnGhe9.TabIndex = 14;
-            this.btnGhe9.Text = "9";
             this.btnGhe9.UseVisualStyleBackColor = true;
             // 
             // btnGhe11
             // 
-            this.btnGhe11.Location = new System.Drawing.Point(12, 353);
+            resources.ApplyResources(this.btnGhe11, "btnGhe11");
             this.btnGhe11.Name = "btnGhe11";
-            this.btnGhe11.Size = new System.Drawing.Size(120, 55);
-            this.btnGhe11.TabIndex = 15;
-            this.btnGhe11.Text = "11";
             this.btnGhe11.UseVisualStyleBackColor = true;
             // 
             // btnGhe13
             // 
-            this.btnGhe13.Location = new System.Drawing.Point(12, 410);
+            resources.ApplyResources(this.btnGhe13, "btnGhe13");
             this.btnGhe13.Name = "btnGhe13";
-            this.btnGhe13.Size = new System.Drawing.Size(120, 57);
-            this.btnGhe13.TabIndex = 16;
-            this.btnGhe13.Text = "13";
             this.btnGhe13.UseVisualStyleBackColor = true;
             // 
             // btnGhe15
             // 
-            this.btnGhe15.Location = new System.Drawing.Point(248, 410);
+            resources.ApplyResources(this.btnGhe15, "btnGhe15");
             this.btnGhe15.Name = "btnGhe15";
-            this.btnGhe15.Size = new System.Drawing.Size(129, 57);
-            this.btnGhe15.TabIndex = 17;
-            this.btnGhe15.Text = "15";
             this.btnGhe15.UseVisualStyleBackColor = true;
             // 
             // btnGhe14
             // 
-            this.btnGhe14.Location = new System.Drawing.Point(131, 410);
+            resources.ApplyResources(this.btnGhe14, "btnGhe14");
             this.btnGhe14.Name = "btnGhe14";
-            this.btnGhe14.Size = new System.Drawing.Size(125, 57);
-            this.btnGhe14.TabIndex = 18;
-            this.btnGhe14.Text = "14";
             this.btnGhe14.UseVisualStyleBackColor = true;
             // 
             // btnGhe17
             // 
-            this.btnGhe17.Location = new System.Drawing.Point(492, 410);
+            resources.ApplyResources(this.btnGhe17, "btnGhe17");
             this.btnGhe17.Name = "btnGhe17";
-            this.btnGhe17.Size = new System.Drawing.Size(118, 57);
-            this.btnGhe17.TabIndex = 19;
-            this.btnGhe17.Text = "17";
             this.btnGhe17.UseVisualStyleBackColor = true;
             // 
             // btnGhe19
             // 
-            this.btnGhe19.Location = new System.Drawing.Point(492, 353);
+            resources.ApplyResources(this.btnGhe19, "btnGhe19");
             this.btnGhe19.Name = "btnGhe19";
-            this.btnGhe19.Size = new System.Drawing.Size(118, 55);
-            this.btnGhe19.TabIndex = 21;
-            this.btnGhe19.Text = "19";
             this.btnGhe19.UseVisualStyleBackColor = true;
             // 
             // btnGhe18
             // 
-            this.btnGhe18.Location = new System.Drawing.Point(375, 353);
+            resources.ApplyResources(this.btnGhe18, "btnGhe18");
             this.btnGhe18.Name = "btnGhe18";
-            this.btnGhe18.Size = new System.Drawing.Size(120, 55);
-            this.btnGhe18.TabIndex = 22;
-            this.btnGhe18.Text = "18";
             this.btnGhe18.UseVisualStyleBackColor = true;
             // 
             // btnGhe21
             // 
-            this.btnGhe21.Location = new System.Drawing.Point(492, 300);
+            resources.ApplyResources(this.btnGhe21, "btnGhe21");
             this.btnGhe21.Name = "btnGhe21";
-            this.btnGhe21.Size = new System.Drawing.Size(118, 51);
-            this.btnGhe21.TabIndex = 23;
-            this.btnGhe21.Text = "21";
             this.btnGhe21.UseVisualStyleBackColor = true;
             // 
             // btnGhe20
             // 
-            this.btnGhe20.Location = new System.Drawing.Point(375, 300);
+            resources.ApplyResources(this.btnGhe20, "btnGhe20");
             this.btnGhe20.Name = "btnGhe20";
-            this.btnGhe20.Size = new System.Drawing.Size(120, 51);
-            this.btnGhe20.TabIndex = 24;
-            this.btnGhe20.Text = "20";
             this.btnGhe20.UseVisualStyleBackColor = true;
             // 
             // btnGhe23
             // 
-            this.btnGhe23.Location = new System.Drawing.Point(492, 248);
+            resources.ApplyResources(this.btnGhe23, "btnGhe23");
             this.btnGhe23.Name = "btnGhe23";
-            this.btnGhe23.Size = new System.Drawing.Size(118, 51);
-            this.btnGhe23.TabIndex = 25;
-            this.btnGhe23.Text = "23";
             this.btnGhe23.UseVisualStyleBackColor = true;
             // 
             // btnGhe22
             // 
-            this.btnGhe22.Location = new System.Drawing.Point(375, 248);
+            resources.ApplyResources(this.btnGhe22, "btnGhe22");
             this.btnGhe22.Name = "btnGhe22";
-            this.btnGhe22.Size = new System.Drawing.Size(120, 51);
-            this.btnGhe22.TabIndex = 26;
-            this.btnGhe22.Text = "22";
             this.btnGhe22.UseVisualStyleBackColor = true;
             // 
             // btnGhe25
             // 
-            this.btnGhe25.Location = new System.Drawing.Point(492, 195);
+            resources.ApplyResources(this.btnGhe25, "btnGhe25");
             this.btnGhe25.Name = "btnGhe25";
-            this.btnGhe25.Size = new System.Drawing.Size(118, 53);
-            this.btnGhe25.TabIndex = 27;
-            this.btnGhe25.Text = "25";
             this.btnGhe25.UseVisualStyleBackColor = true;
             // 
             // btnGhe24
             // 
-            this.btnGhe24.Location = new System.Drawing.Point(375, 195);
+            resources.ApplyResources(this.btnGhe24, "btnGhe24");
             this.btnGhe24.Name = "btnGhe24";
-            this.btnGhe24.Size = new System.Drawing.Size(120, 53);
-            this.btnGhe24.TabIndex = 28;
-            this.btnGhe24.Text = "24";
             this.btnGhe24.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(489, 147);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 31);
-            this.label1.TabIndex = 29;
-            this.label1.Text = "CỬA XE";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(73, 19);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 31);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "TÀI XẾ";
             // 
             // btnGhe16
             // 
-            this.btnGhe16.Location = new System.Drawing.Point(375, 410);
+            resources.ApplyResources(this.btnGhe16, "btnGhe16");
             this.btnGhe16.Name = "btnGhe16";
-            this.btnGhe16.Size = new System.Drawing.Size(120, 57);
-            this.btnGhe16.TabIndex = 20;
-            this.btnGhe16.Text = "16";
             this.btnGhe16.UseVisualStyleBackColor = true;
             // 
-            // Form30
+            // FormGhe30
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 477);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGhe24);
@@ -380,8 +283,7 @@
             this.Controls.Add(this.btnGhe29);
             this.Controls.Add(this.btnGhe26);
             this.Controls.Add(this.btnGhe1);
-            this.Name = "Form30";
-            this.Text = "Form30";
+            this.Name = "FormGhe30";
             this.Load += new System.EventHandler(this.Form30_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

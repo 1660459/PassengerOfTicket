@@ -19,10 +19,17 @@ namespace GIAODIEN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormAdMin frm = new FormAdMin();
-            this.Hide();
-            frm.ShowDialog();
-            this.Show();
+            if (txtMatKhau.Text == "1")
+            {
+                FormAdMin frm = new FormAdMin();
+                this.Hide();
+                frm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Sai Mật Khẩu");
+                return;
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)

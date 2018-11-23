@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GIAODIEN
 {
-    public partial class Form45 : Form
+    public partial class FormGhe45 : Form
     {
-        public Form45()
+        public FormGhe45()
         {
             InitializeComponent();
         }
