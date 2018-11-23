@@ -21,6 +21,7 @@ namespace GIAODIEN
         {
             FormTTKhachHang frm4 = new FormTTKhachHang();
             frm4.ShowDialog();
+            LoadQLKhachHang();
         }
 
         private void button4_Click(object sender, EventArgs e)

@@ -35,13 +35,13 @@
             this.btnXoaQLKH = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dgvQuanLyKhachHang = new System.Windows.Forms.DataGridView();
+            this.lblTemp = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.id_khachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTemp = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhachHang)).BeginInit();
             this.SuspendLayout();
@@ -138,31 +138,6 @@
             this.dgvQuanLyKhachHang.TabIndex = 5;
             this.dgvQuanLyKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyKhachHang_CellClick);
             // 
-            // id_khachhang
-            // 
-            this.id_khachhang.HeaderText = "ID";
-            this.id_khachhang.Name = "id_khachhang";
-            // 
-            // hoten
-            // 
-            this.hoten.HeaderText = "Họ Tên";
-            this.hoten.Name = "hoten";
-            // 
-            // dienthoai
-            // 
-            this.dienthoai.HeaderText = "Điện Thoại";
-            this.dienthoai.Name = "dienthoai";
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            // 
-            // loai
-            // 
-            this.loai.HeaderText = "Loại";
-            this.loai.Name = "loai";
-            // 
             // lblTemp
             // 
             this.lblTemp.AutoSize = true;
@@ -178,6 +153,36 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 6;
+            // 
+            // id_khachhang
+            // 
+            this.id_khachhang.DataPropertyName = "id_khachhang";
+            this.id_khachhang.HeaderText = "ID";
+            this.id_khachhang.Name = "id_khachhang";
+            // 
+            // hoten
+            // 
+            this.hoten.DataPropertyName = "hoten";
+            this.hoten.HeaderText = "Họ Tên";
+            this.hoten.Name = "hoten";
+            // 
+            // dienthoai
+            // 
+            this.dienthoai.DataPropertyName = "dienthoai";
+            this.dienthoai.HeaderText = "Điện Thoại";
+            this.dienthoai.Name = "dienthoai";
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            // 
+            // loai
+            // 
+            this.loai.DataPropertyName = "loai";
+            this.loai.HeaderText = "Loại";
+            this.loai.Name = "loai";
             // 
             // frmQuanLyKhachHang
             // 
@@ -214,13 +219,13 @@
         private System.Windows.Forms.Button btnXoaQLKH;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        internal System.Windows.Forms.DataGridView dgvQuanLyKhachHang;
+        private System.Windows.Forms.Label lblTemp;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_khachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
         private System.Windows.Forms.DataGridViewTextBoxColumn dienthoai;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn loai;
-        internal System.Windows.Forms.DataGridView dgvQuanLyKhachHang;
-        private System.Windows.Forms.Label lblTemp;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
     }
 }

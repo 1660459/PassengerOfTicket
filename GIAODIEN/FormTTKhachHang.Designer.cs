@@ -114,7 +114,7 @@
             this.cbLoaiKH.Margin = new System.Windows.Forms.Padding(4);
             this.cbLoaiKH.Name = "cbLoaiKH";
             this.cbLoaiKH.Size = new System.Drawing.Size(185, 33);
-            this.cbLoaiKH.TabIndex = 14;
+            this.cbLoaiKH.TabIndex = 5;
             // 
             // label6
             // 
@@ -144,7 +144,7 @@
             this.txtSDTKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(403, 23);
-            this.txtSDTKH.TabIndex = 11;
+            this.txtSDTKH.TabIndex = 4;
             // 
             // label5
             // 
@@ -175,7 +175,7 @@
             this.txtEmailKH.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmailKH.Name = "txtEmailKH";
             this.txtEmailKH.Size = new System.Drawing.Size(403, 23);
-            this.txtEmailKH.TabIndex = 8;
+            this.txtEmailKH.TabIndex = 3;
             this.txtEmailKH.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
@@ -207,7 +207,7 @@
             this.txtHoTenKhachHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTenKhachHang.Name = "txtHoTenKhachHang";
             this.txtHoTenKhachHang.Size = new System.Drawing.Size(403, 23);
-            this.txtHoTenKhachHang.TabIndex = 5;
+            this.txtHoTenKhachHang.TabIndex = 2;
             // 
             // label3
             // 
@@ -235,9 +235,10 @@
             this.txtIDKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDKhachHang.Location = new System.Drawing.Point(261, 154);
             this.txtIDKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDKhachHang.MaxLength = 10;
             this.txtIDKhachHang.Name = "txtIDKhachHang";
             this.txtIDKhachHang.Size = new System.Drawing.Size(403, 23);
-            this.txtIDKhachHang.TabIndex = 2;
+            this.txtIDKhachHang.TabIndex = 1;
             // 
             // label2
             // 

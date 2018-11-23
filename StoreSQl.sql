@@ -7,11 +7,11 @@ end
 go
 
 create proc sp_ThemKhachHang 
-	@idKH varchar(10), @hoten nvarchar(4000), @dienthoai varchar(4000), @email varchar(4000),@loai int
+	@id_khachhang varchar(10), @hoten nvarchar(4000), @dienthoai varchar(4000), @email varchar(4000),@loai int
 as
 begin 
 	insert into KhachHang(id_khachhang,hoten,dienthoai,email,loai)
-	values(@idKH,@hoten,@dienthoai,@email,@loai)
+	values(@id_khachhang,@hoten,@dienthoai,@email,@loai)
 	return 1
 end 
 go
