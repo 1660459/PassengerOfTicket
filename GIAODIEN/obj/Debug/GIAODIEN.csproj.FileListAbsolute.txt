@@ -13,7 +13,6 @@ C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.
 C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.FormGN.resources
 C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.FormLoaiXe.resources
 C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.FormQLChuyenXe.resources
-C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.FormQLNHAXE.resources
 C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.FormQLTaiXe.resources
 C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.FormQLTram.resources
 C:\Users\ThiMat\Downloads\16CK2_LTUDQL1_1819_NHOM26\GIAODIEN\obj\Debug\GIAODIEN.FormQLTuyenXe.resources

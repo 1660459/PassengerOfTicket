@@ -60,7 +60,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(290, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(290, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(84, 56);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -95,9 +95,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(367, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(325, 29);
+            this.label3.Size = new System.Drawing.Size(261, 29);
             this.label3.TabIndex = 0;
-            this.label3.Text = "DANH SÁCH CÁC LOẠI XE";
+            this.label3.Text = "DANH SÁCH CÁC XE";
             // 
             // button9
             // 
