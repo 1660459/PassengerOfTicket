@@ -65,7 +65,7 @@ create proc sp_ThemChuyenXe
 as
 begin 
 	insert into Chuyen(id_chuyen,tuyen_id_tuyen,giokhoihanh,ghichu,xe_xeid,tai_xe_id_taixe)
-	values(@id_chuyen,@tuyen_id_tuyen,@giokhoihanh,@ghichu,@xe_xeid,tai_xe_id_taixe)
+	values(@id_chuyen,@tuyen_id_tuyen,@giokhoihanh,@ghichu,@xe_xeid,@tai_xe_id_taixe)
 	return 1
 end 
 go
@@ -219,6 +219,18 @@ begin
 		end
 end
 go
+
+create proc sp_LayTenLoaiXe
+as
+begin
+	Select tenloai  From LoaiXe
+end
+go
+create proc sp_LoadGhiChuChuyenXe
+as
+begin
+	Select distinct ghichu From Chuyen
+end
 
 
 

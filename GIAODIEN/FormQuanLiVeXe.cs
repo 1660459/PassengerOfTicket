@@ -72,8 +72,8 @@ namespace GIAODIEN
         void LoadChuyenXe()
         {
             BUS_QuanLiVeXe qlve = new BUS_QuanLiVeXe();
-            cbLoaiXe1.DataSource = qlve.LoadGCChuyenXe();
-            cbLoaiXe2.DataSource = qlve.LoadGCChuyenXe();
+            cbChuyenXe1.DataSource = qlve.LoadGCChuyenXe();
+            cbChuyenXe2.DataSource = qlve.LoadGCChuyenXe();
         }
     }
 }
