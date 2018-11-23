@@ -26,10 +26,10 @@ create table Ve
 	ghe_id_ghe varchar(10),
 	chuyen_id_chuyen varchar(10),
 	tinhtrang int,
-	giatien smallmoney,
+	giatien money,
 	khachhang_id_khachhang varchar(10),
 	ngayxuatve datetime,
-	ghichu varchar(40),
+	ghichu nvarchar(40),
 	constraint ve_ghe_pk
 	PRIMARY KEY (id_ve)
 )	
@@ -47,7 +47,7 @@ create table Tai_Xe
 (
 	id_taixe varchar(10),
 	tentaixe nvarchar(100),
-	banglai varchar(100),
+	banglai Nvarchar(100),
 	constraint taixe_pk
 	PRIMARY KEY (id_taixe)
 )
@@ -110,15 +110,15 @@ create table Chuyen
 --khoa ngoai 
 ALTER TABLE Ve
 ADD 
-CONSTRAINT ve_ghe_fk
-FOREIGN KEY(ghe_id_ghe)
-REFERENCES Ghe,
 CONSTRAINT ve_chuyen_fk
 FOREIGN KEY(chuyen_id_chuyen)
 REFERENCES Chuyen,
 CONSTRAINT ve_khachhang1_fk
 FOREIGN KEY(khachhang_id_khachhang)
-REFERENCES KhachHang
+REFERENCES KhachHang,
+CONSTRAINT ve_ghe_fk
+FOREIGN KEY(ghe_id_ghe)
+REFERENCES Ghe
 
 ALTER TABLE Ghe
 ADD 
@@ -134,13 +134,13 @@ REFERENCES LoaiXe
 
 ALTER TABLE Chuyen
 ADD 
-CONSTRAINT chuyen_taixe_fk
-FOREIGN KEY(tai_xe_id_taixe)
-REFERENCES Tai_Xe,
 CONSTRAINT chuyen_tuyen_fk
 FOREIGN KEY(tuyen_id_tuyen)
 REFERENCES Tuyen,
-CONSTRAINT ve_khachhang_fk
+CONSTRAINT chuyen_taixe_fk
+FOREIGN KEY(tai_xe_id_taixe)
+REFERENCES Tai_Xe,
+CONSTRAINT chuyen_xe_fk
 FOREIGN KEY(xe_xeid)
 REFERENCES Xe
 
@@ -162,26 +162,7 @@ CONSTRAINT ttg_tram_fk
 FOREIGN KEY(tram_id_tram)
 REFERENCES Tram
 
-insert Chuyen
-values
-('C01','T01','08:00',N'TPHCM -QUY NHƠN ','X01','TX01'),
-('C02','T01','10:00',N'TPHCM -QUY NHƠN ','X02','TX02'),
-('C03','T01','17:00',N'TPHCM -QUY NHƠN ','X03','TX03'),
-('C04','T02','08:00',N'QUY NHƠN- TPHCM','X04','TX04'),
-('C05','T02','10:00',N'QUY NHƠN - TPHCM ','X05','TX05'),
-('C06','T02','19:00',N'QUY NHƠN - TPHCM ','X06','TX06'),
-('C07','T03','08:00',N'TPHCM -VŨNG TÀU ','X07','TX07'),
-('C08','T03','10:00',N'TPHCM -VŨNG TÀU ','X08','TX08'),
-('C09','T03','20:00',N'TPHCM -VŨNG TÀU ','X09','TX09'),
-('C10','T04','08:00',N'VŨNG TÀU -TPHCM ','X10','TX10'),
-('C11','T04','10:00',N'VŨNG TÀU -TPHCM','X01','TX09'),
-('C12','T04','20:00',N'VŨNG TÀU -TPHCM','X07','TX12'),
-('C13','T05','08:00',N'TPHCM -ĐÀ NẴNG ','X01','TX01'),
-('C14','T05','10:00',N'TPHCM -ĐÀ NẴNG ','X02','TX02'),
-('C15','T05','20:00',N'TPHCM -ĐÀ NẴNG ','X03','TX03'),
-('C16','T06','08:00',N'ĐÀ NẴNG-TPHCM ','X04','TX04'),
-('C17','T06','17:00',N'ĐÀ NẴNG-TPHCM ','X05','TX05'),
-('C18','T06','20:00',N'ĐÀ NẴNG-TPHCM ','X06','TX06')
+
 
 insert Tai_Xe
 values 
@@ -221,26 +202,26 @@ VALUES
 ('G02',2,1,1,30,'X01'),
 ('G03',4,1,1,30,'X01'),
 ('G04',5,1,1,30,'X02'),
-('G05',6,1,1,30,'X02'),
-('G06',1,2,3,30,'X03'),
-('G07',2,2,3,30,'X03'),
-('G08',3,2,3,30,'X04'),
-('G09',4,1,2,30,'X04'),
-('G10',7,1,2,30,'X04'),
-('G11',8,1,1,30,'X05'),
-('G12',1,5,1,30,'X06'),
-('G13',2,5,1,30,'X06'),
-('G14',3,5,1,30,'X06'),
-('G15',4,5,2,30,'X07'),
-('G16',5,5,2,30,'X10')
+('G05',6,1,1,30,'X02')
+--('G06',1,2,3,30,'X03'),
+--('G07',2,2,3,30,'X03'),
+--('G08',3,2,3,30,'X04'),
+--('G09',4,1,2,30,'X04'),
+--('G10',7,1,2,30,'X04'),
+--('G11',8,1,1,30,'X05'),
+--('G12',1,5,1,30,'X06'),
+--('G13',2,5,1,30,'X06'),
+--('G14',3,5,1,30,'X06'),
+--('G15',4,5,2,30,'X07'),
+--('G16',5,5,2,30,'X10')
 
 INSERT Ve
 VALUES
-('V01','G01','C01',1,200000.0,'KH01','2018/11/30',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'),
-('V02','G02','C01',1,200000.0,'KH01','2018/11/30',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'),
-('V03','G01','C01',1,200000.0,'KH02','2018/11/30',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'), 
-('V04','G04','C02',1,300000.0,'KH03','2018/12/01',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'),
-('V05','G05','C02',0,300000.0,'KH04','2018/12/01',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ')
+('V01','G01','C01',1,200.0,'KH01','2018/11/30',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'),
+('V02','G02','C02',1,200.0,'KH02','2018/11/30',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'),
+('V03','G03','C03',1,200.0,'KH03','2018/11/30',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'), 
+('V04','G04','C04',1,300.0,'KH04','2018/12/01',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ'),
+('V05','G05','C05',0,300.0,'KH05','2018/12/01',N'KHÔNG ĐƯỢC LÀM RÁCH VÉ')
 
 insert KhachHang
 values
@@ -251,7 +232,52 @@ values
 ('KH05',N'Nguyễn Thị Thìn',N'0783478386','b123@gmail.com',1),
 ('KH06',N'Nguyễn Thị',N'0783478386','b123@gmail.com',1)
 
-insert 
+insert Tuyen
+values
+('T01',678.8,14,'TR01','TR02'),
+('T02',678.8,14,'TR02','TR01'),
+('T03',100.9,3,'TR03','TR04'),
+('T04',100.9,3,'TR04','TR03'),
+('T05',801.5,20,'TR05','TR06'),
+('T06',801.5,20,'TR06','TR05')
+
+insert Chuyen
+values
+('C01','T01','08:00',N'TPHCM -QUY NHƠN ','X01','TX01'),
+('C02','T01','10:00',N'TPHCM -QUY NHƠN ','X02','TX02'),
+('C03','T01','17:00',N'TPHCM -QUY NHƠN ','X03','TX03'),
+('C04','T02','08:00',N'QUY NHƠN- TPHCM','X04','TX04'),
+('C05','T02','10:00',N'QUY NHƠN - TPHCM ','X05','TX05'),
+('C06','T02','19:00',N'QUY NHƠN - TPHCM ','X06','TX06'),
+('C07','T03','08:00',N'TPHCM -VŨNG TÀU ','X07','TX07'),
+('C08','T03','10:00',N'TPHCM -VŨNG TÀU ','X08','TX08'),
+('C09','T03','20:00',N'TPHCM -VŨNG TÀU ','X09','TX09'),
+('C10','T04','08:00',N'VŨNG TÀU -TPHCM ','X10','TX10'),
+('C11','T04','10:00',N'VŨNG TÀU -TPHCM','X01','TX01'),
+('C12','T04','20:00',N'VŨNG TÀU -TPHCM','X07','TX07'),
+('C13','T05','08:00',N'TPHCM -ĐÀ NẴNG ','X01','TX01'),
+('C14','T05','10:00',N'TPHCM -ĐÀ NẴNG ','X02','TX02'),
+('C15','T05','20:00',N'TPHCM -ĐÀ NẴNG ','X03','TX03'),
+('C16','T06','08:00',N'ĐÀ NẴNG-TPHCM ','X04','TX04'),
+('C17','T06','17:00',N'ĐÀ NẴNG-TPHCM ','X05','TX05'),
+('C18','T06','20:00',N'ĐÀ NẴNG-TPHCM ','X06','TX06')
+
+INSERT Tram
+VALUES
+('TR01',N'TPHCM- QUY NHƠN',N'1 Bạch Đằng ,tphcm'),
+('TR02',N'QuyNhon- tphcm',N'bến xe quy nhơn, bình định'),
+('TR03',N'TPHCM- VŨNG TÀU',N'1 Bạch Đằng ,tphcm'),
+('TR04',N'Vũng Tàu - tphcm',N'Bến xe vũng  tàu'),
+('TR05',N'TPHCM - ĐÀ NẴNG',N'Bến xe miền đông ,tphcm'),
+('TR06',N'Đà Nẵng- tphcm',N'Bến xe bạch đằng')
+
+INSERT Tram_trung_gian
+values
+('T01','TR01',1),
+('T02','TR02',2),
+('T03','TR03',3),
+('T04','TR04',4),
+('T05','TR05',5)
 
 
 
