@@ -17,7 +17,7 @@ begin
 end 
 go
 -- xoa khach hang 
-create proc sp_XoaKhachHang @id_khachhang varchar(10)
+alter proc sp_XoaKhachHang @id_khachhang varchar(10)
 as
 begin 
 	if(not exists (select * from KhachHang where id_khachhang = @id_khachhang))
@@ -30,7 +30,6 @@ begin
 			ALTER TABLE Ve CHECK CONSTRAINT ve_khachhang_fk
 			return 1
 	end
-
 end 
 go
 
@@ -114,7 +113,7 @@ begin
 end
 go
 
-create proc sp_ThemTaiXe 
+alter proc sp_ThemTaiXe 
 	@id_taixe varchar(10), @tentaixe nvarchar(100),@banglai nvarchar(100)
 as
 begin 
@@ -124,7 +123,7 @@ begin
 end 
 go
 
-create proc sp_XoaTaiXe @id_taixe varchar(10)
+alter proc sp_XoaTaiXe @id_taixe varchar(10)
 as
 begin 
 	if(not exists (select * from Tai_Xe where id_taixe = @id_taixe))
@@ -140,7 +139,7 @@ begin
 end 
 go
 
-create proc sp_SuaTaiXe
+alter proc sp_SuaTaiXe
 	@id_taixe varchar(10), @tentaixe nvarchar(100),@banglai nvarchar(100)
 as
 begin 
@@ -226,7 +225,8 @@ begin
 	Select tenloai  From LoaiXe
 end
 go
-alter proc sp_LoadGhiChuChuyenXe
+
+create proc sp_LoadGhiChuChuyenXe
 as
 begin
 	Select distinct ghichu From Chuyen
@@ -240,14 +240,14 @@ begin
 end
 go
 
-create proc ThemXe 
-@xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000)
-as
-begin
-		Insert into Xe(xe_id,ten_xe,so_dang_ky)
-		Values(@xe_id , @ten_xe , @so_dang_ky )
-end
-go
+--create proc ThemXe 
+--@xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000)
+--as
+--begin
+--		Insert into Xe(xe_id,ten_xe,so_dang_ky)
+--		Values(@xe_id , @ten_xe , @so_dang_ky )
+--end
+--go
 
 alter proc sp_ThemXe
 @xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000) , @loaixe_id_loaixe varchar(10)
@@ -262,7 +262,7 @@ begin
 end
 go
 
-alter proc sp_XoaXe
+create proc sp_XoaXe
 @xe_id varchar(10)
 as
 begin
@@ -275,7 +275,7 @@ begin
 end
 go
 
-alter proc sp_SuaXe 
+create proc sp_SuaXe 
 @xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000) ,  @loaixe_id_loaixe varchar(10)
 as
 begin 
@@ -291,3 +291,5 @@ begin
 			return 1
 		end
 end
+go
+

@@ -41,8 +41,7 @@ namespace GIAODIEN
             if (txtIDXe.Enabled == true)
             {
                 if (xe.ThemXe(tempXe) == 1)
-                {
-                    
+                {                   
                     FormQLXe qlXe = new FormQLXe();
                     qlXe.LoadQLXe();
                     this.Close();

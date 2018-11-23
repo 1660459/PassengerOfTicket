@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XULY;
+
 namespace GIAODIEN
 {
     public partial class FormQLXe : Form
@@ -20,8 +21,7 @@ namespace GIAODIEN
         private void button2_Click(object sender, EventArgs e)
         {
             FormXe frm = new FormXe();
-            frm.Show();
-            
+            frm.Show();            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -45,6 +45,7 @@ namespace GIAODIEN
             num = e.RowIndex;
             IDDangChon = dgvDanhSachXe.Rows[num].Cells[0].Value.ToString();
         }
+
 
         private void btnSuaDSXe_Click(object sender, EventArgs e)
         {
