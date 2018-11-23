@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -8,13 +9,12 @@ using System.Threading.Tasks;
 
 namespace DULIEU
 {
-    public class DAO_KhachHang
+    public class DAO_Xe
     {
-        public DataTable LoadKhachHang()
+        public DataTable LoadXe()
         {
-
             Provider kn = new Provider();
-            string strSQL = "sp_LoadKhachHang";
+            string strSQL = "sp_LoadXe";
             DataTable dt = new DataTable();
             try
             {
@@ -31,21 +31,20 @@ namespace DULIEU
             }
             return dt;
         }
-        public int AddKhachHang(KhachHang cm)
+        public int ThemXe(Xe cm)
         {
             int flag = 0;
             Provider provider = new Provider();
             try
             {
-                string SqlStr = "sp_ThemKhachHang";
+                string SqlStr = "sp_ThemXe";
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
-                        new SqlParameter { ParameterName = "@id_khachhang", Value = cm.id_khachhang },
-                        new SqlParameter { ParameterName = "@hoten", Value = cm.hoten },
-                        new SqlParameter { ParameterName = "@dienthoai", Value = cm.dienthoai },
-                        new SqlParameter { ParameterName = "@email", Value = cm.email },
-                        new SqlParameter { ParameterName = "@loai", Value = cm.loai }
-                         );
+                        new SqlParameter { ParameterName = "@xe_id", Value = cm.xe_id },
+                        new SqlParameter { ParameterName = "@ten_xe", Value = cm.ten_xe },
+                        new SqlParameter { ParameterName = "@so_dang_ky", Value = cm.so_dang_ky },
+                        new SqlParameter { ParameterName = "@loaixe_id_loaixe", Value = cm.loaixe_id_loaixe }
+                        );
                 flag = 1;
             }
             catch (SqlException ex)
@@ -58,16 +57,17 @@ namespace DULIEU
             }
             return flag;
         }
-        public int XoaKhachHang(string idKH){
-            
+        public int XoaXe(string idXe)
+        {
+
             int flag = 0;
             Provider dbConnect = new Provider();
             try
             {
-                string strSQL = "sp_XoaKhachHang";
+                string strSQL = "sp_XoaVe";
                 dbConnect.Connect();
                 dbConnect.ExecuteNonQuery(CommandType.StoredProcedure, strSQL,
-                      new SqlParameter { ParameterName = "@id_khachhang", Value = idKH }
+                      new SqlParameter { ParameterName = "@xe_id", Value = idXe }
                        );
 
                 flag = 1;
@@ -81,23 +81,23 @@ namespace DULIEU
                 dbConnect.Disconnect();
             }
             return flag;
-        
+
         }
-        public int SuaKhachHang(KhachHang cm)
+        public int SuaXe(Xe cm)
         {
             int flag = 0;
             Provider provider = new Provider();
             try
             {
-                string SqlStr = "sp_SuaKhachHang";
+                string SqlStr = "sp_SuaXe";
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
-                        new SqlParameter { ParameterName = "@id_khachhang", Value = cm.id_khachhang },
-                        new SqlParameter { ParameterName = "@hoten", Value = cm.hoten },
-                        new SqlParameter { ParameterName = "@dienthoai", Value = cm.dienthoai },
-                        new SqlParameter { ParameterName = "@email", Value = cm.email },
-                        new SqlParameter { ParameterName = "@loai", Value = cm.loai }
-                         );
+                     new SqlParameter { ParameterName = "@xe_id", Value = cm.xe_id },
+                        new SqlParameter { ParameterName = "@ten_xe", Value = cm.ten_xe },
+                        new SqlParameter { ParameterName = "@so_dang_ky", Value = cm.so_dang_ky },
+                        new SqlParameter { ParameterName = "@loaixe_id_loaixe", Value = cm.loaixe_id_loaixe }
+                        );
+
                 flag = 1;
             }
             catch (SqlException ex)

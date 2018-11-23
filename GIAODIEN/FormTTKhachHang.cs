@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using XULY;
+using DULIEU;
 namespace GIAODIEN
 {
     public partial class FormTTKhachHang : Form
@@ -46,5 +47,31 @@ namespace GIAODIEN
         {
             this.Close();
         }
+        void KTRONG()
+        {
+
+        }
+        private void btnLuuTTKH_Click(object sender, EventArgs e)
+        {
+            BUS_KhachHang kh = new BUS_KhachHang();
+            KhachHang khach = new KhachHang();
+            khach.id_khachhang = txtIDKhachHang.Text;
+            khach.hoten = txtHoTenKhachHang.Text;
+            khach.email = txtEmailKH.Text;
+            khach.dienthoai = txtSDTKH.Text;
+            khach.loai = int.Parse(cbLoaiKH.SelectedItem.ToString());
+            if (kh.ThemKhachHang(khach) == 1)
+            {
+                this.Close();
+                frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
+                qlkh.LoadQLKhachHang();
+            }
+            else
+            {
+                MessageBox.Show("Không Thêm Được");
+            }
+        }
+
+       
     }
 }

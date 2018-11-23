@@ -52,7 +52,7 @@ namespace GIAODIEN
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Form3 frm3 = new Form3();
+            frmQuanLyKhachHang frm3 = new frmQuanLyKhachHang();
             this.Hide();
             frm3.ShowDialog();
             this.Show();

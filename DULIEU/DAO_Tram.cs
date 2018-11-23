@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace DULIEU
 {
-    public class DAO_KhachHang
+    public class DAO_Tram
     {
-        public DataTable LoadKhachHang()
+        public DataTable LoadTram()
         {
-
             Provider kn = new Provider();
-            string strSQL = "sp_LoadKhachHang";
+            string strSQL = "sp_LoadTram";
             DataTable dt = new DataTable();
             try
             {
@@ -31,21 +30,19 @@ namespace DULIEU
             }
             return dt;
         }
-        public int AddKhachHang(KhachHang cm)
+        public int ThemTram(Tram cm)
         {
             int flag = 0;
             Provider provider = new Provider();
             try
             {
-                string SqlStr = "sp_ThemKhachHang";
+                string SqlStr = "sp_ThemTram";
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
-                        new SqlParameter { ParameterName = "@id_khachhang", Value = cm.id_khachhang },
-                        new SqlParameter { ParameterName = "@hoten", Value = cm.hoten },
-                        new SqlParameter { ParameterName = "@dienthoai", Value = cm.dienthoai },
-                        new SqlParameter { ParameterName = "@email", Value = cm.email },
-                        new SqlParameter { ParameterName = "@loai", Value = cm.loai }
-                         );
+                    new SqlParameter { ParameterName = "@id_tram" , Value = cm.id_tram},
+                     new SqlParameter { ParameterName = "@ten_tram" , Value = cm.ten_tram},
+                      new SqlParameter { ParameterName = "@dia_diem" , Value = cm.dia_diem}
+                        );
                 flag = 1;
             }
             catch (SqlException ex)
@@ -58,16 +55,17 @@ namespace DULIEU
             }
             return flag;
         }
-        public int XoaKhachHang(string idKH){
-            
+        public int XoaTram(string idTram)
+        {
+
             int flag = 0;
             Provider dbConnect = new Provider();
             try
             {
-                string strSQL = "sp_XoaKhachHang";
+                string strSQL = "sp_XoaTram";
                 dbConnect.Connect();
                 dbConnect.ExecuteNonQuery(CommandType.StoredProcedure, strSQL,
-                      new SqlParameter { ParameterName = "@id_khachhang", Value = idKH }
+                      new SqlParameter { ParameterName = "@id_tram", Value = idTram }
                        );
 
                 flag = 1;
@@ -81,23 +79,23 @@ namespace DULIEU
                 dbConnect.Disconnect();
             }
             return flag;
-        
+
         }
-        public int SuaKhachHang(KhachHang cm)
+        public int SuaTram(Tram cm)
         {
             int flag = 0;
             Provider provider = new Provider();
             try
             {
-                string SqlStr = "sp_SuaKhachHang";
+                string SqlStr = "sp_SuaTram";
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
-                        new SqlParameter { ParameterName = "@id_khachhang", Value = cm.id_khachhang },
-                        new SqlParameter { ParameterName = "@hoten", Value = cm.hoten },
-                        new SqlParameter { ParameterName = "@dienthoai", Value = cm.dienthoai },
-                        new SqlParameter { ParameterName = "@email", Value = cm.email },
-                        new SqlParameter { ParameterName = "@loai", Value = cm.loai }
-                         );
+                    new SqlParameter { ParameterName = "@id_tram", Value = cm.id_tram },
+                     new SqlParameter { ParameterName = "@ten_tram", Value = cm.ten_tram },
+                      new SqlParameter { ParameterName = "@dia_diem", Value = cm.dia_diem }
+                        );
+
+
                 flag = 1;
             }
             catch (SqlException ex)
@@ -112,4 +110,3 @@ namespace DULIEU
         }
     }
 }
-

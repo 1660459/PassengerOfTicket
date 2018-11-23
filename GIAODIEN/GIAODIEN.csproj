@@ -56,11 +56,11 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
+    <Compile Include="FormQuanLyKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <Compile Include="FormQuanLyKhachHang.Designer.cs">
+      <DependentUpon>FormQuanLyKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Form30.cs">
       <SubType>Form</SubType>
@@ -178,8 +178,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
+    <EmbeddedResource Include="FormQuanLyKhachHang.resx">
+      <DependentUpon>FormQuanLyKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form30.resx">
       <DependentUpon>Form30.cs</DependentUpon>
@@ -226,6 +226,9 @@
     <EmbeddedResource Include="FormTram.resx">
       <DependentUpon>FormTram.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormTTKhachHang.resx">
+      <DependentUpon>FormTTKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormTuyenXe.resx">
       <DependentUpon>FormTuyenXe.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +253,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DULIEU\DULIEU.csproj">
+      <Project>{a4ff4d2f-d849-4f73-8bda-70e355519480}</Project>
+      <Name>DULIEU</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XULY\XULY.csproj">
+      <Project>{69a660af-aa69-487f-9817-76495ae9ef1b}</Project>
+      <Name>XULY</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

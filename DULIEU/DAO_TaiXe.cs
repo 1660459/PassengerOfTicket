@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace DULIEU
 {
-    public class DAO_KhachHang
+    public class DAO_TaiXe
     {
-        public DataTable LoadKhachHang()
+        public DataTable LoadTaiXe()
         {
-
             Provider kn = new Provider();
-            string strSQL = "sp_LoadKhachHang";
+            string strSQL = "sp_LoadTaiXe";
             DataTable dt = new DataTable();
             try
             {
@@ -31,21 +30,19 @@ namespace DULIEU
             }
             return dt;
         }
-        public int AddKhachHang(KhachHang cm)
+        public int ThemTaiXe(TaiXe cm)
         {
             int flag = 0;
             Provider provider = new Provider();
             try
             {
-                string SqlStr = "sp_ThemKhachHang";
+                string SqlStr = "sp_ThemTaiXe";
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
-                        new SqlParameter { ParameterName = "@id_khachhang", Value = cm.id_khachhang },
-                        new SqlParameter { ParameterName = "@hoten", Value = cm.hoten },
-                        new SqlParameter { ParameterName = "@dienthoai", Value = cm.dienthoai },
-                        new SqlParameter { ParameterName = "@email", Value = cm.email },
-                        new SqlParameter { ParameterName = "@loai", Value = cm.loai }
-                         );
+                    new SqlParameter { ParameterName = "@id_taixe" , Value = cm.id_taixe},
+                    new SqlParameter { ParameterName = "@tentaixe" , Value = cm.tentaixe},
+                    new SqlParameter { ParameterName = "@banglai" , Value = cm.banglai}
+                        );
                 flag = 1;
             }
             catch (SqlException ex)
@@ -58,16 +55,17 @@ namespace DULIEU
             }
             return flag;
         }
-        public int XoaKhachHang(string idKH){
-            
+        public int XoaTaiXe(string idTaiXe)
+        {
+
             int flag = 0;
             Provider dbConnect = new Provider();
             try
             {
-                string strSQL = "sp_XoaKhachHang";
+                string strSQL = "sp_XoaTaiXe";
                 dbConnect.Connect();
                 dbConnect.ExecuteNonQuery(CommandType.StoredProcedure, strSQL,
-                      new SqlParameter { ParameterName = "@id_khachhang", Value = idKH }
+                      new SqlParameter { ParameterName = "@id_taixe", Value = idTaiXe }
                        );
 
                 flag = 1;
@@ -81,23 +79,23 @@ namespace DULIEU
                 dbConnect.Disconnect();
             }
             return flag;
-        
+
         }
-        public int SuaKhachHang(KhachHang cm)
+        public int SuaTaiXe(TaiXe cm)
         {
             int flag = 0;
             Provider provider = new Provider();
             try
             {
-                string SqlStr = "sp_SuaKhachHang";
+                string SqlStr = "sp_SuaTaiXe";
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
-                        new SqlParameter { ParameterName = "@id_khachhang", Value = cm.id_khachhang },
-                        new SqlParameter { ParameterName = "@hoten", Value = cm.hoten },
-                        new SqlParameter { ParameterName = "@dienthoai", Value = cm.dienthoai },
-                        new SqlParameter { ParameterName = "@email", Value = cm.email },
-                        new SqlParameter { ParameterName = "@loai", Value = cm.loai }
-                         );
+                    new SqlParameter { ParameterName = "@id_taixe" , Value = cm.id_taixe},
+                    new SqlParameter { ParameterName = "@tentaixe" , Value = cm.tentaixe},
+                    new SqlParameter { ParameterName = "@banglai" , Value = cm.banglai}
+                        );
+                     
+
                 flag = 1;
             }
             catch (SqlException ex)
@@ -112,4 +110,3 @@ namespace DULIEU
         }
     }
 }
-
