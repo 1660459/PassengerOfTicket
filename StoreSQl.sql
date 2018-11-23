@@ -43,11 +43,11 @@ begin
 	else
 		begin 
 			update KhachHang
-			set id_khachhang = @id_khachhang,
-				hoten = @hoten,
+			set hoten = @hoten,
 				dienthoai = @dienthoai,
 				email = @email,
 				loai = @loai
+			where  id_khachhang = @id_khachhang
 			return 1
 		end
 end
@@ -95,12 +95,12 @@ begin
 	else
 		begin 
 			update Chuyen
-			set id_chuyen = @id_chuyen,
-				tuyen_id_tuyen = @tuyen_id_tuyen,
+			set tuyen_id_tuyen = @tuyen_id_tuyen,
 				giokhoihanh = @giokhoihanh,
 				ghichu = @ghichu,
 				xe_xeid = @xe_xeid,
 				tai_xe_id_taixe = @tai_xe_id_taixe
+			where  id_chuyen = @id_chuyen
 			return 1
 		end
 end
@@ -149,9 +149,9 @@ begin
 	else
 		begin 
 			update Tai_Xe
-			set id_taixe = @id_taixe,
-				tentaixe = @tentaixe,
-				banglai = @banglai			
+			set tentaixe = @tentaixe,
+				banglai = @banglai	
+			where id_taixe = @id_taixe
 			return 1
 		end
 end
@@ -212,9 +212,9 @@ begin
 	else
 		begin 
 			update Tram
-			set id_tram = @id_tram,
-				ten_tram = @ten_tram,
-				dia_diem = @dia_diem			
+			set ten_tram = @ten_tram,
+				dia_diem = @dia_diem	
+			where id_tram = @id_tram		
 			return 1
 		end
 end
@@ -226,11 +226,68 @@ begin
 	Select tenloai  From LoaiXe
 end
 go
-create proc sp_LoadGhiChuChuyenXe
+alter proc sp_LoadGhiChuChuyenXe
 as
 begin
 	Select distinct ghichu From Chuyen
 end
+go
 
+create proc sp_LoadXe
+as
+begin
+	Select * From Xe
+end
+go
 
+create proc ThemXe 
+@xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000)
+as
+begin
+		Insert into Xe(xe_id,ten_xe,so_dang_ky)
+		Values(@xe_id , @ten_xe , @so_dang_ky )
+end
+go
 
+alter proc sp_ThemXe
+@xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000) , @loaixe_id_loaixe varchar(10)
+as
+begin 
+		Exec ThemXe @xe_id , @ten_xe , @so_dang_ky
+		ALTER TABLE Xe NOCHECK CONSTRAINT xe_loaixe_fk
+		Update Xe
+		Set loaixe_id_loaixe = @loaixe_id_loaixe
+		where xe_id = @xe_id	
+		ALTER TABLE Xe CHECK CONSTRAINT xe_loaixe_fk
+end
+go
+
+alter proc sp_XoaXe
+@xe_id varchar(10)
+as
+begin
+		ALTER TABLE Ghe NOCHECK CONSTRAINT Ghe1_Xe_fk
+		ALTER TABLE Chuyen NOCHECK CONSTRAINT Chuyen_Xe_fk
+		DELETE FROM Xe
+		WHERE xe_id = @xe_id
+		ALTER TABLE Ghe CHECK CONSTRAINT Ghe1_Xe_fk
+		ALTER TABLE Chuyen CHECK CONSTRAINT Chuyen_Xe_fk
+end
+go
+
+alter proc sp_SuaXe 
+@xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000) ,  @loaixe_id_loaixe varchar(10)
+as
+begin 
+		if(not exists (select * from Xe where xe_id = @xe_id))
+				return 0
+		else
+		begin 
+			update Xe
+			set ten_xe = @ten_xe,
+				so_dang_ky = @so_dang_ky,
+				loaixe_id_loaixe =  @loaixe_id_loaixe
+			where xe_id = @xe_id
+			return 1
+		end
+end

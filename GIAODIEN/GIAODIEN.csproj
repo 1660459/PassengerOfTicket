@@ -232,6 +232,9 @@
     <EmbeddedResource Include="FormTuyenXe.resx">
       <DependentUpon>FormTuyenXe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormXe.resx">
+      <DependentUpon>FormXe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

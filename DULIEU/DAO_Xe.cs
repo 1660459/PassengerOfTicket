@@ -64,7 +64,7 @@ namespace DULIEU
             Provider dbConnect = new Provider();
             try
             {
-                string strSQL = "sp_XoaVe";
+                string strSQL = "sp_XoaXe";
                 dbConnect.Connect();
                 dbConnect.ExecuteNonQuery(CommandType.StoredProcedure, strSQL,
                       new SqlParameter { ParameterName = "@xe_id", Value = idXe }
