@@ -20,7 +20,7 @@ namespace GIAODIEN
         private void button3_Click(object sender, EventArgs e)
         {
             FormTTKhachHang frm4 = new FormTTKhachHang();
-            frm4.ShowDialog();
+            frm4.Show();
             LoadQLKhachHang();
         }
 
@@ -59,6 +59,22 @@ namespace GIAODIEN
                 MessageBox.Show("Không Xoá Được");
             }
         }
+
+        private void btnSuaQLKH_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(IDDangChon))
+            {
+                MessageBox.Show("Click Vào Dòng Muốn Sửa");
+                return;
+            }
+            FormTTKhachHang frm4 = new FormTTKhachHang();
+            frm4.txtIDKhachHang.Text = IDDangChon;
+            frm4.txtIDKhachHang.Enabled = false;
+            frm4.Show();
+            LoadQLKhachHang();
+        }
+
+        
 
         
         

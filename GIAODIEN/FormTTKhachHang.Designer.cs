@@ -287,21 +287,21 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtIDKhachHang;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txtEmailKH;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtHoTenKhachHang;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TextBox txtSDTKH;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbLoaiKH;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnLuuTTKH;
         private System.Windows.Forms.Button btnThoatTTKH;
+        internal System.Windows.Forms.TextBox txtIDKhachHang;
+        internal System.Windows.Forms.TextBox txtEmailKH;
+        internal System.Windows.Forms.TextBox txtHoTenKhachHang;
+        internal System.Windows.Forms.TextBox txtSDTKH;
+        internal System.Windows.Forms.ComboBox cbLoaiKH;
     }
 }

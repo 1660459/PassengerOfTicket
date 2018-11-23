@@ -60,16 +60,35 @@ namespace GIAODIEN
             khach.email = txtEmailKH.Text;
             khach.dienthoai = txtSDTKH.Text;
             khach.loai = int.Parse(cbLoaiKH.SelectedItem.ToString());
-            if (kh.ThemKhachHang(khach) == 1)
+            if (txtIDKhachHang.Enabled == true)
             {
-                this.Close();
-                frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
-                qlkh.LoadQLKhachHang();
+                if (kh.ThemKhachHang(khach) == 1)
+                {
+                    this.Close();
+                    frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
+                    qlkh.LoadQLKhachHang();
+                }
+                else
+                {
+                    MessageBox.Show("Không Thêm Được");
+                    return;
+                }
             }
             else
             {
-                MessageBox.Show("Không Thêm Được");
+                if (kh.SuaKhachHang(khach) == 1)
+                {
+                    this.Close();
+                    frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
+                    qlkh.LoadQLKhachHang();
+                }
+                else
+                {
+                    MessageBox.Show("Không Sửa Được");
+                    return;
+                }
             }
+            txtIDKhachHang.Enabled = true;
         }
 
        

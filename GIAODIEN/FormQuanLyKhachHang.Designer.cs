@@ -31,17 +31,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSuaQLKH = new System.Windows.Forms.Button();
             this.btnXoaQLKH = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.dgvQuanLyKhachHang = new System.Windows.Forms.DataGridView();
-            this.lblTemp = new System.Windows.Forms.Label();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.id_khachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dienthoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTemp = new System.Windows.Forms.Label();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhachHang)).BeginInit();
             this.SuspendLayout();
@@ -83,17 +83,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "QUẢN LÍ KHÁCH HÀNG";
             // 
-            // button1
+            // btnSuaQLKH
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(1095, 194);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(332, 47);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "SỬA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSuaQLKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSuaQLKH.ForeColor = System.Drawing.Color.Red;
+            this.btnSuaQLKH.Location = new System.Drawing.Point(1095, 194);
+            this.btnSuaQLKH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuaQLKH.Name = "btnSuaQLKH";
+            this.btnSuaQLKH.Size = new System.Drawing.Size(332, 47);
+            this.btnSuaQLKH.TabIndex = 2;
+            this.btnSuaQLKH.Text = "SỬA";
+            this.btnSuaQLKH.UseVisualStyleBackColor = true;
+            this.btnSuaQLKH.Click += new System.EventHandler(this.btnSuaQLKH_Click);
             // 
             // btnXoaQLKH
             // 
@@ -123,6 +124,8 @@
             // 
             // dgvQuanLyKhachHang
             // 
+            this.dgvQuanLyKhachHang.AllowUserToAddRows = false;
+            this.dgvQuanLyKhachHang.AllowUserToDeleteRows = false;
             this.dgvQuanLyKhachHang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvQuanLyKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQuanLyKhachHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -133,10 +136,47 @@
             this.loai});
             this.dgvQuanLyKhachHang.Location = new System.Drawing.Point(1, 68);
             this.dgvQuanLyKhachHang.Name = "dgvQuanLyKhachHang";
+            this.dgvQuanLyKhachHang.ReadOnly = true;
             this.dgvQuanLyKhachHang.RowTemplate.Height = 24;
+            this.dgvQuanLyKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvQuanLyKhachHang.Size = new System.Drawing.Size(1087, 556);
             this.dgvQuanLyKhachHang.TabIndex = 5;
             this.dgvQuanLyKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyKhachHang_CellClick);
+            // 
+            // id_khachhang
+            // 
+            this.id_khachhang.DataPropertyName = "id_khachhang";
+            this.id_khachhang.HeaderText = "ID";
+            this.id_khachhang.Name = "id_khachhang";
+            this.id_khachhang.ReadOnly = true;
+            // 
+            // hoten
+            // 
+            this.hoten.DataPropertyName = "hoten";
+            this.hoten.HeaderText = "Họ Tên";
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
+            // 
+            // dienthoai
+            // 
+            this.dienthoai.DataPropertyName = "dienthoai";
+            this.dienthoai.HeaderText = "Điện Thoại";
+            this.dienthoai.Name = "dienthoai";
+            this.dienthoai.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // loai
+            // 
+            this.loai.DataPropertyName = "loai";
+            this.loai.HeaderText = "Loại";
+            this.loai.Name = "loai";
+            this.loai.ReadOnly = true;
             // 
             // lblTemp
             // 
@@ -154,36 +194,6 @@
             this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 100);
             this.flowLayoutPanel1.TabIndex = 6;
             // 
-            // id_khachhang
-            // 
-            this.id_khachhang.DataPropertyName = "id_khachhang";
-            this.id_khachhang.HeaderText = "ID";
-            this.id_khachhang.Name = "id_khachhang";
-            // 
-            // hoten
-            // 
-            this.hoten.DataPropertyName = "hoten";
-            this.hoten.HeaderText = "Họ Tên";
-            this.hoten.Name = "hoten";
-            // 
-            // dienthoai
-            // 
-            this.dienthoai.DataPropertyName = "dienthoai";
-            this.dienthoai.HeaderText = "Điện Thoại";
-            this.dienthoai.Name = "dienthoai";
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            // 
-            // loai
-            // 
-            this.loai.DataPropertyName = "loai";
-            this.loai.HeaderText = "Loại";
-            this.loai.Name = "loai";
-            // 
             // frmQuanLyKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,7 +205,7 @@
             this.Controls.Add(this.dgvQuanLyKhachHang);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.btnXoaQLKH);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSuaQLKH);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -215,7 +225,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSuaQLKH;
         private System.Windows.Forms.Button btnXoaQLKH;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;

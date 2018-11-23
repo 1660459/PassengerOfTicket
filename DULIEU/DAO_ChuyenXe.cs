@@ -30,6 +30,27 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable LoadGhiChuChuyenXe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadGhiChuChuyenXe"; // Stored Nay Nho' Distinct nhe'
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+       
         public int ThemChuyenXe(ChuyenXe cm)
         {
             int flag = 0;
@@ -43,7 +64,8 @@ namespace DULIEU
                         new SqlParameter { ParameterName = "@tuyen_id_tuyen", Value = cm.tuyen_id_tuyen },
                         new SqlParameter { ParameterName = "@giokhoihanh", Value = cm.giokhoihanh },
                         new SqlParameter { ParameterName = "@xe_xeid", Value = cm.xe_xeid },
-                        new SqlParameter { ParameterName = "@ghichu", Value = cm.ghichu }
+                        new SqlParameter { ParameterName = "@ghichu", Value = cm.ghichu },
+                        new SqlParameter { ParameterName = "@tai_xe_id_taixe", Value = cm.tai_xe_id_taixe }
                         );
                 flag = 1;
             }

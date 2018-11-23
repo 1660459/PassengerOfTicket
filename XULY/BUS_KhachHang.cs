@@ -30,5 +30,13 @@ namespace XULY
             kq = kh.XoaKhachHang(a);
             return kq;
         }
+        public int SuaKhachHang(KhachHang a)
+        {
+            int kq = 0;
+            DAO_KhachHang kh = new DAO_KhachHang();
+            kq = kh.SuaKhachHang(a);
+            return kq;
+        }
+
     }
 }

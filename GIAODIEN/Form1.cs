@@ -60,7 +60,7 @@ namespace GIAODIEN
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            Form2 frm2 = new Form2();
+            FormQuanLiVeXe frm2 = new FormQuanLiVeXe();
             this.Hide();
             frm2.ShowDialog();
             this.Show();
