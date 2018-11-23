@@ -20,7 +20,7 @@ go
 create proc sp_XoaKhachHang @id_khachhang varchar(10)
 as
 begin 
-	if(not exists (select * from KhachHang where id_khachhang = @idKH))
+	if(not exists (select * from KhachHang where id_khachhang = @id_khachhang))
 		return 0
 	else 
 	begin
