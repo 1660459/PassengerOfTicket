@@ -20,7 +20,7 @@ go
 create proc sp_XoaKhachHang @id_khachhang varchar(10)
 as
 begin 
-	if(not exists (select * from KhachHang where id_khachhang = @idKH))
+	if(not exists (select * from KhachHang where id_khachhang = @id_khachhang))
 		return 0
 	else 
 	begin
@@ -65,7 +65,7 @@ create proc sp_ThemChuyenXe
 as
 begin 
 	insert into Chuyen(id_chuyen,tuyen_id_tuyen,giokhoihanh,ghichu,xe_xeid,tai_xe_id_taixe)
-	values(@id_chuyen,@tuyen_id_tuyen,@giokhoihanh,@ghichu,@xe_xeid,tai_xe_id_taixe)
+	values(@id_chuyen,@tuyen_id_tuyen,@giokhoihanh,@ghichu,@xe_xeid,@tai_xe_id_taixe)
 	return 1
 end 
 go
@@ -219,6 +219,18 @@ begin
 		end
 end
 go
+
+create proc sp_LayTenLoaiXe
+as
+begin
+	Select tenloai  From LoaiXe
+end
+go
+create proc sp_LoadGhiChuChuyenXe
+as
+begin
+	Select distinct ghichu From Chuyen
+end
 
 
 

@@ -246,7 +246,7 @@ values
 ('C01','T01','08:00',N'TPHCM -QUY NHƠN ','X01','TX01'),
 ('C02','T01','10:00',N'TPHCM -QUY NHƠN ','X02','TX02'),
 ('C03','T01','17:00',N'TPHCM -QUY NHƠN ','X03','TX03'),
-('C04','T02','08:00',N'QUY NHƠN- TPHCM','X04','TX04'),
+('C04','T02','08:00',N'QUY NHƠN - TPHCM','X04','TX04'),
 ('C05','T02','10:00',N'QUY NHƠN - TPHCM ','X05','TX05'),
 ('C06','T02','19:00',N'QUY NHƠN - TPHCM ','X06','TX06'),
 ('C07','T03','08:00',N'TPHCM -VŨNG TÀU ','X07','TX07'),
