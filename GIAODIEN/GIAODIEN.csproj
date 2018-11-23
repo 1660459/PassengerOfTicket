@@ -116,12 +116,6 @@
     <Compile Include="FormQLChuyenXe.Designer.cs">
       <DependentUpon>FormQLChuyenXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormQLNHAXE.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormQLNHAXE.Designer.cs">
-      <DependentUpon>FormQLNHAXE.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormQLTaiXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,11 +202,11 @@
     <EmbeddedResource Include="FormLoaiXe.resx">
       <DependentUpon>FormLoaiXe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormNguoiDat.resx">
+      <DependentUpon>FormNguoiDat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormQLChuyenXe.resx">
       <DependentUpon>FormQLChuyenXe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormQLNHAXE.resx">
-      <DependentUpon>FormQLNHAXE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLTaiXe.resx">
       <DependentUpon>FormQLTaiXe.cs</DependentUpon>

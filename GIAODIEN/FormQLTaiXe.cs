@@ -27,5 +27,10 @@ namespace GIAODIEN
         {
             this.Close();
         }
+
+        private void FormQLTaiXe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

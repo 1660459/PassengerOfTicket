@@ -32,5 +32,10 @@ namespace GIAODIEN
             FormTuyenXe frm = new FormTuyenXe();
             frm.ShowDialog();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
