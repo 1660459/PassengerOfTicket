@@ -240,14 +240,14 @@ begin
 end
 go
 
---create proc ThemXe 
---@xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000)
---as
---begin
---		Insert into Xe(xe_id,ten_xe,so_dang_ky)
---		Values(@xe_id , @ten_xe , @so_dang_ky )
---end
---go
+create proc ThemXe 
+@xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000)
+as
+begin
+		Insert into Xe(xe_id,ten_xe,so_dang_ky)
+		Values(@xe_id , @ten_xe , @so_dang_ky )
+end
+go
 
 alter proc sp_ThemXe
 @xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000) , @loaixe_id_loaixe varchar(10)
@@ -293,3 +293,56 @@ begin
 end
 go
 
+create proc sp_LoadTuyenXe
+as
+	Select * From Tuyen
+
+go
+
+alter proc sp_XoaTuyenXe
+@id_tuyen varchar(10)
+as
+begin
+	ALTER TABLE Chuyen NOCHECK CONSTRAINT chuyen_tuyen_fk
+	ALTER TABLE Tram_trung_gian NOCHECK CONSTRAINT ttg_tuyen_fk
+	Delete From Tuyen
+	Where id_tuyen = @id_tuyen
+	ALTER TABLE Chuyen CHECK CONSTRAINT chuyen_tuyen_fk
+	ALTER TABLE Tram_trung_gian CHECK CONSTRAINT ttg_tuyen_fk
+end
+go
+
+alter proc sp_ThemTuyenXe
+@id_tuyen varchar(10) , @khoang_cach float , @thoigianchay int , @tram_id_tram1 varchar(10) , @tram_id_tram varchar(10)
+as
+begin
+	ALTER TABLE Tuyen NOCHECK CONSTRAINT tuyen_tram_fk
+	ALTER TABLE Tuyen NOCHECK CONSTRAINT chuyen_tram2_fk
+	Insert into Tuyen
+	values (@id_tuyen , @khoang_cach , @thoigianchay ,@tram_id_tram1 , @tram_id_tram)
+	ALTER TABLE Tuyen CHECK CONSTRAINT tuyen_tram_fk
+	ALTER TABLE Tuyen CHECK CONSTRAINT chuyen_tram2_fk
+end
+go
+
+alter proc sp_SuaTuyenXe
+@id_tuyen varchar(10) , @khoang_cach float , @thoigianchay int , @tram_id_tram varchar(10) , @tram_id_tram1 varchar(10)
+as 
+begin
+	 if(not exists (select * from Tuyen where id_tuyen = @id_tuyen))
+				return 0
+		else
+		begin 
+			ALTER TABLE Tuyen NOCHECK CONSTRAINT tuyen_tram_fk
+			ALTER TABLE Tuyen NOCHECK CONSTRAINT chuyen_tram2_fk
+			update Tuyen
+			set khoang_cach = @khoang_cach,
+				thoigianchay = @thoigianchay,
+				tram_id_tram =  @tram_id_tram,
+				tram_id_tram1 = @tram_id_tram1
+			where id_tuyen = @id_tuyen
+			ALTER TABLE Tuyen CHECK CONSTRAINT tuyen_tram_fk
+			ALTER TABLE Tuyen CHECK CONSTRAINT chuyen_tram2_fk
+			return 1
+		end
+end

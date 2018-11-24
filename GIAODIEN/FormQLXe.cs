@@ -64,6 +64,11 @@ namespace GIAODIEN
 
         private void btnXoaDSXe_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(IDDangChon))
+            {
+                MessageBox.Show("Click Vào Dòng muốn Xoá");
+                return;
+            }
             BUS_Xe kh = new BUS_Xe();
             if (kh.XoaXe(IDDangChon) == 1)
             {
@@ -80,6 +85,13 @@ namespace GIAODIEN
         {
             LoadQLXe();
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
 
        
         

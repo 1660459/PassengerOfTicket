@@ -128,7 +128,7 @@
             this.txtSoDangKy.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDangKy.Name = "txtSoDangKy";
             this.txtSoDangKy.Size = new System.Drawing.Size(399, 23);
-            this.txtSoDangKy.TabIndex = 11;
+            this.txtSoDangKy.TabIndex = 4;
             // 
             // label5
             // 
@@ -159,7 +159,7 @@
             this.txtTenXe.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenXe.Name = "txtTenXe";
             this.txtTenXe.Size = new System.Drawing.Size(399, 23);
-            this.txtTenXe.TabIndex = 8;
+            this.txtTenXe.TabIndex = 3;
             // 
             // label4
             // 
@@ -190,7 +190,7 @@
             this.txtLoaiXe.Margin = new System.Windows.Forms.Padding(4);
             this.txtLoaiXe.Name = "txtLoaiXe";
             this.txtLoaiXe.Size = new System.Drawing.Size(399, 23);
-            this.txtLoaiXe.TabIndex = 5;
+            this.txtLoaiXe.TabIndex = 2;
             // 
             // label3
             // 
@@ -222,7 +222,7 @@
             this.txtIDXe.MaxLength = 10;
             this.txtIDXe.Name = "txtIDXe";
             this.txtIDXe.Size = new System.Drawing.Size(399, 23);
-            this.txtIDXe.TabIndex = 2;
+            this.txtIDXe.TabIndex = 1;
             // 
             // label2
             // 

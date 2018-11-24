@@ -13,7 +13,21 @@ namespace DULIEU
     //thoigianchay int,
     //tram_id_tram1 int,
     //tram_id_tram int
-        string _id_tuyen;
+        string _id_tuyen, _tram_id_tram, _tram_id_tram1;
+
+        public string tram_id_tram1
+        {
+            get { return _tram_id_tram1; }
+            set { _tram_id_tram1 = value; }
+        }
+
+        public string tram_id_tram
+        {
+            get { return _tram_id_tram; }
+            set { _tram_id_tram = value; }
+        }
+
+       
 
         public string id_tuyen
         {
@@ -27,19 +41,7 @@ namespace DULIEU
             get { return _khoang_cach; }
             set { _khoang_cach = value; }
         }
-        int _thoigianchay, _tram_id_tram, _tram_id_tram1;
-
-        public int tram_id_tram1
-        {
-            get { return _tram_id_tram1; }
-            set { _tram_id_tram1 = value; }
-        }
-
-        public int tram_id_tram
-        {
-            get { return _tram_id_tram; }
-            set { _tram_id_tram = value; }
-        }
+        int _thoigianchay;
 
         public int thoigianchay
         {

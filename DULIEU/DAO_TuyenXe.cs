@@ -41,7 +41,8 @@ namespace DULIEU
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
                         new SqlParameter { ParameterName = "@id_tuyen", Value = cm.id_tuyen },
-                        new SqlParameter { ParameterName = "@khoangcach", Value = cm.khoang_cach },
+                        new SqlParameter { ParameterName = "@khoang_cach", Value = cm.khoang_cach },
+                        new SqlParameter { ParameterName = "@thoigianchay", Value = cm.thoigianchay },
                         new SqlParameter { ParameterName = "@tram_id_tram", Value = cm.tram_id_tram },
                         new SqlParameter { ParameterName = "@tram_id_tram1", Value = cm.tram_id_tram1 }
                         );
@@ -93,7 +94,8 @@ namespace DULIEU
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
                        new SqlParameter { ParameterName = "@id_tuyen", Value = cm.id_tuyen },
-                        new SqlParameter { ParameterName = "@khoangcach", Value = cm.khoang_cach },
+                        new SqlParameter { ParameterName = "@khoang_cach", Value = cm.khoang_cach },
+                        new SqlParameter { ParameterName = "@thoigianchay", Value = cm.thoigianchay },
                         new SqlParameter { ParameterName = "@tram_id_tram", Value = cm.tram_id_tram },
                         new SqlParameter { ParameterName = "@tram_id_tram1", Value = cm.tram_id_tram1 }
                          );

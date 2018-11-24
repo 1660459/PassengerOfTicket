@@ -105,7 +105,7 @@
             this.panel1.Controls.Add(this.btnGhe1);
             this.panel1.Controls.Add(this.btnGhe2);
             this.panel1.Location = new System.Drawing.Point(0, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(807, 580);
             this.panel1.TabIndex = 40;
@@ -146,7 +146,7 @@
             // btnGhe20
             // 
             this.btnGhe20.Location = new System.Drawing.Point(637, 505);
-            this.btnGhe20.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe20.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe20.Name = "btnGhe20";
             this.btnGhe20.Size = new System.Drawing.Size(167, 70);
             this.btnGhe20.TabIndex = 68;
@@ -156,7 +156,7 @@
             // btnGhe15
             // 
             this.btnGhe15.Location = new System.Drawing.Point(637, 430);
-            this.btnGhe15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe15.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe15.Name = "btnGhe15";
             this.btnGhe15.Size = new System.Drawing.Size(167, 68);
             this.btnGhe15.TabIndex = 67;
@@ -166,7 +166,7 @@
             // btnGhe6
             // 
             this.btnGhe6.Location = new System.Drawing.Point(637, 213);
-            this.btnGhe6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe6.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe6.Name = "btnGhe6";
             this.btnGhe6.Size = new System.Drawing.Size(167, 65);
             this.btnGhe6.TabIndex = 66;
@@ -176,7 +176,7 @@
             // btnGhe9
             // 
             this.btnGhe9.Location = new System.Drawing.Point(637, 286);
-            this.btnGhe9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe9.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe9.Name = "btnGhe9";
             this.btnGhe9.Size = new System.Drawing.Size(167, 63);
             this.btnGhe9.TabIndex = 65;
@@ -186,7 +186,7 @@
             // btnGhe12
             // 
             this.btnGhe12.Location = new System.Drawing.Point(637, 357);
-            this.btnGhe12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe12.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe12.Name = "btnGhe12";
             this.btnGhe12.Size = new System.Drawing.Size(167, 65);
             this.btnGhe12.TabIndex = 64;
@@ -196,7 +196,7 @@
             // btnGhe3
             // 
             this.btnGhe3.Location = new System.Drawing.Point(637, 139);
-            this.btnGhe3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe3.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe3.Name = "btnGhe3";
             this.btnGhe3.Size = new System.Drawing.Size(167, 66);
             this.btnGhe3.TabIndex = 63;
@@ -206,7 +206,7 @@
             // btnGhe18
             // 
             this.btnGhe18.Location = new System.Drawing.Point(323, 505);
-            this.btnGhe18.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe18.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe18.Name = "btnGhe18";
             this.btnGhe18.Size = new System.Drawing.Size(167, 70);
             this.btnGhe18.TabIndex = 62;
@@ -217,7 +217,7 @@
             // btnGhe19
             // 
             this.btnGhe19.Location = new System.Drawing.Point(484, 505);
-            this.btnGhe19.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe19.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe19.Name = "btnGhe19";
             this.btnGhe19.Size = new System.Drawing.Size(160, 70);
             this.btnGhe19.TabIndex = 61;
@@ -228,7 +228,7 @@
             // btnGhe17
             // 
             this.btnGhe17.Location = new System.Drawing.Point(160, 505);
-            this.btnGhe17.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe17.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe17.Name = "btnGhe17";
             this.btnGhe17.Size = new System.Drawing.Size(167, 70);
             this.btnGhe17.TabIndex = 60;
@@ -238,7 +238,7 @@
             // btnGhe16
             // 
             this.btnGhe16.Location = new System.Drawing.Point(1, 505);
-            this.btnGhe16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe16.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe16.Name = "btnGhe16";
             this.btnGhe16.Size = new System.Drawing.Size(160, 70);
             this.btnGhe16.TabIndex = 59;
@@ -248,7 +248,7 @@
             // btnGhe13
             // 
             this.btnGhe13.Location = new System.Drawing.Point(1, 433);
-            this.btnGhe13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe13.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe13.Name = "btnGhe13";
             this.btnGhe13.Size = new System.Drawing.Size(160, 68);
             this.btnGhe13.TabIndex = 51;
@@ -258,7 +258,7 @@
             // btnGhe10
             // 
             this.btnGhe10.Location = new System.Drawing.Point(1, 361);
-            this.btnGhe10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe10.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe10.Name = "btnGhe10";
             this.btnGhe10.Size = new System.Drawing.Size(160, 65);
             this.btnGhe10.TabIndex = 50;
@@ -268,7 +268,7 @@
             // btnGhe14
             // 
             this.btnGhe14.Location = new System.Drawing.Point(323, 430);
-            this.btnGhe14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe14.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe14.Name = "btnGhe14";
             this.btnGhe14.Size = new System.Drawing.Size(167, 68);
             this.btnGhe14.TabIndex = 49;
@@ -278,7 +278,7 @@
             // btnGhe4
             // 
             this.btnGhe4.Location = new System.Drawing.Point(1, 217);
-            this.btnGhe4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe4.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe4.Name = "btnGhe4";
             this.btnGhe4.Size = new System.Drawing.Size(160, 65);
             this.btnGhe4.TabIndex = 48;
@@ -288,7 +288,7 @@
             // btnGhe5
             // 
             this.btnGhe5.Location = new System.Drawing.Point(323, 213);
-            this.btnGhe5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe5.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe5.Name = "btnGhe5";
             this.btnGhe5.Size = new System.Drawing.Size(167, 65);
             this.btnGhe5.TabIndex = 47;
@@ -298,7 +298,7 @@
             // btnGhe7
             // 
             this.btnGhe7.Location = new System.Drawing.Point(1, 289);
-            this.btnGhe7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe7.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe7.Name = "btnGhe7";
             this.btnGhe7.Size = new System.Drawing.Size(160, 63);
             this.btnGhe7.TabIndex = 46;
@@ -308,7 +308,7 @@
             // btnGhe8
             // 
             this.btnGhe8.Location = new System.Drawing.Point(323, 286);
-            this.btnGhe8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe8.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe8.Name = "btnGhe8";
             this.btnGhe8.Size = new System.Drawing.Size(167, 63);
             this.btnGhe8.TabIndex = 45;
@@ -318,7 +318,7 @@
             // btnGhe11
             // 
             this.btnGhe11.Location = new System.Drawing.Point(323, 357);
-            this.btnGhe11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe11.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe11.Name = "btnGhe11";
             this.btnGhe11.Size = new System.Drawing.Size(167, 65);
             this.btnGhe11.TabIndex = 44;
@@ -328,7 +328,7 @@
             // btnGhe1
             // 
             this.btnGhe1.Location = new System.Drawing.Point(1, 143);
-            this.btnGhe1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe1.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe1.Name = "btnGhe1";
             this.btnGhe1.Size = new System.Drawing.Size(160, 66);
             this.btnGhe1.TabIndex = 43;
@@ -338,7 +338,7 @@
             // btnGhe2
             // 
             this.btnGhe2.Location = new System.Drawing.Point(323, 139);
-            this.btnGhe2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe2.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe2.Name = "btnGhe2";
             this.btnGhe2.Size = new System.Drawing.Size(167, 66);
             this.btnGhe2.TabIndex = 42;
@@ -370,7 +370,7 @@
             this.panel2.Controls.Add(this.btnGhe21);
             this.panel2.Controls.Add(this.btnGhe22);
             this.panel2.Location = new System.Drawing.Point(812, 1);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(822, 580);
             this.panel2.TabIndex = 41;
@@ -389,7 +389,7 @@
             // btnGhe40
             // 
             this.btnGhe40.Location = new System.Drawing.Point(637, 505);
-            this.btnGhe40.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe40.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe40.Name = "btnGhe40";
             this.btnGhe40.Size = new System.Drawing.Size(167, 70);
             this.btnGhe40.TabIndex = 68;
@@ -399,7 +399,7 @@
             // btnGhe35
             // 
             this.btnGhe35.Location = new System.Drawing.Point(637, 430);
-            this.btnGhe35.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe35.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe35.Name = "btnGhe35";
             this.btnGhe35.Size = new System.Drawing.Size(167, 68);
             this.btnGhe35.TabIndex = 67;
@@ -409,7 +409,7 @@
             // btnGhe26
             // 
             this.btnGhe26.Location = new System.Drawing.Point(637, 213);
-            this.btnGhe26.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe26.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe26.Name = "btnGhe26";
             this.btnGhe26.Size = new System.Drawing.Size(167, 65);
             this.btnGhe26.TabIndex = 66;
@@ -419,7 +419,7 @@
             // btnGhe29
             // 
             this.btnGhe29.Location = new System.Drawing.Point(637, 286);
-            this.btnGhe29.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe29.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe29.Name = "btnGhe29";
             this.btnGhe29.Size = new System.Drawing.Size(167, 63);
             this.btnGhe29.TabIndex = 65;
@@ -429,7 +429,7 @@
             // btnGhe32
             // 
             this.btnGhe32.Location = new System.Drawing.Point(637, 357);
-            this.btnGhe32.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe32.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe32.Name = "btnGhe32";
             this.btnGhe32.Size = new System.Drawing.Size(167, 65);
             this.btnGhe32.TabIndex = 64;
@@ -439,7 +439,7 @@
             // btnGhe23
             // 
             this.btnGhe23.Location = new System.Drawing.Point(637, 139);
-            this.btnGhe23.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe23.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe23.Name = "btnGhe23";
             this.btnGhe23.Size = new System.Drawing.Size(167, 66);
             this.btnGhe23.TabIndex = 63;
@@ -449,7 +449,7 @@
             // btnGhe38
             // 
             this.btnGhe38.Location = new System.Drawing.Point(323, 505);
-            this.btnGhe38.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe38.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe38.Name = "btnGhe38";
             this.btnGhe38.Size = new System.Drawing.Size(167, 70);
             this.btnGhe38.TabIndex = 62;
@@ -459,7 +459,7 @@
             // btnGhe39
             // 
             this.btnGhe39.Location = new System.Drawing.Point(484, 505);
-            this.btnGhe39.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe39.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe39.Name = "btnGhe39";
             this.btnGhe39.Size = new System.Drawing.Size(160, 70);
             this.btnGhe39.TabIndex = 61;
@@ -469,7 +469,7 @@
             // btnGhe37
             // 
             this.btnGhe37.Location = new System.Drawing.Point(160, 505);
-            this.btnGhe37.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe37.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe37.Name = "btnGhe37";
             this.btnGhe37.Size = new System.Drawing.Size(167, 70);
             this.btnGhe37.TabIndex = 60;
@@ -479,7 +479,7 @@
             // btnGhe36
             // 
             this.btnGhe36.Location = new System.Drawing.Point(1, 505);
-            this.btnGhe36.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe36.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe36.Name = "btnGhe36";
             this.btnGhe36.Size = new System.Drawing.Size(160, 70);
             this.btnGhe36.TabIndex = 59;
@@ -489,7 +489,7 @@
             // btnGhe33
             // 
             this.btnGhe33.Location = new System.Drawing.Point(1, 433);
-            this.btnGhe33.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe33.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe33.Name = "btnGhe33";
             this.btnGhe33.Size = new System.Drawing.Size(160, 68);
             this.btnGhe33.TabIndex = 51;
@@ -499,7 +499,7 @@
             // btnGhe30
             // 
             this.btnGhe30.Location = new System.Drawing.Point(1, 361);
-            this.btnGhe30.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe30.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe30.Name = "btnGhe30";
             this.btnGhe30.Size = new System.Drawing.Size(160, 65);
             this.btnGhe30.TabIndex = 50;
@@ -509,7 +509,7 @@
             // btnGhe34
             // 
             this.btnGhe34.Location = new System.Drawing.Point(323, 430);
-            this.btnGhe34.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe34.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe34.Name = "btnGhe34";
             this.btnGhe34.Size = new System.Drawing.Size(167, 68);
             this.btnGhe34.TabIndex = 49;
@@ -519,7 +519,7 @@
             // btnGhe24
             // 
             this.btnGhe24.Location = new System.Drawing.Point(1, 217);
-            this.btnGhe24.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe24.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe24.Name = "btnGhe24";
             this.btnGhe24.Size = new System.Drawing.Size(160, 65);
             this.btnGhe24.TabIndex = 48;
@@ -529,7 +529,7 @@
             // btnGhe25
             // 
             this.btnGhe25.Location = new System.Drawing.Point(323, 213);
-            this.btnGhe25.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe25.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe25.Name = "btnGhe25";
             this.btnGhe25.Size = new System.Drawing.Size(167, 65);
             this.btnGhe25.TabIndex = 47;
@@ -539,7 +539,7 @@
             // btnGhe27
             // 
             this.btnGhe27.Location = new System.Drawing.Point(1, 289);
-            this.btnGhe27.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe27.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe27.Name = "btnGhe27";
             this.btnGhe27.Size = new System.Drawing.Size(160, 63);
             this.btnGhe27.TabIndex = 46;
@@ -549,7 +549,7 @@
             // btnGhe28
             // 
             this.btnGhe28.Location = new System.Drawing.Point(323, 286);
-            this.btnGhe28.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe28.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe28.Name = "btnGhe28";
             this.btnGhe28.Size = new System.Drawing.Size(167, 63);
             this.btnGhe28.TabIndex = 45;
@@ -559,7 +559,7 @@
             // btnGhe31
             // 
             this.btnGhe31.Location = new System.Drawing.Point(323, 357);
-            this.btnGhe31.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe31.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe31.Name = "btnGhe31";
             this.btnGhe31.Size = new System.Drawing.Size(167, 65);
             this.btnGhe31.TabIndex = 44;
@@ -569,7 +569,7 @@
             // btnGhe21
             // 
             this.btnGhe21.Location = new System.Drawing.Point(1, 143);
-            this.btnGhe21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe21.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe21.Name = "btnGhe21";
             this.btnGhe21.Size = new System.Drawing.Size(160, 66);
             this.btnGhe21.TabIndex = 43;
@@ -579,7 +579,7 @@
             // btnGhe22
             // 
             this.btnGhe22.Location = new System.Drawing.Point(323, 139);
-            this.btnGhe22.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGhe22.Margin = new System.Windows.Forms.Padding(4);
             this.btnGhe22.Name = "btnGhe22";
             this.btnGhe22.Size = new System.Drawing.Size(167, 66);
             this.btnGhe22.TabIndex = 42;
@@ -590,10 +590,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1632, 588);
+            this.ClientSize = new System.Drawing.Size(1651, 587);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormGN";
             this.Text = "Chọn Ghế";
             this.panel1.ResumeLayout(false);
