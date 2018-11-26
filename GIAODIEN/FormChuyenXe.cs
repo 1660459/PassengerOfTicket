@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using XULY;
+using DULIEU;
 namespace GIAODIEN
 {
     public partial class FormChuyenXe : Form
@@ -17,45 +18,8 @@ namespace GIAODIEN
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel6_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
+       
 
         private void FormChuyenXe_Load(object sender, EventArgs e)
         {
@@ -70,6 +34,49 @@ namespace GIAODIEN
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLuuChuyenXe_Click(object sender, EventArgs e)
+        {
+            ChuyenXe cx = new ChuyenXe();
+            cx.id_chuyen = txtIDTuyen.Text;
+            cx.tuyen_id_tuyen = txtIDTuyen.Text;
+            cx.giokhoihanh = DtpChuyenXe.Value;
+            cx.ghichu = txtGhiChu.Text;
+            cx.xe_xeid = txtIDXe.Text;
+            cx.tai_xe_id_taixe = txtIDTaiXe.Text;
+            BUS_ChuyenXe chuyenx = new BUS_ChuyenXe();
+            if (txtIDXe.Enabled == true)
+            {
+                if (chuyenx.ThemChuyenXe(cx) == 1)
+                {
+                    FormQLChuyenXe qlCXe = new FormQLChuyenXe();
+                    qlCXe.LoadQLChuyenXe();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Không Thêm Được");
+                    return;
+                }
+            }
+            else
+            {
+                if (chuyenx.SuaChuyenXe(cx) == 1)
+                {
+                    txtIDTuyen.Enabled = true;
+                    FormQLChuyenXe qlCXe = new FormQLChuyenXe();
+                    qlCXe.LoadQLChuyenXe();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Không Sửa Được");
+                    return;
+                }
+            }
+            
+
         }
     }
 }

@@ -49,8 +49,22 @@ namespace GIAODIEN
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
-        {
-
+        { 
+            if (string.IsNullOrEmpty(IDDangChon))
+            {
+                MessageBox.Show("Click Vào Dòng muốn Xoá");
+                return;
+            }
+            BUS_TaiXe tx = new BUS_TaiXe();
+            if (tx.XoaTaiXe(IDDangChon) == 1)
+            {
+                MessageBox.Show("Xoa Thanh Cong");
+                LoadQLTX();
+            }
+            else
+            {
+                MessageBox.Show("Không Xoá Được");
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -62,9 +76,9 @@ namespace GIAODIEN
             }
 
             FormTaiXe ftx = new FormTaiXe();
-            //ftx.txtId.Text;
-            //ftx.txtId.Enabled = false;
-            //ftx.Show();
+            ftx.txtId.Text = IDDangChon;
+            ftx.txtId.Enabled = false;
+            ftx.Show();
 
             //LoadQLTX();
         }
@@ -72,6 +86,11 @@ namespace GIAODIEN
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void splitContainer1_Panel1_Click(object sender, EventArgs e)
+        {
+            LoadQLTX();
         }
 
        

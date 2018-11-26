@@ -89,7 +89,7 @@ namespace DULIEU
                 string strSQL = "sp_XoaChuyenXe";
                 dbConnect.Connect();
                 dbConnect.ExecuteNonQuery(CommandType.StoredProcedure, strSQL,
-                      new SqlParameter { ParameterName = "@id_tuyen", Value = idChuyen }
+                      new SqlParameter { ParameterName = "@id_chuyen", Value = idChuyen }
                        );
 
                 flag = 1;
