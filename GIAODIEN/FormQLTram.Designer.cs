@@ -32,15 +32,18 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
+            this.dgvDSTram = new System.Windows.Forms.DataGridView();
+            this.id_tram = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ten_tram = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dia_diem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTram)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +53,7 @@
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Controls.Add(this.button2);
-            this.panel4.Controls.Add(this.dataGridView4);
+            this.panel4.Controls.Add(this.dgvDSTram);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(3, 5);
             this.panel4.Name = "panel4";
@@ -80,14 +83,46 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataGridView4
+            // dgvDSTram
             // 
-            this.dataGridView4.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(-1, 54);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(1101, 382);
-            this.dataGridView4.TabIndex = 1;
+            this.dgvDSTram.AllowUserToAddRows = false;
+            this.dgvDSTram.AllowUserToDeleteRows = false;
+            this.dgvDSTram.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDSTram.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvDSTram.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSTram.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_tram,
+            this.ten_tram,
+            this.dia_diem});
+            this.dgvDSTram.Location = new System.Drawing.Point(3, 54);
+            this.dgvDSTram.Name = "dgvDSTram";
+            this.dgvDSTram.ReadOnly = true;
+            this.dgvDSTram.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDSTram.Size = new System.Drawing.Size(1089, 290);
+            this.dgvDSTram.TabIndex = 1;
+            this.dgvDSTram.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTram_CellContentClick);
+            this.dgvDSTram.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTram_CellContentClick);
+            // 
+            // id_tram
+            // 
+            this.id_tram.DataPropertyName = "id_tram";
+            this.id_tram.HeaderText = "Id Trạm";
+            this.id_tram.Name = "id_tram";
+            this.id_tram.ReadOnly = true;
+            // 
+            // ten_tram
+            // 
+            this.ten_tram.DataPropertyName = "ten_tram";
+            this.ten_tram.HeaderText = "Tên trạm";
+            this.ten_tram.Name = "ten_tram";
+            this.ten_tram.ReadOnly = true;
+            // 
+            // dia_diem
+            // 
+            this.dia_diem.DataPropertyName = "dia_diem";
+            this.dia_diem.HeaderText = "Địa điểm";
+            this.dia_diem.Name = "dia_diem";
+            this.dia_diem.ReadOnly = true;
             // 
             // label4
             // 
@@ -98,6 +133,7 @@
             this.label4.Size = new System.Drawing.Size(239, 29);
             this.label4.TabIndex = 0;
             this.label4.Text = "DANH SÁCH TRẠM";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button1
             // 
@@ -109,17 +145,19 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "XÓA";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button11
+            // btnSua
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.Red;
-            this.button11.Location = new System.Drawing.Point(692, 17);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(195, 52);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "SỬA";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.Red;
+            this.btnSua.Location = new System.Drawing.Point(692, 17);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(195, 52);
+            this.btnSua.TabIndex = 9;
+            this.btnSua.Text = "SỬA";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // button12
             // 
@@ -131,13 +169,13 @@
             this.button12.TabIndex = 8;
             this.button12.Text = "THÊM";
             this.button12.UseVisualStyleBackColor = true;
-            this.button12.Click += new System.EventHandler(this.button12_Click);
+            this.button12.Click += new System.EventHandler(this.ThemTram);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button11);
+            this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(3, 349);
@@ -158,10 +196,11 @@
             this.Name = "FormQLTram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQLTram";
+            this.Load += new System.EventHandler(this.FormQLTram_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSTram)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -170,13 +209,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView dgvDSTram;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_tram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ten_tram;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dia_diem;
     }
 }

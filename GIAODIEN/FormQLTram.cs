@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using XULY;
 
 namespace GIAODIEN
 {
@@ -21,11 +22,79 @@ namespace GIAODIEN
         {
             this.Close();
         }
+        public void LoadQLTram()
+        {
+            BUS_Tram tram = new BUS_Tram();
+            dgvDSTram.DataSource = tram.LoadTram();
+            
+        }
+        //private void button12_Click(object sender, EventArgs e)
+        //{
+        //    FormTram frm = new FormTram();
+        //    frm.Show();
+        //}
+        static string IDDangChon = null;
+        private void dgvDSTram_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int num;
+            num = e.RowIndex;
+            IDDangChon = dgvDSTram.Rows[num].Cells[0].Value.ToString();
+        }
 
-        private void button12_Click(object sender, EventArgs e)
+
+        
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+             if (string.IsNullOrEmpty(IDDangChon))
+            {
+                MessageBox.Show("Click Vào Dòng Muốn Sửa");
+                return;
+            }
+            FormTram frm5 = new FormTram();
+         
+            frm5.txtIDTram.Text = IDDangChon;
+            frm5.txtIDTram.Enabled = false;
+            frm5.Show();
+
+            LoadQLTram();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(IDDangChon))
+            {
+                MessageBox.Show("Click Vào Dòng muốn Xoá");
+                return;
+            }
+            BUS_Tram kh = new BUS_Tram();
+            if (kh.XoaTram(IDDangChon) == 1)
+            {
+                MessageBox.Show("Xoa Thanh Cong");
+                LoadQLTram();
+            }
+            else
+            {
+                MessageBox.Show("Không Xoá Được");
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            LoadQLTram();
+        }
+
+        private void ThemTram(object sender, EventArgs e)
         {
             FormTram frm = new FormTram();
             frm.Show();
+
         }
+
+        private void FormQLTram_Load(object sender, EventArgs e)
+        {
+            LoadQLTram();
+        }
+
     }
 }

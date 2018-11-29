@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DULIEU;
+using XULY;
 namespace GIAODIEN
 {
     public partial class FormTram : Form
@@ -23,5 +25,52 @@ namespace GIAODIEN
         {
             this.Close();
         }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            Tram tempTram = new Tram();
+            tempTram.id_tram = txtIDTram.Text;
+            tempTram.ten_tram = txtTenTram.Text;
+            tempTram.dia_diem = txtDiaDiem.Text;
+            BUS_Tram tram = new BUS_Tram();
+           
+            if (txtIDTram.Enabled == true)
+            {
+                if (tram.ThemTram(tempTram) == 1)
+                {
+                    FormQLTram qlTram = new FormQLTram();
+                    
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Không Thêm Được");
+                    return;
+                }
+            }
+            else
+            {
+                if (tram.SuaTram(tempTram) == 1)
+                {
+
+                    FormQLTram qlTram = new FormQLTram();
+                    qlTram.LoadQLTram();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Không Sửa Được");
+                    return;
+                }
+            }
+            txtIDTram.Enabled = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+       
     }
 }

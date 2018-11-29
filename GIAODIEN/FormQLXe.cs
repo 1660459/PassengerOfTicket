@@ -18,11 +18,11 @@ namespace GIAODIEN
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormXe frm = new FormXe();
-            frm.Show();            
-        }
+        //private void button2_Click(object sender, EventArgs e)
+        //{
+        //    FormXe frm = new FormXe();
+        //    frm.Show();            
+        //}
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -89,6 +89,12 @@ namespace GIAODIEN
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ThemChuyenXe(object sender, EventArgs e)
+        {
+            FormXe frm = new FormXe();
+              frm.Show();
         }
 
         

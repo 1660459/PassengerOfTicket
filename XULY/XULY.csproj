@@ -45,6 +45,7 @@
     <Compile Include="BUS_KhachHang.cs" />
     <Compile Include="BUS_QuanLiVeXe.cs" />
     <Compile Include="BUS_TaiXe.cs" />
+    <Compile Include="BUS_Tram.cs" />
     <Compile Include="BUS_TuyenXe.cs" />
     <Compile Include="BUS_Xe.cs" />
     <Compile Include="Program.cs" />

@@ -158,6 +158,8 @@ go
 
 --GHẾ
 
+
+-- Tram 
 create proc sp_LoadTram 
 as
 begin 
@@ -175,28 +177,21 @@ begin
 end 
 go
 
-create proc sp_XoaTram @id_tram varchar(10)
+Alter proc sp_XoaTram
+ @id_tram varchar(10)
 as
 begin 
 	if(not exists (select * from Tram where id_tram = @id_tram))
 		return 0
 	else 
 	begin
+			
+
 			ALTER TABLE Tuyen NOCHECK CONSTRAINT tuyen_tram_fk
 			DELETE FROM Tram
 			WHERE id_tram = @id_tram
 			ALTER TABLE Tuyen CHECK CONSTRAINT tuyen_tram_fk
-
-			ALTER TABLE Tuyen NOCHECK CONSTRAINT chuyen_tram2_fk
-			DELETE FROM Tram
-			WHERE id_tram = @id_tram
-			ALTER TABLE Tuyen CHECK CONSTRAINT tuyen_tram_fk
-
-			ALTER TABLE Tram_trung_gian NOCHECK CONSTRAINT chuyen_tram2_fk
-			DELETE FROM Tram
-			WHERE id_tram = @id_tram
-			ALTER TABLE Tram_trung_gian CHECK CONSTRAINT chuyen_tram2_fk
-
+			
 			return 1
 	end
 end 
@@ -233,6 +228,7 @@ begin
 end
 go
 
+-- Xe
 create proc sp_LoadXe
 as
 begin
