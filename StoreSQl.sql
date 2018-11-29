@@ -159,7 +159,7 @@ go
 --GHẾ
 
 
--- Tram 
+-- TRẠM
 create proc sp_LoadTram 
 as
 begin 
@@ -167,6 +167,7 @@ begin
 end
 go
 
+-- Thêm trạm
 create proc sp_ThemTram 
 	@id_tram varchar(10),@ten_tram nvarchar(4000),@dia_diem nvarchar(4000)
 as
@@ -177,7 +178,7 @@ begin
 end 
 go
 
-Alter proc sp_XoaTram
+create proc sp_XoaTram
  @id_tram varchar(10)
 as
 begin 
@@ -185,8 +186,6 @@ begin
 		return 0
 	else 
 	begin
-			
-
 			ALTER TABLE Tuyen NOCHECK CONSTRAINT tuyen_tram_fk
 			DELETE FROM Tram
 			WHERE id_tram = @id_tram

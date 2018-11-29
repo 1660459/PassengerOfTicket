@@ -33,13 +33,13 @@ namespace GIAODIEN
             tempTram.ten_tram = txtTenTram.Text;
             tempTram.dia_diem = txtDiaDiem.Text;
             BUS_Tram tram = new BUS_Tram();
-           
+
             if (txtIDTram.Enabled == true)
             {
                 if (tram.ThemTram(tempTram) == 1)
                 {
                     FormQLTram qlTram = new FormQLTram();
-                    
+
                     this.Close();
                 }
                 else

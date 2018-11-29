@@ -39,6 +39,7 @@ namespace GIAODIEN
             int num;
             num = e.RowIndex;
             IDDangChon = dgvDSTram.Rows[num].Cells[0].Value.ToString();
+
         }
 
 
