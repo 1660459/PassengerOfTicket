@@ -47,49 +47,101 @@ namespace GIAODIEN
         {
             this.Close();
         }
-        void KTRONG()
+        bool KTRONG()
         {
-
+            if (string.IsNullOrEmpty(txtIDKhachHang.Text))
+            {
+                MessageBox.Show("hãy điền vào ID khách hàng ");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtHoTenKhachHang.Text))
+            {
+                MessageBox.Show("hãy điền vào họ tên khách hàng");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbLoaiKH.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy Chọn Loại Khách Hàng");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtSDTKH.Text))
+            {
+                MessageBox.Show("hãy điền vào số điện thoại khách");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtEmailKH.Text))
+            {
+                MessageBox.Show("hãy điền vào email khách hàng");
+                return false;
+            }
+            return true;
         }
+        //public string MaKHTuTang()
+        //{
+        //    int dem = 0;
+        //    string temp = "KH01";
+        //    frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
+        //    dem = qlkh.dgvQuanLyKhachHang.RowCount;
+        //    if (dem == 0)
+        //    {
+        //        return temp;
+        //    }
+        //    else
+        //    {
+        //        temp = qlkh.dgvQuanLyKhachHang.Rows[dem - 1].Cells[0].Value.ToString();
+        //        int p = int.Parse(temp.Substring(2)) + 1;
+        //        temp = "KH" + p.ToString("00");
+        //        return temp;
+        //    }
+        //}
         private void btnLuuTTKH_Click(object sender, EventArgs e)
         {
-            BUS_KhachHang kh = new BUS_KhachHang();
-            KhachHang khach = new KhachHang();
-            khach.id_khachhang = txtIDKhachHang.Text;
-            khach.hoten = txtHoTenKhachHang.Text;
-            khach.email = txtEmailKH.Text;
-            khach.dienthoai = txtSDTKH.Text;
-            khach.loai = int.Parse(cbLoaiKH.SelectedItem.ToString());
-            if (txtIDKhachHang.Enabled == true)
+            if (KTRONG() == false)
             {
-                if (kh.ThemKhachHang(khach) == 1)
-                {
-                    this.Close();
-                    frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
-                    qlkh.LoadQLKhachHang();
-                }
-                else
-                {
-                    MessageBox.Show("Không Thêm Được");
-                    return;
-                }
+                return;
             }
             else
             {
-                if (kh.SuaKhachHang(khach) == 1)
+                BUS_KhachHang kh = new BUS_KhachHang();
+                KhachHang khach = new KhachHang();
+                khach.id_khachhang = txtIDKhachHang.Text;
+                khach.hoten = txtHoTenKhachHang.Text;
+                khach.email = txtEmailKH.Text;
+                khach.dienthoai = txtSDTKH.Text;
+                khach.loai = int.Parse(cbLoaiKH.SelectedItem.ToString());
+                if (txtIDKhachHang.Enabled == true)
                 {
-                    this.Close();
-                    frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
-                    qlkh.LoadQLKhachHang();
+                    if (kh.ThemKhachHang(khach) == 1)
+                    {
+                        this.Close();
+                        frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
+                        qlkh.LoadQLKhachHang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không Thêm Được");
+                        return;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Không Sửa Được");
-                    return;
+                    if (kh.SuaKhachHang(khach) == 1)
+                    {
+                        this.Close();
+                        frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
+                        qlkh.LoadQLKhachHang();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không Sửa Được");
+                        return;
+                    }
                 }
+                txtIDKhachHang.Enabled = true;
             }
-            txtIDKhachHang.Enabled = true;
         }
+
+        
 
        
     }

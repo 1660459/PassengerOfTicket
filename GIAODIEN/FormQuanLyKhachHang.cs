@@ -16,12 +16,30 @@ namespace GIAODIEN
         {
             InitializeComponent();
         }
-
+        public string MaKHTuTang()
+        {
+            int dem = 0;
+            string temp = "KH01";
+            dem = dgvQuanLyKhachHang.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                temp = dgvQuanLyKhachHang.Rows[dem - 1].Cells[0].Value.ToString();
+                int p = int.Parse(temp.Substring(2)) + 1;
+                temp = "KH" + p.ToString("00");
+                return temp;
+            }
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             FormTTKhachHang frm4 = new FormTTKhachHang();
+            frm4.txtIDKhachHang.Text = MaKHTuTang();
             frm4.Show();
             LoadQLKhachHang();
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -73,6 +91,13 @@ namespace GIAODIEN
             frm4.Show();
             LoadQLKhachHang();
         }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            LoadQLKhachHang();
+        }
+
+        
 
         
 

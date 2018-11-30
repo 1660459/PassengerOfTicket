@@ -87,6 +87,7 @@
             this.btnThoatTTKH.TabIndex = 16;
             this.btnThoatTTKH.Text = "THOÁT";
             this.btnThoatTTKH.UseVisualStyleBackColor = true;
+            this.btnThoatTTKH.UseWaitCursor = true;
             this.btnThoatTTKH.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnLuuTTKH
@@ -100,6 +101,7 @@
             this.btnLuuTTKH.TabIndex = 15;
             this.btnLuuTTKH.Text = "LƯU";
             this.btnLuuTTKH.UseVisualStyleBackColor = true;
+            this.btnLuuTTKH.UseWaitCursor = true;
             this.btnLuuTTKH.Click += new System.EventHandler(this.btnLuuTTKH_Click);
             // 
             // cbLoaiKH
@@ -115,6 +117,7 @@
             this.cbLoaiKH.Name = "cbLoaiKH";
             this.cbLoaiKH.Size = new System.Drawing.Size(185, 33);
             this.cbLoaiKH.TabIndex = 5;
+            this.cbLoaiKH.UseWaitCursor = true;
             // 
             // label6
             // 
@@ -126,6 +129,7 @@
             this.label6.Size = new System.Drawing.Size(194, 25);
             this.label6.TabIndex = 13;
             this.label6.Text = "LOAI_KhachHang:";
+            this.label6.UseWaitCursor = true;
             // 
             // panel5
             // 
@@ -135,6 +139,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(403, 1);
             this.panel5.TabIndex = 12;
+            this.panel5.UseWaitCursor = true;
             // 
             // txtSDTKH
             // 
@@ -145,6 +150,7 @@
             this.txtSDTKH.Name = "txtSDTKH";
             this.txtSDTKH.Size = new System.Drawing.Size(403, 23);
             this.txtSDTKH.TabIndex = 4;
+            this.txtSDTKH.UseWaitCursor = true;
             // 
             // label5
             // 
@@ -156,6 +162,7 @@
             this.label5.Size = new System.Drawing.Size(188, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "SĐT_KhachHang:";
+            this.label5.UseWaitCursor = true;
             // 
             // panel4
             // 
@@ -165,6 +172,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(403, 1);
             this.panel4.TabIndex = 9;
+            this.panel4.UseWaitCursor = true;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // txtEmailKH
@@ -176,6 +184,7 @@
             this.txtEmailKH.Name = "txtEmailKH";
             this.txtEmailKH.Size = new System.Drawing.Size(403, 23);
             this.txtEmailKH.TabIndex = 3;
+            this.txtEmailKH.UseWaitCursor = true;
             this.txtEmailKH.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
@@ -188,6 +197,7 @@
             this.label4.Size = new System.Drawing.Size(197, 25);
             this.label4.TabIndex = 7;
             this.label4.Text = "Email_KhachHang:";
+            this.label4.UseWaitCursor = true;
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel3
@@ -198,6 +208,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(403, 1);
             this.panel3.TabIndex = 6;
+            this.panel3.UseWaitCursor = true;
             // 
             // txtHoTenKhachHang
             // 
@@ -208,6 +219,7 @@
             this.txtHoTenKhachHang.Name = "txtHoTenKhachHang";
             this.txtHoTenKhachHang.Size = new System.Drawing.Size(403, 23);
             this.txtHoTenKhachHang.TabIndex = 2;
+            this.txtHoTenKhachHang.UseWaitCursor = true;
             // 
             // label3
             // 
@@ -219,6 +231,7 @@
             this.label3.Size = new System.Drawing.Size(209, 25);
             this.label3.TabIndex = 4;
             this.label3.Text = "HoTen_KhachHang:";
+            this.label3.UseWaitCursor = true;
             // 
             // panel2
             // 
@@ -228,9 +241,11 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(403, 1);
             this.panel2.TabIndex = 3;
+            this.panel2.UseWaitCursor = true;
             // 
             // txtIDKhachHang
             // 
+            this.txtIDKhachHang.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.txtIDKhachHang.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtIDKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDKhachHang.Location = new System.Drawing.Point(261, 154);
@@ -250,6 +265,7 @@
             this.label2.Size = new System.Drawing.Size(165, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "ID_KhachHang:";
+            this.label2.UseWaitCursor = true;
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
@@ -265,6 +281,7 @@
             this.label1.Size = new System.Drawing.Size(465, 41);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN KHÁCH HÀNG";
+            this.label1.UseWaitCursor = true;
             // 
             // FormTTKhachHang
             // 
