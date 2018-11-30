@@ -29,45 +29,87 @@ namespace GIAODIEN
         {
             this.Close();
         }
+        bool KTRONG()
+        {
+            if (string.IsNullOrEmpty(txtIDXe.Text))
+            {
+                MessageBox.Show("hãy điền vào ID xe ");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtTenXe.Text))
+            {
+                MessageBox.Show("hãy điền vào tên xe");
+                return false;
+            }
 
+            if (string.IsNullOrEmpty(txtSoDangKy.Text))
+            {
+                MessageBox.Show("hãy điền vào số đăng ký");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbLoaiXe.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy chọn loại xe");
+                return false;
+            }
+            return true;
+        }
         private void btnThemXe_Click(object sender, EventArgs e)
         {
-            Xe tempXe = new Xe();
-            tempXe.xe_id = txtIDXe.Text;
-            tempXe.ten_xe = txtTenXe.Text;
-            tempXe.so_dang_ky = txtSoDangKy.Text;
-            tempXe.loaixe_id_loaixe = txtLoaiXe.Text;
-            BUS_Xe xe = new BUS_Xe();
-            if (txtIDXe.Enabled == true)
+            if (KTRONG() == false)
             {
-                if (xe.ThemXe(tempXe) == 1)
-                {
-                    FormQLXe qlXe = new FormQLXe();
-                    qlXe.LoadQLXe();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Không Thêm Được");
-                    return;
-                }
+                return;
             }
             else
             {
-                if (xe.SuaXe(tempXe) == 1)
+                Xe tempXe = new Xe();
+                tempXe.xe_id = txtIDXe.Text;
+                tempXe.ten_xe = txtTenXe.Text;
+                tempXe.so_dang_ky = txtSoDangKy.Text;
+                tempXe.loaixe_id_loaixe = cbLoaiXe.SelectedItem.ToString();
+                BUS_Xe xe = new BUS_Xe();
+                if (txtIDXe.Enabled == true)
                 {
-
-                    FormQLXe qlXe = new FormQLXe();
-                    qlXe.LoadQLXe();
-                    this.Close();
+                    if (xe.ThemXe(tempXe) == 1)
+                    {
+                        FormQLXe qlXe = new FormQLXe();
+                        qlXe.LoadQLXe();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không Thêm Được");
+                        return;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Không Sửa Được");
-                    return;
+                    if (xe.SuaXe(tempXe) == 1)
+                    {
+
+                        FormQLXe qlXe = new FormQLXe();
+                        qlXe.LoadQLXe();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không Sửa Được");
+                        return;
+                    }
                 }
+                txtIDXe.Enabled = true;
             }
-            txtIDXe.Enabled = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormXe_Load(object sender, EventArgs e)
+        {
+            BUS_Xe xe = new BUS_Xe();
+            cbLoaiXe.DataSource = xe.LoadLoaiXe();
         }
     }
 }

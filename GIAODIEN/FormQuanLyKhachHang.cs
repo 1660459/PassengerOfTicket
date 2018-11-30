@@ -38,7 +38,7 @@ namespace GIAODIEN
             FormTTKhachHang frm4 = new FormTTKhachHang();
             frm4.txtIDKhachHang.Text = MaKHTuTang();
             frm4.Show();
-            LoadQLKhachHang();
+            
 
         }
 

@@ -90,11 +90,33 @@ namespace GIAODIEN
         {
             this.Close();
         }
-
+        public string MaXeTuTang()
+        {
+            int dem = 0;
+            string temp = "KH01";
+            dem = dgvDanhSachXe.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                temp = dgvDanhSachXe.Rows[dem - 1].Cells[0].Value.ToString();
+                int p = int.Parse(temp.Substring(1)) + 1;
+                temp = "X" + p.ToString("00");
+                return temp;
+            }
+        }
         private void ThemChuyenXe(object sender, EventArgs e)
         {
             FormXe frm = new FormXe();
-              frm.Show();
+            frm.txtIDXe.Text = MaXeTuTang();
+            frm.Show();
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            LoadQLXe();
         }
 
         

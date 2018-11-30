@@ -37,5 +37,18 @@ namespace XULY
             kq = kh.XoaXe(a);
             return kq;
         }
+
+        public List<string> LoadLoaiXe()
+        {
+            DAO_Xe xe = new DAO_Xe();
+            DataTable dt = new DataTable();
+            dt = xe.LoadLoaiXe();
+            List<string> list = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
     }
 }

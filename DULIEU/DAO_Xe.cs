@@ -31,6 +31,27 @@ namespace DULIEU
             }
             return dt;
         }
+
+        public DataTable LoadLoaiXe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadLoaiXe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
         public int ThemXe(Xe cm)
         {
             int flag = 0;

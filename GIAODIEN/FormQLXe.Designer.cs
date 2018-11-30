@@ -58,19 +58,20 @@
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.dgvDanhSachXe);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(4, 5);
+            this.panel3.Location = new System.Drawing.Point(5, 6);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1038, 344);
+            this.panel3.Size = new System.Drawing.Size(1383, 423);
             this.panel3.TabIndex = 5;
             this.panel3.Click += new System.EventHandler(this.panel3_Click);
             // 
             // button2
             // 
             this.button2.ForeColor = System.Drawing.Color.Salmon;
-            this.button2.Location = new System.Drawing.Point(1006, 5);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(1341, 6);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(28, 29);
+            this.button2.Size = new System.Drawing.Size(37, 36);
             this.button2.TabIndex = 5;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = true;
@@ -79,9 +80,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(290, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(387, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 56);
+            this.pictureBox1.Size = new System.Drawing.Size(112, 69);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -91,9 +93,10 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(1054, 3);
+            this.button1.Location = new System.Drawing.Point(1405, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 23);
+            this.button1.Size = new System.Drawing.Size(44, 28);
             this.button1.TabIndex = 3;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -111,11 +114,12 @@
             this.ten_xe,
             this.so_dang_ky,
             this.loaixe_id_loaixe});
-            this.dgvDanhSachXe.Location = new System.Drawing.Point(-1, 58);
+            this.dgvDanhSachXe.Location = new System.Drawing.Point(-1, 71);
+            this.dgvDanhSachXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDanhSachXe.Name = "dgvDanhSachXe";
             this.dgvDanhSachXe.ReadOnly = true;
             this.dgvDanhSachXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSachXe.Size = new System.Drawing.Size(1038, 285);
+            this.dgvDanhSachXe.Size = new System.Drawing.Size(1384, 351);
             this.dgvDanhSachXe.TabIndex = 1;
             this.dgvDanhSachXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachXe_CellClick);
             // 
@@ -151,9 +155,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(367, 15);
+            this.label3.Location = new System.Drawing.Point(489, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(261, 29);
+            this.label3.Size = new System.Drawing.Size(327, 36);
             this.label3.TabIndex = 0;
             this.label3.Text = "DANH SÁCH CÁC XE";
             // 
@@ -161,9 +166,10 @@
             // 
             this.btnXoaDSXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaDSXe.ForeColor = System.Drawing.Color.Red;
-            this.btnXoaDSXe.Location = new System.Drawing.Point(454, 20);
+            this.btnXoaDSXe.Location = new System.Drawing.Point(605, 25);
+            this.btnXoaDSXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoaDSXe.Name = "btnXoaDSXe";
-            this.btnXoaDSXe.Size = new System.Drawing.Size(195, 39);
+            this.btnXoaDSXe.Size = new System.Drawing.Size(260, 48);
             this.btnXoaDSXe.TabIndex = 10;
             this.btnXoaDSXe.Text = "XÓA";
             this.btnXoaDSXe.UseVisualStyleBackColor = true;
@@ -173,9 +179,10 @@
             // 
             this.btnSuaDSXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaDSXe.ForeColor = System.Drawing.Color.Red;
-            this.btnSuaDSXe.Location = new System.Drawing.Point(713, 20);
+            this.btnSuaDSXe.Location = new System.Drawing.Point(951, 25);
+            this.btnSuaDSXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSuaDSXe.Name = "btnSuaDSXe";
-            this.btnSuaDSXe.Size = new System.Drawing.Size(195, 39);
+            this.btnSuaDSXe.Size = new System.Drawing.Size(260, 48);
             this.btnSuaDSXe.TabIndex = 9;
             this.btnSuaDSXe.Text = "SỬA";
             this.btnSuaDSXe.UseVisualStyleBackColor = true;
@@ -185,9 +192,10 @@
             // 
             this.btnThemDSXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemDSXe.ForeColor = System.Drawing.Color.Red;
-            this.btnThemDSXe.Location = new System.Drawing.Point(205, 20);
+            this.btnThemDSXe.Location = new System.Drawing.Point(273, 25);
+            this.btnThemDSXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThemDSXe.Name = "btnThemDSXe";
-            this.btnThemDSXe.Size = new System.Drawing.Size(178, 39);
+            this.btnThemDSXe.Size = new System.Drawing.Size(237, 48);
             this.btnThemDSXe.TabIndex = 8;
             this.btnThemDSXe.Text = "THÊM";
             this.btnThemDSXe.UseVisualStyleBackColor = true;
@@ -200,20 +208,23 @@
             this.panel1.Controls.Add(this.btnSuaDSXe);
             this.panel1.Controls.Add(this.btnThemDSXe);
             this.panel1.Controls.Add(this.btnXoaDSXe);
-            this.panel1.Location = new System.Drawing.Point(4, 351);
+            this.panel1.Location = new System.Drawing.Point(5, 432);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1038, 91);
+            this.panel1.Size = new System.Drawing.Size(1383, 112);
             this.panel1.TabIndex = 6;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // FormQLXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(1050, 448);
+            this.ClientSize = new System.Drawing.Size(1400, 551);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormQLXe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQLXe";

@@ -38,13 +38,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtTenXe = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txtLoaiXe = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txtIDXe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.cbLoaiXe = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -63,6 +63,8 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.cbLoaiXe);
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.btnThemXe);
             this.panel2.Controls.Add(this.panel6);
@@ -71,8 +73,6 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.txtTenXe);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.txtLoaiXe);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.txtIDXe);
@@ -83,6 +83,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(823, 566);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // button2
             // 
@@ -172,26 +173,6 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "TÊN XE:";
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(243, 167);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(414, 1);
-            this.panel3.TabIndex = 6;
-            // 
-            // txtLoaiXe
-            // 
-            this.txtLoaiXe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLoaiXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLoaiXe.Location = new System.Drawing.Point(259, 139);
-            this.txtLoaiXe.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLoaiXe.Name = "txtLoaiXe";
-            this.txtLoaiXe.Size = new System.Drawing.Size(399, 23);
-            this.txtLoaiXe.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -246,6 +227,24 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN  XE";
             // 
+            // cbLoaiXe
+            // 
+            this.cbLoaiXe.FormattingEnabled = true;
+            this.cbLoaiXe.Location = new System.Drawing.Point(245, 145);
+            this.cbLoaiXe.Name = "cbLoaiXe";
+            this.cbLoaiXe.Size = new System.Drawing.Size(255, 24);
+            this.cbLoaiXe.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Minion Pro", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(530, 129);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 60);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "LX01 :  30 Chỗ\r\nLX02:  45 Chỗ \r\nLX03 : Giường Nằm";
+            // 
             // FormXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,6 +256,7 @@
             this.Name = "FormXe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form5Xecs";
+            this.Load += new System.EventHandler(this.FormXe_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -272,7 +272,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label2;
@@ -281,7 +280,8 @@
         private System.Windows.Forms.Button btnThemXe;
         internal System.Windows.Forms.TextBox txtSoDangKy;
         internal System.Windows.Forms.TextBox txtTenXe;
-        internal System.Windows.Forms.TextBox txtLoaiXe;
         internal System.Windows.Forms.TextBox txtIDXe;
+        private System.Windows.Forms.ComboBox cbLoaiXe;
+        private System.Windows.Forms.Label label6;
     }
 }
