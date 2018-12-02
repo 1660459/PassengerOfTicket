@@ -31,6 +31,26 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable IDKhachHang()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_IDKhachHang";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
         public int AddKhachHang(KhachHang cm)
         {
             int flag = 0;

@@ -6,7 +6,12 @@ begin
 	select* from KhachHang
 end
 go
-
+create proc sp_IDKhachHang
+as
+begin 
+	select id_khachhang from KhachHang
+end
+go
 create proc sp_ThemKhachHang 
 	@id_khachhang varchar(10), @hoten nvarchar(4000), @dienthoai varchar(4000), @email varchar(4000),@loai int
 as
@@ -58,7 +63,12 @@ begin
 	select* from Chuyen
 end
 go
-
+create proc sp_LoadIDChuyenXe 
+as
+begin 
+	select id_chuyen from Chuyen
+end
+go
 create proc sp_ThemChuyenXe 
 	@id_chuyen varchar(10), @tuyen_id_tuyen varchar(10),@giokhoihanh datetime,@ghichu nvarchar(4000),@xe_xeid varchar(10),@tai_xe_id_taixe varchar(10)
 as
@@ -85,8 +95,8 @@ begin
 end 
 go
 
-create proc sp_SuaChuyenXe
-	@id_chuyen varchar(10), @tuyen_id_tuyen varchar(10),@giokhoihanh datetime,@ghichu nvarchar(4000),@xe_xeid varchar(10),@tai_xe_id_taixe varchar(10)
+alter proc sp_SuaChuyenXe
+@id_chuyen varchar(10), @tuyen_id_tuyen varchar(10),@giokhoihanh datetime,@xe_xeid varchar(10),@ghichu nvarchar(4000),@tai_xe_id_taixe varchar(10)
 as
 begin 
 	if(not exists (select * from Chuyen where id_chuyen = @id_chuyen))
@@ -113,6 +123,12 @@ begin
 end
 go
 
+create proc sp_IDTaiXe 
+as
+begin 
+	select id_taixe from Tai_Xe
+end
+go
 alter proc sp_ThemTaiXe 
 	@id_taixe varchar(10), @tentaixe nvarchar(100),@banglai nvarchar(100)
 as
@@ -167,6 +183,12 @@ begin
 end
 go
 
+create proc sp_LoadIDTram 
+as
+begin 
+	select id_tram from Tram
+end
+go
 -- Thêm trạm
 create proc sp_ThemTram 
 	@id_tram varchar(10),@ten_tram nvarchar(4000),@dia_diem nvarchar(4000)
@@ -235,6 +257,12 @@ begin
 end
 go
 
+create proc sp_IDXe
+as
+begin
+	Select xe_id From Xe
+end
+go
 create proc ThemXe 
 @xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000)
 as
@@ -288,12 +316,22 @@ begin
 end
 go
 
+create proc sp_LoadLoaiXe
+as
+	Select id_loaixe From LoaiXe
+go
+----Tuyen Xe
 create proc sp_LoadTuyenXe
 as
 	Select * From Tuyen
 
 go
 
+create proc sp_IDTuyen
+as
+	Select id_tuyen From Tuyen
+
+go
 alter proc sp_XoaTuyenXe
 @id_tuyen varchar(10)
 as

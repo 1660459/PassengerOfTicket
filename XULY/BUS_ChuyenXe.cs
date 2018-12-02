@@ -16,11 +16,19 @@ namespace XULY
             dt = CX.LoadChuyenXe();
             return dt;
         }
-
+        
         public int ThemChuyenXe(ChuyenXe a)
         {
             int kq = 0;
             DAO_ChuyenXe CX = new DAO_ChuyenXe();
+            DataTable dt = CX.LoadIDChuyenXe();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (a.id_chuyen == row[0].ToString())
+                {
+                    return -1;
+                }
+            }
             kq = CX.ThemChuyenXe(a);
             return kq;
         }
@@ -37,6 +45,42 @@ namespace XULY
             DAO_ChuyenXe CX = new DAO_ChuyenXe();
             kq = CX.XoaChuyenXe(a);
             return kq;
+        }
+        public List<string> LoadIDXe()
+        {
+            DAO_ChuyenXe Cxe = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = Cxe.LoadIDXe();
+            List<string> list = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
+        public List<string> LoadIDTuyen()
+        {
+            DAO_ChuyenXe Cxe = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = Cxe.LoadIDTuyen();
+            List<string> list = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
+        public List<string> LoadIDTaiXe()
+        {
+            DAO_ChuyenXe Cxe = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = Cxe.LoadIDtx();
+            List<string> list = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
         }
     }
 }

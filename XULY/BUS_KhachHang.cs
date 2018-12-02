@@ -20,6 +20,14 @@ namespace XULY
         {
             int kq = 0;
             DAO_KhachHang kh = new DAO_KhachHang();
+            DataTable dt = kh.IDKhachHang();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (a.id_khachhang == row[0].ToString())
+                {
+                    return -1;
+                }
+            }
             kq = kh.AddKhachHang(a);
             return kq;
         }

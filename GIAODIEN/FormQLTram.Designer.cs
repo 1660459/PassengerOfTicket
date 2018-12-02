@@ -55,17 +55,20 @@
             this.panel4.Controls.Add(this.button2);
             this.panel4.Controls.Add(this.dgvDSTram);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(3, 5);
+            this.panel4.Location = new System.Drawing.Point(4, 6);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1101, 345);
+            this.panel4.Size = new System.Drawing.Size(1467, 424);
             this.panel4.TabIndex = 5;
+            this.panel4.Click += new System.EventHandler(this.panel4_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(294, -13);
+            this.pictureBox1.Location = new System.Drawing.Point(372, -1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(113, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(151, 68);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -75,9 +78,10 @@
             this.button2.BackColor = System.Drawing.Color.White;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(1067, 3);
+            this.button2.Location = new System.Drawing.Point(1423, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 23);
+            this.button2.Size = new System.Drawing.Size(44, 28);
             this.button2.TabIndex = 3;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
@@ -94,14 +98,14 @@
             this.id_tram,
             this.ten_tram,
             this.dia_diem});
-            this.dgvDSTram.Location = new System.Drawing.Point(3, 54);
+            this.dgvDSTram.Location = new System.Drawing.Point(4, 66);
+            this.dgvDSTram.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDSTram.Name = "dgvDSTram";
             this.dgvDSTram.ReadOnly = true;
             this.dgvDSTram.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSTram.Size = new System.Drawing.Size(1089, 290);
+            this.dgvDSTram.Size = new System.Drawing.Size(1452, 357);
             this.dgvDSTram.TabIndex = 1;
-            this.dgvDSTram.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTram_CellContentClick);
-            this.dgvDSTram.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTram_CellContentClick);
+            this.dgvDSTram.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDSTram_CellClick);
             // 
             // id_tram
             // 
@@ -128,9 +132,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(398, 11);
+            this.label4.Location = new System.Drawing.Point(531, 14);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(239, 29);
+            this.label4.Size = new System.Drawing.Size(299, 36);
             this.label4.TabIndex = 0;
             this.label4.Text = "DANH SÁCH TRẠM";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -139,9 +144,10 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(428, 17);
+            this.button1.Location = new System.Drawing.Point(571, 21);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(195, 52);
+            this.button1.Size = new System.Drawing.Size(260, 64);
             this.button1.TabIndex = 10;
             this.button1.Text = "XÓA";
             this.button1.UseVisualStyleBackColor = true;
@@ -151,9 +157,10 @@
             // 
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Red;
-            this.btnSua.Location = new System.Drawing.Point(692, 17);
+            this.btnSua.Location = new System.Drawing.Point(923, 21);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(4);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(195, 52);
+            this.btnSua.Size = new System.Drawing.Size(260, 64);
             this.btnSua.TabIndex = 9;
             this.btnSua.Text = "SỬA";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -163,9 +170,10 @@
             // 
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Red;
-            this.button12.Location = new System.Drawing.Point(170, 17);
+            this.button12.Location = new System.Drawing.Point(227, 21);
+            this.button12.Margin = new System.Windows.Forms.Padding(4);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(195, 52);
+            this.button12.Size = new System.Drawing.Size(260, 64);
             this.button12.TabIndex = 8;
             this.button12.Text = "THÊM";
             this.button12.UseVisualStyleBackColor = true;
@@ -178,21 +186,24 @@
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(3, 349);
+            this.panel1.Location = new System.Drawing.Point(4, 430);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1101, 93);
+            this.panel1.Size = new System.Drawing.Size(1467, 114);
             this.panel1.TabIndex = 6;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // FormQLTram
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1108, 445);
+            this.ClientSize = new System.Drawing.Size(1477, 548);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormQLTram";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQLTram";

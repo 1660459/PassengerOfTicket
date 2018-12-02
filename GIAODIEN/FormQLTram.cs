@@ -26,25 +26,7 @@ namespace GIAODIEN
         {
             BUS_Tram tram = new BUS_Tram();
             dgvDSTram.DataSource = tram.LoadTram();
-            
         }
-        //private void button12_Click(object sender, EventArgs e)
-        //{
-        //    FormTram frm = new FormTram();
-        //    frm.Show();
-        //}
-        static string IDDangChon = null;
-        private void dgvDSTram_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int num;
-            num = e.RowIndex;
-            IDDangChon = dgvDSTram.Rows[num].Cells[0].Value.ToString();
-
-        }
-
-
-        
-
         private void btnSua_Click(object sender, EventArgs e)
         {
              if (string.IsNullOrEmpty(IDDangChon))
@@ -88,6 +70,7 @@ namespace GIAODIEN
         private void ThemTram(object sender, EventArgs e)
         {
             FormTram frm = new FormTram();
+            frm.txtIDTram.Text = MaTramTuTang();
             frm.Show();
 
         }
@@ -97,5 +80,38 @@ namespace GIAODIEN
             LoadQLTram();
         }
 
+        private void panel4_Click(object sender, EventArgs e)
+        {
+            LoadQLTram();
+        }
+
+        private void panel1_Click(object sender, EventArgs e)
+        {
+            LoadQLTram();
+        }
+        public string MaTramTuTang()
+        {
+            int dem = 0;
+            string temp = "TR01";
+            dem = dgvDSTram.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                temp = dgvDSTram.Rows[dem - 1].Cells[0].Value.ToString();
+                int p = int.Parse(temp.Substring(2)) + 1;
+                temp = "TR" + p.ToString("00");
+                return temp;
+            }
+        }
+        static string IDDangChon = null;
+        private void dgvDSTram_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int num;
+            num = e.RowIndex;
+            IDDangChon = dgvDSTram.Rows[num].Cells[0].Value.ToString();
+        }
     }
 }

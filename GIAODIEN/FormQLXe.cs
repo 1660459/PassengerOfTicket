@@ -18,11 +18,7 @@ namespace GIAODIEN
             InitializeComponent();
         }
 
-        //private void button2_Click(object sender, EventArgs e)
-        //{
-        //    FormXe frm = new FormXe();
-        //    frm.Show();            
-        //}
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -93,7 +89,7 @@ namespace GIAODIEN
         public string MaXeTuTang()
         {
             int dem = 0;
-            string temp = "KH01";
+            string temp = "X01";
             dem = dgvDanhSachXe.RowCount;
             if (dem == 0)
             {

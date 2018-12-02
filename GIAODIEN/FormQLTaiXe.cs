@@ -22,6 +22,7 @@ namespace GIAODIEN
         private void button3_Click(object sender, EventArgs e)
         {
             FormTaiXe frm = new FormTaiXe();
+            frm.txtId.Text = MaTaiXeTuTang();
             frm.Show();
         }
 
@@ -92,7 +93,23 @@ namespace GIAODIEN
         {
             LoadQLTX();
         }
-
+        public string MaTaiXeTuTang()
+        {
+            int dem = 0;
+            string temp = "TX01";
+            dem = dgvQLTX.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                temp = dgvQLTX.Rows[dem - 1].Cells[0].Value.ToString();
+                int p = int.Parse(temp.Substring(2)) + 1;
+                temp = "TX" + p.ToString("00");
+                return temp;
+            }
+        }
        
        
 

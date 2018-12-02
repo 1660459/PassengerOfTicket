@@ -117,6 +117,11 @@ namespace GIAODIEN
                         frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
                         qlkh.LoadQLKhachHang();
                     }
+                    else if (kh.ThemKhachHang(khach)  == -1)
+                    {
+                        MessageBox.Show("Không Được Trùng ID");
+                        return;
+                    }
                     else
                     {
                         MessageBox.Show("Không Thêm Được");

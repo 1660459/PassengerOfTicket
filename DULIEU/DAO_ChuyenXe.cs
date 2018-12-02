@@ -30,6 +30,86 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable LoadIDXe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_IDXe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        public DataTable LoadIDChuyenXe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadIDChuyenXe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        public DataTable LoadIDTuyen()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_IDTuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        public DataTable LoadIDtx()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_IDTaiXe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
         public DataTable LoadGhiChuChuyenXe()
         {
             Provider kn = new Provider();
@@ -115,10 +195,11 @@ namespace DULIEU
                 provider.Connect();
                 provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
                        new SqlParameter { ParameterName = "@id_chuyen", Value = cm.id_chuyen },
-                       new SqlParameter { ParameterName = "@tuyen_id_tuyen", Value = cm.tuyen_id_tuyen },
-                       new SqlParameter { ParameterName = "@giokhoihanh", Value = cm.giokhoihanh },
-                       new SqlParameter { ParameterName = "@xe_xeid", Value = cm.xe_xeid },
-                       new SqlParameter { ParameterName = "@ghichu", Value = cm.ghichu }
+                        new SqlParameter { ParameterName = "@tuyen_id_tuyen", Value = cm.tuyen_id_tuyen },
+                        new SqlParameter { ParameterName = "@giokhoihanh", Value = cm.giokhoihanh },
+                        new SqlParameter { ParameterName = "@xe_xeid", Value = cm.xe_xeid },
+                        new SqlParameter { ParameterName = "@ghichu", Value = cm.ghichu },
+                        new SqlParameter { ParameterName = "@tai_xe_id_taixe", Value = cm.tai_xe_id_taixe }
                          );
                 flag = 1;
             }

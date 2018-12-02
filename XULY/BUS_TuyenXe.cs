@@ -16,10 +16,30 @@ namespace XULY
             dt = txe.LoadTuyenXe();
             return dt;
         }
+        public List<string> LoadIDTram()
+        {
+            List<string> list = new List<string>();
+            DAO_TuyenXe txe = new DAO_TuyenXe();
+            DataTable dt = new DataTable();
+            dt = txe.IDTram();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
         public int ThemTuyenXe(TuyenXe a)
         {
             int kq = 0;
             DAO_TuyenXe txe = new DAO_TuyenXe();
+            DataTable dt = txe.IDTuyen();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (a.id_tuyen == row[0].ToString())
+                {
+                    return -1;
+                }
+            }
             kq = txe.ThemTuyenXe(a);
             return kq;
         }

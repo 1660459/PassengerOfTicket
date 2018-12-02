@@ -30,6 +30,7 @@ namespace GIAODIEN
         private void button1_Click(object sender, EventArgs e)
         {
             FormTuyenXe frm = new FormTuyenXe();
+            frm.txtIDTuyen.Text = MaTXeTuTang();
             frm.ShowDialog();
         }
 
@@ -91,6 +92,22 @@ namespace GIAODIEN
         {
             LoadQLTuyenXe();
         }
-       
+        public string MaTXeTuTang()
+        {
+            int dem = 0;
+            string temp = "T01";
+            dem = dgvQLTuyenXe.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                temp = dgvQLTuyenXe.Rows[dem - 1].Cells[0].Value.ToString();
+                int p = int.Parse(temp.Substring(1)) + 1;
+                temp = "T" + p.ToString("00");
+                return temp;
+            }
+        }
     }
 }

@@ -78,6 +78,7 @@
             // 
             // btnThoatTTKH
             // 
+            this.btnThoatTTKH.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnThoatTTKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoatTTKH.ForeColor = System.Drawing.Color.Red;
             this.btnThoatTTKH.Location = new System.Drawing.Point(383, 519);
@@ -92,6 +93,7 @@
             // 
             // btnLuuTTKH
             // 
+            this.btnLuuTTKH.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.btnLuuTTKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuuTTKH.ForeColor = System.Drawing.Color.Red;
             this.btnLuuTTKH.Location = new System.Drawing.Point(109, 519);

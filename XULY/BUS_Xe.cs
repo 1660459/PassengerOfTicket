@@ -20,6 +20,14 @@ namespace XULY
         {
             int kq = 0;
             DAO_Xe xe = new DAO_Xe();
+            DataTable dt = xe.IDXe();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (a.xe_id == row[0].ToString())
+                {
+                    return -1;
+                }
+            }
             kq = xe.ThemXe(a);
             return kq;
         }

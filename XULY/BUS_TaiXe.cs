@@ -22,6 +22,14 @@ namespace XULY
         {
             int kq = 0;
             DAO_TaiXe tai_xe = new DAO_TaiXe();
+            DataTable dt = tai_xe.IDTaiXe();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (a.id_taixe == row[0].ToString())
+                {
+                    return -1;
+                }
+            }
             kq = tai_xe.ThemTaiXe(a);
             return kq;
         }

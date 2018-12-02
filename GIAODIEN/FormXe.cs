@@ -72,9 +72,12 @@ namespace GIAODIEN
                 {
                     if (xe.ThemXe(tempXe) == 1)
                     {
-                        FormQLXe qlXe = new FormQLXe();
-                        qlXe.LoadQLXe();
                         this.Close();
+                    }
+                    else if (xe.ThemXe(tempXe) == -1)
+                    {
+                        MessageBox.Show("Không Được Trùng ID");
+                        return;
                     }
                     else
                     {

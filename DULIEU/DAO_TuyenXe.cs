@@ -31,6 +31,48 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable IDTuyen()
+        {
+
+            Provider kn = new Provider();
+            string strSQL = "sp_IDTuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        public DataTable IDTram()
+        {
+
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadIDTram";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
         public int ThemTuyenXe(TuyenXe cm)
         {
             int flag = 0;

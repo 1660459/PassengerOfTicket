@@ -35,6 +35,7 @@ namespace GIAODIEN
         private void button1_Click(object sender, EventArgs e)
         {
             FormChuyenXe frm = new FormChuyenXe();
+            frm.txtIDChuyenXe.Text = MaChuyenXeTuTang();
             frm.Show();
         }
 
@@ -81,7 +82,33 @@ namespace GIAODIEN
                 MessageBox.Show("Không Xoá Được");
             }
         }
+        public string MaChuyenXeTuTang()
+        {
+            int dem = 0;
+            string temp = "C01";
+            dem = dgvChuyenXe.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                temp = dgvChuyenXe.Rows[dem - 1].Cells[0].Value.ToString();
+                int p = int.Parse(temp.Substring(1)) + 1;
+                temp = "C" + p.ToString("00");
+                return temp;
+            }
+        }
 
+        private void panel3_Click(object sender, EventArgs e)
+        {
+            LoadQLChuyenXe();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            LoadQLChuyenXe();
+        }
         
     }
 }

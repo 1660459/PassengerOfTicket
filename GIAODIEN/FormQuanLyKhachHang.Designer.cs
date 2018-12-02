@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1479, 70);
             this.panel1.TabIndex = 0;
@@ -64,7 +64,7 @@
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Red;
             this.button4.Location = new System.Drawing.Point(1429, 4);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(44, 28);
             this.button4.TabIndex = 4;
@@ -88,7 +88,7 @@
             this.btnSuaQLKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaQLKH.ForeColor = System.Drawing.Color.Red;
             this.btnSuaQLKH.Location = new System.Drawing.Point(1129, 194);
-            this.btnSuaQLKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSuaQLKH.Margin = new System.Windows.Forms.Padding(4);
             this.btnSuaQLKH.Name = "btnSuaQLKH";
             this.btnSuaQLKH.Size = new System.Drawing.Size(332, 47);
             this.btnSuaQLKH.TabIndex = 2;
@@ -101,7 +101,7 @@
             this.btnXoaQLKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaQLKH.ForeColor = System.Drawing.Color.Red;
             this.btnXoaQLKH.Location = new System.Drawing.Point(1129, 140);
-            this.btnXoaQLKH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoaQLKH.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoaQLKH.Name = "btnXoaQLKH";
             this.btnXoaQLKH.Size = new System.Drawing.Size(332, 47);
             this.btnXoaQLKH.TabIndex = 3;
@@ -114,7 +114,7 @@
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Red;
             this.button3.Location = new System.Drawing.Point(1129, 86);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(332, 47);
             this.button3.TabIndex = 4;
@@ -143,7 +143,6 @@
             this.dgvQuanLyKhachHang.Size = new System.Drawing.Size(1087, 556);
             this.dgvQuanLyKhachHang.TabIndex = 5;
             this.dgvQuanLyKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQuanLyKhachHang_CellClick);
-            
             // 
             // id_khachhang
             // 
@@ -202,11 +201,12 @@
             this.Controls.Add(this.btnSuaQLKH);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmQuanLyKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.frmQuanLyKhachHang_Load);
+            this.Click += new System.EventHandler(this.frmQuanLyKhachHang_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvQuanLyKhachHang)).EndInit();

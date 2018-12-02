@@ -23,7 +23,10 @@ namespace GIAODIEN
 
         private void FormChuyenXe_Load(object sender, EventArgs e)
         {
-
+            BUS_ChuyenXe cx = new BUS_ChuyenXe();
+            cbIDTuyen.DataSource = cx.LoadIDTuyen();
+            cbIDTaiXe.DataSource = cx.LoadIDTaiXe();
+            cbIDXe.DataSource = cx.LoadIDXe();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,47 +38,88 @@ namespace GIAODIEN
         {
             this.Close();
         }
-
+        bool KTRONG()
+        {
+            if (string.IsNullOrEmpty(txtIDChuyenXe.Text))
+            {
+                MessageBox.Show("hãy điền vào ID xe ");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbIDTuyen.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy chọn id tuyến");
+                return false;
+            }
+            if (string.IsNullOrEmpty(DtpChuyenXe.Value.ToString()))
+            {
+                MessageBox.Show("hãy điền chọn thời gian chạy");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtGhiChu.Text))
+            {
+                MessageBox.Show("hãy điền vào ghi chú ");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbIDTaiXe.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy chọn tài xế");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbIDXe.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy chọn id xe");
+                return false;
+            }
+            return true;
+        }
         private void btnLuuChuyenXe_Click(object sender, EventArgs e)
         {
-            ChuyenXe cx = new ChuyenXe();
-            cx.id_chuyen = txtIDTuyen.Text;
-            cx.tuyen_id_tuyen = txtIDTuyen.Text;
-            cx.giokhoihanh = DtpChuyenXe.Value;
-            cx.ghichu = txtGhiChu.Text;
-            cx.xe_xeid = txtIDXe.Text;
-            cx.tai_xe_id_taixe = txtIDTaiXe.Text;
-            BUS_ChuyenXe chuyenx = new BUS_ChuyenXe();
-            if (txtIDXe.Enabled == true)
+            if (KTRONG() == false)
             {
-                if (chuyenx.ThemChuyenXe(cx) == 1)
-                {
-                    FormQLChuyenXe qlCXe = new FormQLChuyenXe();
-                    qlCXe.LoadQLChuyenXe();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Không Thêm Được");
-                    return;
-                }
+                return;
             }
             else
             {
-                if (chuyenx.SuaChuyenXe(cx) == 1)
+                ChuyenXe cx = new ChuyenXe();
+                cx.id_chuyen = txtIDChuyenXe.Text;
+                cx.tuyen_id_tuyen = cbIDTuyen.SelectedItem.ToString();
+                cx.giokhoihanh = DtpChuyenXe.Value;
+                cx.ghichu = txtGhiChu.Text;
+                cx.xe_xeid = cbIDXe.SelectedItem.ToString();
+                cx.tai_xe_id_taixe = cbIDTaiXe.SelectedItem.ToString();
+                BUS_ChuyenXe chuyenx = new BUS_ChuyenXe();
+                if (txtIDChuyenXe.Enabled == true)
                 {
-                    txtIDTuyen.Enabled = true;
-                    FormQLChuyenXe qlCXe = new FormQLChuyenXe();
-                    qlCXe.LoadQLChuyenXe();
-                    this.Close();
+                    if (chuyenx.ThemChuyenXe(cx) == 1)
+                    {
+
+                        this.Close();
+                    }
+                    else if (chuyenx.ThemChuyenXe(cx) == -1)
+                    {
+                        MessageBox.Show("Không Được Trùng ID");
+                        return;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không Thêm Được");
+                        return;
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Không Sửa Được");
-                    return;
+                    if (chuyenx.SuaChuyenXe(cx) == 1)
+                    {
+                        txtIDChuyenXe.Enabled = true;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không Sửa Được");
+                        return;
+                    }
                 }
             }
-            
 
         }
     }

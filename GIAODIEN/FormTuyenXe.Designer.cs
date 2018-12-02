@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtIDTram2 = new System.Windows.Forms.TextBox();
+            this.cbTram02 = new System.Windows.Forms.ComboBox();
+            this.cbTram01 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.btnLuuTTTuyenXe = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txtIDTram1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtThoiGianChay = new System.Windows.Forms.TextBox();
@@ -54,13 +52,11 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.txtIDTram2);
+            this.panel1.Controls.Add(this.cbTram02);
+            this.panel1.Controls.Add(this.cbTram01);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.btnLuuTTTuyenXe);
-            this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.txtIDTram1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.txtThoiGianChay);
@@ -77,26 +73,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(830, 632);
             this.panel1.TabIndex = 1;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // panel2
+            // cbTram02
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel2.Location = new System.Drawing.Point(277, 385);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(461, 1);
-            this.panel2.TabIndex = 22;
+            this.cbTram02.FormattingEnabled = true;
+            this.cbTram02.Location = new System.Drawing.Point(277, 362);
+            this.cbTram02.Name = "cbTram02";
+            this.cbTram02.Size = new System.Drawing.Size(287, 24);
+            this.cbTram02.TabIndex = 21;
             // 
-            // txtIDTram2
+            // cbTram01
             // 
-            this.txtIDTram2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIDTram2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDTram2.Location = new System.Drawing.Point(277, 354);
-            this.txtIDTram2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIDTram2.Name = "txtIDTram2";
-            this.txtIDTram2.Size = new System.Drawing.Size(461, 23);
-            this.txtIDTram2.TabIndex = 5;
+            this.cbTram01.FormattingEnabled = true;
+            this.cbTram01.Location = new System.Drawing.Point(277, 294);
+            this.cbTram01.Name = "cbTram01";
+            this.cbTram01.Size = new System.Drawing.Size(287, 24);
+            this.cbTram01.TabIndex = 21;
             // 
             // label2
             // 
@@ -134,25 +126,6 @@
             this.btnLuuTTTuyenXe.Text = "LƯU";
             this.btnLuuTTTuyenXe.UseVisualStyleBackColor = true;
             this.btnLuuTTTuyenXe.Click += new System.EventHandler(this.btnLuuTTTuyenXe_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(277, 318);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(461, 1);
-            this.panel6.TabIndex = 17;
-            // 
-            // txtIDTram1
-            // 
-            this.txtIDTram1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtIDTram1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDTram1.Location = new System.Drawing.Point(277, 287);
-            this.txtIDTram1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtIDTram1.Name = "txtIDTram1";
-            this.txtIDTram1.Size = new System.Drawing.Size(461, 23);
-            this.txtIDTram1.TabIndex = 4;
             // 
             // label7
             // 
@@ -278,6 +251,7 @@
             this.Name = "FormTuyenXe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormTuyenXe";
+            this.Load += new System.EventHandler(this.FormTuyenXe_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -289,8 +263,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button btnLuuTTTuyenXe;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txtIDTram1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtThoiGianChay;
@@ -301,9 +273,9 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtIDTram2;
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.TextBox txtIDTuyen;
+        private System.Windows.Forms.ComboBox cbTram02;
+        private System.Windows.Forms.ComboBox cbTram01;
     }
 }

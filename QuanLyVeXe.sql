@@ -61,7 +61,7 @@ create table Tram_trung_gian
 )
 create table Tuyen 
 (
-	id_tuyen varchar(10),
+	id_tuyen varchar(10),  
 	khoang_cach float,
 	thoigianchay int,
 	tram_id_tram1 varchar(10),

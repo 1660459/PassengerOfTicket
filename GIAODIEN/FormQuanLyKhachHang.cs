@@ -97,6 +97,11 @@ namespace GIAODIEN
             LoadQLKhachHang();
         }
 
+        private void frmQuanLyKhachHang_Click(object sender, EventArgs e)
+        {
+            LoadQLKhachHang();
+        }
+
         
 
         
