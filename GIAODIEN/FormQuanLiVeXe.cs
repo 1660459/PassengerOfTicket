@@ -17,31 +17,7 @@ namespace GIAODIEN
             InitializeComponent();
         }
 
-        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void button3_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -81,37 +57,64 @@ namespace GIAODIEN
             if(  cbLoaiXe1.SelectedItem.ToString() == "30 CHỖ")
             {
                 FormGhe30 frm30 = new FormGhe30();
+                frm30.eMaGhe += eMaGhe1_Event;
                 frm30.Show();
+
             }
             else if (cbLoaiXe1.SelectedItem.ToString() == "45 CHỖ")
             {
                 FormGhe45 frm45 = new FormGhe45();
+                frm45.eMaGhe += eMaGhe1_Event;
                 frm45.Show();
             }
             else
             {
                 FormGN frmGN = new FormGN();
+                frmGN.eMaGhe += eMaGhe1_Event;
                 frmGN.Show();
             }
-        }
 
+        }
+        void eMaGhe1_Event(string a)
+        {
+            txtMaGhe1.Text = a;
+        }
         private void btnMaGhe2_Click(object sender, EventArgs e)
         {
             if (cbLoaiXe2.SelectedItem.ToString() == "30 CHỖ")
             {
                 FormGhe30 frm30 = new FormGhe30();
+                frm30.eMaGhe += eMaGhe2_Event;
                 frm30.Show();
             }
             else if (cbLoaiXe2.SelectedItem.ToString() == "45 CHỖ")
             {
                 FormGhe45 frm45 = new FormGhe45();
+                frm45.eMaGhe += eMaGhe2_Event;
                 frm45.Show();
             }
             else
             {
                 FormGN frmGN = new FormGN();
+                frmGN.eMaGhe += eMaGhe2_Event;
                 frmGN.Show();
             }
+           
         }
+        void eMaGhe2_Event(string a)
+        {
+            txtMaGhe2.Text = a;
+        }
+
+        private void cbLoaiXe1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtMaGhe1.Text = null;
+        }
+        
+        private void cbLoaiXe2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtMaGhe2.Text = null;
+        }
+       
     }
 }

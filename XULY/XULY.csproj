@@ -47,6 +47,7 @@
     <Compile Include="BUS_TaiXe.cs" />
     <Compile Include="BUS_Tram.cs" />
     <Compile Include="BUS_TuyenXe.cs" />
+    <Compile Include="BUS_Ve.cs" />
     <Compile Include="BUS_Xe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

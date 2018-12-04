@@ -119,18 +119,24 @@ create table GiaVe
 
 create table DanhSachNguoiDat
 (
-	stt int,	
-	id_ve_id varchar(10),
-	hoten nvarchar(100),
-	sdt varchar(15),
+	id_ve varchar(10),
+	stt int ,
+	ten_khach_hang nvarchar(50),
+	so_dt nvarchar (15),
+	ghe_id_ghe varchar(10),
+	chuyen_id_chuyen varchar(10),
+	tinhtrang int,
+	giatien float,
+	ngayxuatve datetime,
+	ghichu nvarchar(40),
 	constraint dsnd_pk
-	PRIMARY KEY (stt,id_ve_id)
+	PRIMARY KEY (id_ve,stt)
 )
 --khoa ngoai 
 ALTER TABLE DanhSachNguoiDat
 ADD 
 CONSTRAINT dsnd_Ve_fk
-FOREIGN KEY(id_ve_id)
+FOREIGN KEY(id_ve)
 REFERENCES Ve
 
 ALTER TABLE GiaVe
