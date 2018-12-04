@@ -327,14 +327,8 @@ values
 (5,'T05',350.0),
 (6,'T06',350.0)
 
-insert DanhSachNguoiDat
-values
-(1,'V01',N'Nguyễn Trần Hoài Anh','0128515675'),
-(2,'V02',N'Trần Quang Phú','0918463363'),
-(3,'V03',N'Dương Câm Linh','0963125521'),
-(4,'V04',N'Nguyễn Quang Công','0971345678'),
-(5,'V05',N'Thái Thiện Thành','0128515675')
 
-select* from DanhSachNguoiDat
+
+
 
 
