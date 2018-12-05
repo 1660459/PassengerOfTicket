@@ -79,38 +79,41 @@
             // 
             // btnSuaQLTuyenXe
             // 
+            this.btnSuaQLTuyenXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSuaQLTuyenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSuaQLTuyenXe.ForeColor = System.Drawing.Color.Red;
-            this.btnSuaQLTuyenXe.Location = new System.Drawing.Point(433, 13);
+            this.btnSuaQLTuyenXe.ForeColor = System.Drawing.Color.White;
+            this.btnSuaQLTuyenXe.Location = new System.Drawing.Point(442, 13);
             this.btnSuaQLTuyenXe.Name = "btnSuaQLTuyenXe";
             this.btnSuaQLTuyenXe.Size = new System.Drawing.Size(199, 41);
             this.btnSuaQLTuyenXe.TabIndex = 12;
             this.btnSuaQLTuyenXe.Text = "SỬA";
-            this.btnSuaQLTuyenXe.UseVisualStyleBackColor = true;
+            this.btnSuaQLTuyenXe.UseVisualStyleBackColor = false;
             this.btnSuaQLTuyenXe.Click += new System.EventHandler(this.btnSuaQLTuyenXe_Click);
             // 
             // btnThemQLTuyenXe
             // 
+            this.btnThemQLTuyenXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnThemQLTuyenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThemQLTuyenXe.ForeColor = System.Drawing.Color.Red;
+            this.btnThemQLTuyenXe.ForeColor = System.Drawing.Color.White;
             this.btnThemQLTuyenXe.Location = new System.Drawing.Point(181, 13);
             this.btnThemQLTuyenXe.Name = "btnThemQLTuyenXe";
             this.btnThemQLTuyenXe.Size = new System.Drawing.Size(195, 41);
             this.btnThemQLTuyenXe.TabIndex = 10;
             this.btnThemQLTuyenXe.Text = "THÊM";
-            this.btnThemQLTuyenXe.UseVisualStyleBackColor = true;
+            this.btnThemQLTuyenXe.UseVisualStyleBackColor = false;
             this.btnThemQLTuyenXe.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnXoaQLTuyenXe
             // 
+            this.btnXoaQLTuyenXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnXoaQLTuyenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaQLTuyenXe.ForeColor = System.Drawing.Color.Red;
+            this.btnXoaQLTuyenXe.ForeColor = System.Drawing.Color.White;
             this.btnXoaQLTuyenXe.Location = new System.Drawing.Point(727, 13);
             this.btnXoaQLTuyenXe.Name = "btnXoaQLTuyenXe";
             this.btnXoaQLTuyenXe.Size = new System.Drawing.Size(182, 41);
             this.btnXoaQLTuyenXe.TabIndex = 11;
             this.btnXoaQLTuyenXe.Text = "XÓA";
-            this.btnXoaQLTuyenXe.UseVisualStyleBackColor = true;
+            this.btnXoaQLTuyenXe.UseVisualStyleBackColor = false;
             this.btnXoaQLTuyenXe.Click += new System.EventHandler(this.btnXoaQLTuyenXe_Click);
             // 
             // dgvQLTuyenXe
@@ -186,7 +189,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(312, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(83, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -196,11 +199,11 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(1056, 3);
+            this.button4.Location = new System.Drawing.Point(1039, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(33, 23);
+            this.button4.Size = new System.Drawing.Size(50, 31);
             this.button4.TabIndex = 5;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
@@ -209,10 +212,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.label1.Location = new System.Drawing.Point(393, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(282, 31);
+            this.label1.Size = new System.Drawing.Size(300, 33);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÍ TUYẾN XE";
             // 

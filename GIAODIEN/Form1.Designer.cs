@@ -71,12 +71,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("SketchFlow Print", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(-12, 129);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1037, 23);
+            this.label2.Size = new System.Drawing.Size(1027, 23);
             this.label2.TabIndex = 6;
-            this.label2.Text = "    TÀI SẢN GIÁ TRỊ NHẤT CỦA CÔNG TY BẠN CHÍNH LÀ CÁCH KHÁCH HÀNG BIẾT ĐẾN  NÓ ";
+            this.label2.Text = "    TÀI SẢN GIÁ TRỊ NHẤT CỦA CÔNG TY BẠN CHÍNH LÀ CÁCH KHÁCH HÀNG BIẾT ĐẾN NÓ ";
             this.label2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // pictureBox1
@@ -94,9 +94,9 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(988, 3);
+            this.button1.Location = new System.Drawing.Point(971, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 23);
+            this.button1.Size = new System.Drawing.Size(50, 31);
             this.button1.TabIndex = 2;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -105,19 +105,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("MV Boli", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(115, 26);
+            this.label1.ForeColor = System.Drawing.Color.DarkTurquoise;
+            this.label1.Location = new System.Drawing.Point(126, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(867, 87);
+            this.label1.Size = new System.Drawing.Size(865, 85);
             this.label1.TabIndex = 1;
             this.label1.Text = "CÔNG TY XE KHÁCH SKY";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.panel3);
@@ -129,18 +129,20 @@
             // 
             // button6
             // 
+            this.button6.BackColor = System.Drawing.Color.MintCream;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Red;
-            this.button6.Location = new System.Drawing.Point(743, -1);
+            this.button6.ForeColor = System.Drawing.Color.Teal;
+            this.button6.Location = new System.Drawing.Point(743, 3);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(267, 56);
+            this.button6.Size = new System.Drawing.Size(267, 52);
             this.button6.TabIndex = 10;
             this.button6.Text = "ADMIN";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.pictureBox3);
@@ -151,14 +153,15 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.MintCream;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Red;
+            this.button3.ForeColor = System.Drawing.Color.Teal;
             this.button3.Location = new System.Drawing.Point(105, 324);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(286, 66);
             this.button3.TabIndex = 1;
             this.button3.Text = "QUẢN LÍ KHÁCH HÀNG";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // pictureBox3
@@ -173,6 +176,7 @@
             // 
             // panel6
             // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.button2);
             this.panel6.Controls.Add(this.pictureBox2);
@@ -183,14 +187,15 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.MintCream;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.ForeColor = System.Drawing.Color.Teal;
             this.button2.Location = new System.Drawing.Point(98, 324);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(303, 66);
             this.button2.TabIndex = 1;
             this.button2.Text = "QUẢN LÍ VÉ XE";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // pictureBox2

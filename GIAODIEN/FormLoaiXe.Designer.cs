@@ -30,6 +30,8 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -37,8 +39,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,31 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(636, 457);
             this.panel2.TabIndex = 3;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(355, 383);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(176, 38);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "THOÁT";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(105, 383);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(176, 38);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "THÊM";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
@@ -135,29 +160,6 @@
             this.label1.Size = new System.Drawing.Size(302, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN  LOẠI XE";
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(345, 399);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 38);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "THOÁT";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(105, 399);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 38);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "THÊM";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormLoaiXe
             // 

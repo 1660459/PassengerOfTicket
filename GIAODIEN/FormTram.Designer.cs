@@ -79,26 +79,28 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(320, 378);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 38);
             this.button2.TabIndex = 11;
             this.button2.Text = "THOÁT";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // btnThem
             // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThem.ForeColor = System.Drawing.Color.Red;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
             this.btnThem.Location = new System.Drawing.Point(80, 378);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(176, 38);
             this.btnThem.TabIndex = 10;
             this.btnThem.Text = "THÊM";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // panel4

@@ -89,11 +89,12 @@
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1060, -1);
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Red;
+            this.button2.Location = new System.Drawing.Point(1035, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(29, 23);
+            this.button2.Size = new System.Drawing.Size(54, 33);
             this.button2.TabIndex = 2;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
@@ -102,18 +103,18 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Garamond", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.lbl1.Location = new System.Drawing.Point(375, 19);
             this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(251, 27);
+            this.lbl1.Size = new System.Drawing.Size(309, 33);
             this.lbl1.TabIndex = 1;
             this.lbl1.Text = "DANH SÁCH TÀI  XẾ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(273, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(76, 55);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -125,6 +126,7 @@
             this.dgvQLTX.AllowUserToAddRows = false;
             this.dgvQLTX.AllowUserToDeleteRows = false;
             this.dgvQLTX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvQLTX.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvQLTX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvQLTX.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_taixe,
@@ -183,38 +185,41 @@
             // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoa.ForeColor = System.Drawing.Color.Red;
-            this.btnXoa.Location = new System.Drawing.Point(456, 24);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(463, 24);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(195, 39);
             this.btnXoa.TabIndex = 6;
             this.btnXoa.Text = "XÓA";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSua.ForeColor = System.Drawing.Color.Red;
-            this.btnSua.Location = new System.Drawing.Point(677, 24);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(733, 24);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(195, 39);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "SỬA";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(237, 24);
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(198, 24);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(195, 39);
             this.button3.TabIndex = 4;
             this.button3.Text = "THÊM";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel3

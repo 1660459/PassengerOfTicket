@@ -50,6 +50,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormGiaVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGiaVe.Designer.cs">
+      <DependentUpon>FormGiaVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLGiaVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLGiaVe.Designer.cs">
+      <DependentUpon>FormQLGiaVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormQuanLiVeXe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +186,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGiaVe.resx">
+      <DependentUpon>FormGiaVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLGiaVe.resx">
+      <DependentUpon>FormQLGiaVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLiVeXe.resx">
       <DependentUpon>FormQuanLiVeXe.cs</DependentUpon>
