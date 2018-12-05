@@ -98,7 +98,7 @@
             // 
             this.cbLoaiXe.FormattingEnabled = true;
             this.cbLoaiXe.Location = new System.Drawing.Point(184, 118);
-            this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLoaiXe.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiXe.Name = "cbLoaiXe";
             this.cbLoaiXe.Size = new System.Drawing.Size(192, 21);
             this.cbLoaiXe.TabIndex = 2;
@@ -121,7 +121,7 @@
             this.btnThemXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnThemXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemXe.ForeColor = System.Drawing.Color.White;
-            this.btnThemXe.Location = new System.Drawing.Point(116, 396);
+            this.btnThemXe.Location = new System.Drawing.Point(82, 396);
             this.btnThemXe.Name = "btnThemXe";
             this.btnThemXe.Size = new System.Drawing.Size(176, 38);
             this.btnThemXe.TabIndex = 13;

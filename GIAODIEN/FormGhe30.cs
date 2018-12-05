@@ -33,14 +33,14 @@ namespace GIAODIEN
             {
                 eMaGhe(MG);
             }
-            
+
         }
         private void btnGhe1_Click(object sender, EventArgs e)
         {
             TruyenMaGhe(btnGhe1.Text);
             this.Close();
         }
-        
+
         private void btnGhe2_Click(object sender, EventArgs e)
         {
             TruyenMaGhe(btnGhe2.Text);
