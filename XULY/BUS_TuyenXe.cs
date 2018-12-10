@@ -16,6 +16,19 @@ namespace XULY
             dt = txe.LoadTuyenXe();
             return dt;
         }
+
+        public List<string> LoadIDTuyenXe()
+        {
+            List<string> list = new List<string>();
+            DAO_TuyenXe txe = new DAO_TuyenXe();
+            DataTable dt = new DataTable();
+            dt = txe.IDTuyen();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
         public List<string> LoadIDTram()
         {
             List<string> list = new List<string>();

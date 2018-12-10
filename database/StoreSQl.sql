@@ -362,20 +362,58 @@ alter proc sp_SuaTuyenXe
 @id_tuyen varchar(10) , @khoang_cach float , @thoigianchay int , @tram_id_tram varchar(10) , @tram_id_tram1 varchar(10)
 as 
 begin
-	 if(not exists (select * from Tuyen where id_tuyen = @id_tuyen))
-				return 0
-		else
-		begin 
-			ALTER TABLE Tuyen NOCHECK CONSTRAINT tuyen_tram_fk
-			ALTER TABLE Tuyen NOCHECK CONSTRAINT chuyen_tram2_fk
-			update Tuyen
-			set khoang_cach = @khoang_cach,
-				thoigianchay = @thoigianchay,
-				tram_id_tram =  @tram_id_tram,
-				tram_id_tram1 = @tram_id_tram1
-			where id_tuyen = @id_tuyen
-			ALTER TABLE Tuyen CHECK CONSTRAINT tuyen_tram_fk
-			ALTER TABLE Tuyen CHECK CONSTRAINT chuyen_tram2_fk
-			return 1
-		end
+	if(not exists (select * from Tuyen where id_tuyen = @id_tuyen))
+			return 0
+	else
+	begin 
+		ALTER TABLE Tuyen NOCHECK CONSTRAINT tuyen_tram_fk
+		ALTER TABLE Tuyen NOCHECK CONSTRAINT chuyen_tram2_fk
+		update Tuyen
+		set khoang_cach = @khoang_cach,
+			thoigianchay = @thoigianchay,
+			tram_id_tram =  @tram_id_tram,
+			tram_id_tram1 = @tram_id_tram1
+		where id_tuyen = @id_tuyen
+		ALTER TABLE Tuyen CHECK CONSTRAINT tuyen_tram_fk
+		ALTER TABLE Tuyen CHECK CONSTRAINT chuyen_tram2_fk
+		return 1
+	end
+end
+go
+----Gia Ve
+
+create proc sp_LoadGiaVe
+as
+	Select * From GiaVe
+go
+create proc sp_XoaGiaVe
+@STT int ,@ID varchar(10) 
+as
+begin
+	if(not exists (select * from GiaVe where stt = @STT and id_tuyen_id = @ID))
+			return 0
+	else
+	Delete From GiaVe
+	Where stt = @STT and id_tuyen_id = @ID
+	
+end
+go
+create proc sp_ThemGiaVe
+@id_ve int , @id_tuyen_id varchar(10) , @gia_ve float
+as
+begin 
+	Insert into GiaVe
+	Values( @id_ve , @id_tuyen_id , @gia_ve)
+end
+go
+create proc sp_SuaGiaVe
+@id_ve int , @id_tuyen_id varchar(10) , @gia_ve float
+as
+begin 
+	if(not exists (select * from GiaVe where stt = @id_ve and id_tuyen_id = @id_tuyen_id))
+			return 0
+	else
+	Update GiaVe
+	Set gia_ve = @gia_ve
+	Where stt =@id_ve and id_tuyen_id = @id_tuyen_id
 end

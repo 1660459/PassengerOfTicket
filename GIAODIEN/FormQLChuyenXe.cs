@@ -61,6 +61,10 @@ namespace GIAODIEN
         {
             int num;
             num = e.RowIndex;
+            if (num < 0)
+            {
+                return;
+            }
             IDDangChon = dgvChuyenXe.Rows[num].Cells[0].Value.ToString();
         }
 
@@ -82,6 +86,7 @@ namespace GIAODIEN
                 MessageBox.Show("Không Xoá Được");
             }
         }
+      
         public string MaChuyenXeTuTang()
         {
             int dem = 0;
@@ -93,9 +98,18 @@ namespace GIAODIEN
             }
             else
             {
-                temp = dgvChuyenXe.Rows[dem - 1].Cells[0].Value.ToString();
-                int p = int.Parse(temp.Substring(1)) + 1;
-                temp = "C" + p.ToString("00");
+                int p = 0, n = 0;
+                foreach (DataGridViewRow row in dgvChuyenXe.Rows)
+                {
+                    temp = row.Cells[0].Value.ToString();
+                    p = int.Parse(temp.Substring(1));
+                    if (n < p)
+                    {
+                        n = p;
+                    }
+                }
+                n += 1;
+                temp = "C" + n.ToString("00");
                 return temp;
             }
         }
