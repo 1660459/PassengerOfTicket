@@ -8,14 +8,14 @@ namespace DULIEU
 {
     public class Ve
     {
-    //    id_ve int,
-    //ghe_id_ghe int,
-    //chuyen_id_chuyen int,
-    //tinhtrang int,
-    //giatien smallmoney,
-    //khachhang_id_khachhang int,
-    //ngayxuatve datetime,
-    //ghichu varchar(40),
+        //    id_ve int,
+        //ghe_id_ghe int,
+        //chuyen_id_chuyen int,
+        //tinhtrang int,
+        //giatien smallmoney,
+        //khachhang_id_khachhang int,
+        //ngayxuatve datetime,
+        //ghichu varchar(40),
         string _id_ve, _chuyen_id_chuyen, _ghe_id_ghe, _khachhang_id_khachhang, _ghichu;
 
         public string ghichu
