@@ -51,6 +51,51 @@ namespace DULIEU
             }
             return dt;
         }
+
+        public DataTable IDGiaVe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadIDGiaVe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        public string GetGiaVe(string idtuyen)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_GetGiaVe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter {ParameterName= "@ID" , Value = idtuyen}
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            DataRow row = dt.Rows[0];
+            return row[0].ToString();
+        }
+        
         public int ThemVe(Ve cm)
         {
             int flag = 0;

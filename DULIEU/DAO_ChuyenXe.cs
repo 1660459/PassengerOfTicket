@@ -90,6 +90,30 @@ namespace DULIEU
             }
             return dt;
         }
+        public string GetIDTuyen(string ghichu)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_GetIDTuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter{ParameterName = "@GhiChu" , Value = ghichu}
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            DataRow row = dt.Rows[0];
+            return row[0].ToString();
+        }
+        
         public DataTable LoadIDtx()
         {
             Provider kn = new Provider();

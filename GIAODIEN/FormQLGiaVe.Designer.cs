@@ -153,7 +153,7 @@
             this.btnSuaDSXe.TabIndex = 9;
             this.btnSuaDSXe.Text = "SỬA";
             this.btnSuaDSXe.UseVisualStyleBackColor = false;
-            this.btnSuaDSXe.Click += new System.EventHandler(this.btnSuaDSXe_Click);
+            this.btnSuaDSXe.Click += new System.EventHandler(this.btnSuaGiaVe_Click);
             // 
             // btnThemDSXe
             // 
@@ -181,7 +181,7 @@
             this.btnXoaDSXe.TabIndex = 10;
             this.btnXoaDSXe.Text = "XÓA";
             this.btnXoaDSXe.UseVisualStyleBackColor = false;
-            this.btnXoaDSXe.Click += new System.EventHandler(this.btnXoaDSXe_Click);
+            this.btnXoaDSXe.Click += new System.EventHandler(this.btnXoaGiaVe_Click);
             // 
             // FormQLGiaVe
             // 

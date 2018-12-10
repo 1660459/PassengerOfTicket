@@ -28,6 +28,14 @@ namespace XULY
         {
             int kq = 0;
             DAO_Ve kh = new DAO_Ve();
+            DataTable dt = kh.IDGiaVe();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (ve.stt == int.Parse(row[0].ToString()) && ve.id_tuyen_id == row[1].ToString())
+                {
+                    return -1;
+                }
+            }
             kq = kh.ThemGiaVe(ve);
             return kq;
         }
@@ -38,6 +46,14 @@ namespace XULY
             DAO_Ve kh = new DAO_Ve();
             kq = kh.SuaGiaVe(ve);
             return kq;
+        }
+        public string GetGiaVe(string ghichu)
+        {
+            DAO_Ve ve = new DAO_Ve();
+            DAO_ChuyenXe cx = new DAO_ChuyenXe();
+            string idtuyen = cx.GetIDTuyen(ghichu);
+            string dt = ve.GetGiaVe(idtuyen);
+            return dt;
         }
         
     }

@@ -21,7 +21,13 @@ namespace GIAODIEN
         private void FormGiaVe_Load(object sender, EventArgs e)
         {
             LoadCBTuyenXe();
+            FormQLGiaVe qlgv = new FormQLGiaVe();
+            qlgv.eGiaVe += qlgv_eGiaVe;
 
+        }
+        void qlgv_eGiaVe(string a)
+        {
+            cbIDTuyenXe.SelectedItem = a;
         }
         void LoadCBTuyenXe()
         {
@@ -53,6 +59,7 @@ namespace GIAODIEN
             }
             return true;
         }
+         
           private void btnThemXe_Click(object sender, EventArgs e)
           {
               if (KTRONG() == false)
@@ -87,9 +94,6 @@ namespace GIAODIEN
                   {
                       if (ve.SuaGiaVe(tempVe) == 1)
                       {
-
-                          FormQLXe qlXe = new FormQLXe();
-                          qlXe.LoadQLXe();
                           this.Close();
                       }
                       else

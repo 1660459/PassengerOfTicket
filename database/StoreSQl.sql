@@ -248,6 +248,13 @@ begin
 	Select distinct ghichu From Chuyen
 end
 go
+create proc sp_GetIDTuyen
+@GhiChu nvarchar(4000)
+as
+begin
+	Select distinct tuyen_id_tuyen From Chuyen Where ghichu = @GhiChu
+end
+go
 
 -- Xe
 create proc sp_LoadXe
@@ -417,3 +424,17 @@ begin
 	Set gia_ve = @gia_ve
 	Where stt =@id_ve and id_tuyen_id = @id_tuyen_id
 end
+go
+create proc sp_LoadIDGiaVe
+as
+begin
+	Select stt , id_tuyen_id From GiaVe
+end
+go
+create proc sp_GetGiaVe
+@ID varchar(10) 
+as
+begin
+	Select gia_ve From GiaVe Where id_tuyen_id = @ID
+end
+exec sp_GetGiaVe N'ĐÀ NẴNG-TPHCM'

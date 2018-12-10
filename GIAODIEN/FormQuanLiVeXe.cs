@@ -142,5 +142,16 @@ namespace GIAODIEN
                 return temp;
             }
         }
+
+        private void cbChuyenXe1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BUS_Ve ve = new BUS_Ve();
+            txtGiaTien1.Text = ve.GetGiaVe(cbChuyenXe1.SelectedItem.ToString());
+        }
+
+        private void cbChuyenXe2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -21,6 +21,14 @@ namespace XULY
         {
             int kq = 0;
             DAO_Tram tram = new DAO_Tram();
+            DataTable dt = tram.IDTram();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (a.id_tram == row[0].ToString())
+                {
+                    return -1;
+                }
+            }
             kq = tram.ThemTram(a);
             return kq;
         }

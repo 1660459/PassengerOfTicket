@@ -70,7 +70,7 @@
             this.cbIDTuyenXe.Location = new System.Drawing.Point(281, 212);
             this.cbIDTuyenXe.Name = "cbIDTuyenXe";
             this.cbIDTuyenXe.Size = new System.Drawing.Size(406, 24);
-            this.cbIDTuyenXe.TabIndex = 19;
+            this.cbIDTuyenXe.TabIndex = 2;
             // 
             // panel1
             // 
@@ -90,7 +90,7 @@
             this.txtGiaTienVe.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiaTienVe.Name = "txtGiaTienVe";
             this.txtGiaTienVe.Size = new System.Drawing.Size(399, 23);
-            this.txtGiaTienVe.TabIndex = 16;
+            this.txtGiaTienVe.TabIndex = 3;
             this.txtGiaTienVe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtGiaTienVe_KeyPress);
             // 
             // label7

@@ -46,13 +46,13 @@ namespace GIAODIEN
         {
             LoadQLGiaVe();
         }
-        void LoadQLGiaVe()
+        public void LoadQLGiaVe()
         {
             BUS_Ve xe = new BUS_Ve();
             dgvDanhSachGiaVe.DataSource = xe.LoadGiaVe();
         }
 
-        private void btnXoaDSXe_Click(object sender, EventArgs e)
+        private void btnXoaGiaVe_Click(object sender, EventArgs e)
         {
             string temp = STT.ToString();
             if (string.IsNullOrEmpty(IDDangChon) || string.IsNullOrEmpty(temp))
@@ -71,8 +71,18 @@ namespace GIAODIEN
                 MessageBox.Show("Không Xoá Được");
             }
         }
+        public delegate void dGiaVe(string username);
+        public event dGiaVe eGiaVe;
+        void TruyenGiaVe(string a)
+        {
+            string MG = a;
+            if (eGiaVe != null)
+            {
+                eGiaVe(MG);
+            }
 
-        private void btnSuaDSXe_Click(object sender, EventArgs e)
+        }
+        private void btnSuaGiaVe_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(IDDangChon) || string.IsNullOrEmpty(STT.ToString()))
             {
@@ -82,8 +92,8 @@ namespace GIAODIEN
             FormGiaVe frm4 = new FormGiaVe();
             frm4.txtIDVe.Text = STT.ToString();
             frm4.txtIDVe.Enabled = false;
-            frm4.cbIDTuyenXe.SelectedItem = IDDangChon;
-            frm4.cbIDTuyenXe.Enabled = false;
+            TruyenGiaVe(IDDangChon);
+            
             frm4.Show();
         }
         
