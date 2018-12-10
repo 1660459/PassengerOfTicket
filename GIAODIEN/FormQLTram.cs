@@ -100,9 +100,18 @@ namespace GIAODIEN
             }
             else
             {
-                temp = dgvDSTram.Rows[dem - 1].Cells[0].Value.ToString();
-                int p = int.Parse(temp.Substring(2)) + 1;
-                temp = "TR" + p.ToString("00");
+                int p = 0, n = 0;
+                foreach (DataGridViewRow row in dgvDSTram.Rows)
+                {
+                    temp = row.Cells[0].Value.ToString();
+                    p = int.Parse(temp.Substring(2));
+                    if (n < p)
+                    {
+                        n = p;
+                    }
+                }
+                n += 1;
+                temp = "TR" + n.ToString("00");
                 return temp;
             }
         }
@@ -111,6 +120,10 @@ namespace GIAODIEN
         {
             int num;
             num = e.RowIndex;
+            if (num < 0)
+            {
+                return;
+            }
             IDDangChon = dgvDSTram.Rows[num].Cells[0].Value.ToString();
         }
     }

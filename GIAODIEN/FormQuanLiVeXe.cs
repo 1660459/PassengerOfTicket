@@ -115,6 +115,43 @@ namespace GIAODIEN
         {
             txtMaGhe2.Text = null;
         }
-       
+        public string MaVe()
+        {
+            int dem = 0;
+            string temp = "V01";
+            FormNguoiDat nd = new FormNguoiDat();
+            dem = nd.dgvNguoiDat.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                int p = 0, n = 0;
+                foreach (DataGridViewRow row in nd.dgvNguoiDat.Rows)
+                {
+                    temp = row.Cells[0].Value.ToString();
+                    p = int.Parse(temp.Substring(2));
+                    if (n < p)
+                    {
+                        n = p;
+                    }
+                }
+                n += 1;
+                temp = "V" + n.ToString("00");
+                return temp;
+            }
+        }
+
+        private void cbChuyenXe1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            BUS_Ve ve = new BUS_Ve();
+            txtGiaTien1.Text = ve.GetGiaVe(cbChuyenXe1.SelectedItem.ToString());
+        }
+
+        private void cbChuyenXe2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

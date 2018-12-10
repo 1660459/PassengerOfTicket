@@ -31,6 +31,7 @@ namespace DULIEU
             }
             return dt;
         }
+        
         public DataTable IDTuyen()
         {
 

@@ -30,6 +30,72 @@ namespace DULIEU
             }
             return dt;
         }
+
+        public DataTable LoadGiaVe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadGiaVe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+
+        public DataTable IDGiaVe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadIDGiaVe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        public string GetGiaVe(string idtuyen)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_GetGiaVe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter {ParameterName= "@ID" , Value = idtuyen}
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            DataRow row = dt.Rows[0];
+            return row[0].ToString();
+        }
+        
         public int ThemVe(Ve cm)
         {
             int flag = 0;
@@ -47,6 +113,58 @@ namespace DULIEU
                         new SqlParameter { ParameterName = "@khachhang_id_khachhang", Value = cm.khachhang_id_khachhang },
                         new SqlParameter { ParameterName = "@ngayxuatve", Value = cm.ngayxuatve },
                         new SqlParameter { ParameterName = "@ghichu", Value = cm.ghichu }
+                        );
+                flag = 1;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                provider.Disconnect();
+            }
+            return flag;
+        }
+        public int ThemGiaVe(GiaVe cm)
+        {
+            int flag = 0;
+            Provider provider = new Provider();
+            try
+            {
+                string SqlStr = "sp_ThemGiaVe";
+                provider.Connect();
+                provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
+                        new SqlParameter { ParameterName = "@id_ve", Value = cm.stt },
+                        new SqlParameter { ParameterName = "@id_tuyen_id", Value = cm.id_tuyen_id },
+                        new SqlParameter { ParameterName = "@gia_ve", Value = cm.gia_ve }
+                        
+                        );
+                flag = 1;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                provider.Disconnect();
+            }
+            return flag;
+        }
+        public int SuaGiaVe(GiaVe cm)
+        {
+            int flag = 0;
+            Provider provider = new Provider();
+            try
+            {
+                string SqlStr = "sp_SuaGiaVe";
+                provider.Connect();
+                provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
+                        new SqlParameter { ParameterName = "@id_ve", Value = cm.stt },
+                        new SqlParameter { ParameterName = "@id_tuyen_id", Value = cm.id_tuyen_id },
+                        new SqlParameter { ParameterName = "@gia_ve", Value = cm.gia_ve }
+
                         );
                 flag = 1;
             }
@@ -86,6 +204,34 @@ namespace DULIEU
             return flag;
 
         }
+        public int XoaGiaVe(int STT , string ID)
+        {
+
+            int flag = 0;
+            Provider dbConnect = new Provider();
+            try
+            {
+                string strSQL = "sp_XoaGiaVe";
+                dbConnect.Connect();
+                dbConnect.ExecuteNonQuery(CommandType.StoredProcedure, strSQL,
+                      new SqlParameter { ParameterName = "@STT", Value = STT },
+                      new SqlParameter { ParameterName = "@ID", Value = ID }
+                       );
+
+                flag = 1;
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                dbConnect.Disconnect();
+            }
+            return flag;
+
+        }
+        
         public int SuaVe(Ve cm)
         {
             int flag = 0;

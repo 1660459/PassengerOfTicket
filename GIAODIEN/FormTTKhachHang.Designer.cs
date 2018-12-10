@@ -73,7 +73,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(561, 509);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+          
             // 
             // btnThoatTTKH
             // 
@@ -168,7 +168,7 @@
             this.panel4.Size = new System.Drawing.Size(302, 1);
             this.panel4.TabIndex = 9;
             this.panel4.UseWaitCursor = true;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
+            
             // 
             // txtEmailKH
             // 
@@ -179,7 +179,7 @@
             this.txtEmailKH.Size = new System.Drawing.Size(302, 19);
             this.txtEmailKH.TabIndex = 3;
             this.txtEmailKH.UseWaitCursor = true;
-            this.txtEmailKH.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            
             // 
             // label4
             // 
@@ -191,7 +191,7 @@
             this.label4.TabIndex = 7;
             this.label4.Text = "Email_KhachHang:";
             this.label4.UseWaitCursor = true;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+        
             // 
             // panel3
             // 
@@ -253,7 +253,7 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "ID_KhachHang:";
             this.label2.UseWaitCursor = true;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+           
             // 
             // label1
             // 

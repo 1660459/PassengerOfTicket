@@ -18,30 +18,7 @@ namespace GIAODIEN
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -76,24 +53,7 @@ namespace GIAODIEN
             }
             return true;
         }
-        //public string MaKHTuTang()
-        //{
-        //    int dem = 0;
-        //    string temp = "KH01";
-        //    frmQuanLyKhachHang qlkh = new frmQuanLyKhachHang();
-        //    dem = qlkh.dgvQuanLyKhachHang.RowCount;
-        //    if (dem == 0)
-        //    {
-        //        return temp;
-        //    }
-        //    else
-        //    {
-        //        temp = qlkh.dgvQuanLyKhachHang.Rows[dem - 1].Cells[0].Value.ToString();
-        //        int p = int.Parse(temp.Substring(2)) + 1;
-        //        temp = "KH" + p.ToString("00");
-        //        return temp;
-        //    }
-        //}
+       
         private void btnLuuTTKH_Click(object sender, EventArgs e)
         {
             if (KTRONG() == false)
