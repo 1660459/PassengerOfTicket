@@ -123,8 +123,5 @@ namespace GIAODIEN
                 return temp;
             }
         }
-       
-       
-
     }
 }

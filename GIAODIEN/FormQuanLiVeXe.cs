@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using XULY;
+using DULIEU;
 namespace GIAODIEN
 {
     public partial class FormQuanLiVeXe : Form
@@ -152,6 +153,100 @@ namespace GIAODIEN
         private void cbChuyenXe2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+        bool KTRONG()
+        {
+            if (string.IsNullOrEmpty(txtTenKH1.Text))
+            {
+                MessageBox.Show("hãy điền vào tên khách hàng ");
+                return false;
+            } 
+            if (string.IsNullOrEmpty(txtSDTKH1.Text))
+            {
+                MessageBox.Show("hãy điền sđt khách hàng");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtMaGhe1.Text))
+            {
+                MessageBox.Show("hãy điền chọn ghế");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbChuyenXe1.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy chọn chuyến xe");
+                return false;
+            }
+            if (string.IsNullOrEmpty(dateTimePicker1.Value.ToString()))
+            {
+                MessageBox.Show("hãy chọn ngày xuất vé");
+                return false;
+            } 
+            if (string.IsNullOrEmpty(txtGhiChu.Text))
+            {
+                MessageBox.Show("hãy điền vào ghi chú");
+                return false;
+            }
+            return true;
+        }
+        private void btnDatVe_Click(object sender, EventArgs e)
+        {
+            if (KTRONG() == false)
+            {
+                return;
+            }
+            BUS_NguoiDat NguoiD = new BUS_NguoiDat();
+            NguoiDat nd = new NguoiDat();
+            nd.id_ve = MaVeTuTang();
+            nd.stt = SttTang();
+            nd.ten_khach_hang = txtTenKH1.Text;
+            nd.so_dt = txtSDTKH1.Text;
+            nd.ghe_id_ghe = txtMaGhe1.Text;
+            BUS_ChuyenXe cx = new BUS_ChuyenXe();
+            nd.chuyen_id_chuyen = cx.GetIDChuyen(cbChuyenXe1.SelectedItem.ToString());
+            nd.tinhtrang = 0;
+            nd.giatien = float.Parse(txtGiaTien1.Text);
+            nd.ngayxuatve = dateTimePicker1.Value;
+            nd.ghi_chu = txtGhiChu.Text;
+            if (NguoiD.ThemNguoiDat(nd) == 1)
+            {
+                MessageBox.Show("Đặt vé Thành Công !!");
+            }
+            else
+            {
+                MessageBox.Show("Không Thêm Được");
+                return;
+            }
+
+        }
+        int SttTang()
+        {
+            int dem = 0;
+            int temp = 1;
+            FormNguoiDat frmND = new FormNguoiDat();
+            dem = frmND.dgvNguoiDat.RowCount;
+            if (dem == 0)
+            {
+                return temp;
+            }
+            else
+            {
+                foreach (DataGridViewRow row in frmND.dgvNguoiDat.Rows)
+                {
+                    if (temp < int.Parse(row.Cells[0].Value.ToString()))
+                    {
+                        temp = int.Parse(row.Cells[0].Value.ToString());
+                    }
+                }
+                temp += 1;
+                return temp;
+            }
+        }
+        string MaVeTuTang()
+        {
+            BUS_Ve ve = new BUS_Ve();
+            string MaVe = "";
+            MaVe = ve.MaVeMoi();
+            return MaVe;
         }
     }
 }

@@ -255,6 +255,13 @@ begin
 	Select distinct tuyen_id_tuyen From Chuyen Where ghichu = @GhiChu
 end
 go
+create proc sp_GetIDChuyen
+@GhiChu nvarchar(4000)
+as
+begin
+	Select distinct id_chuyen From Chuyen Where ghichu = @GhiChu
+end
+go
 
 -- Xe
 create proc sp_LoadXe
@@ -413,7 +420,7 @@ begin
 	Values( @id_ve , @id_tuyen_id , @gia_ve)
 end
 go
-create proc sp_SuaGiaVe
+alter proc sp_SuaGiaVe
 @id_ve int , @id_tuyen_id varchar(10) , @gia_ve float
 as
 begin 
@@ -437,4 +444,55 @@ as
 begin
 	Select gia_ve From GiaVe Where id_tuyen_id = @ID
 end
-exec sp_GetGiaVe N'ĐÀ NẴNG-TPHCM'
+--exec sp_GetGiaVe 'T01'
+go
+create proc sp_AddNguoiDat
+@id_ve varchar(10) , @stt int , @ten_khach_hang nvarchar(50) , @so_dt varchar(15) , @ghe_id_ghe varchar(10) , @chuyen_id_chuyen varchar(10) , @tinhtrang int , @giatien float , @ngayxuatve datetime , @ghichu nvarchar(40)
+as
+begin
+	ALTER TABLE DanhSachNguoiDat NOCHECK CONSTRAINT dsnd_Ve_fk
+	insert into DanhSachNguoiDat
+	values(@id_ve, @stt ,@ten_khach_hang ,@so_dt ,@ghe_id_ghe ,@chuyen_id_chuyen, @tinhtrang, @giatien, @ngayxuatve ,@ghichu )
+	ALTER TABLE DanhSachNguoiDat CHECK CONSTRAINT dsnd_Ve_fk
+end
+go
+create function f_MaVeMoi ()
+returns varchar(10)
+as
+begin
+	Declare c cursor for
+	Select id_ve 
+	From DanhSachNguoiDat
+	Declare @MaVe varchar(10)
+	Open c
+	fetch next from c into @MaVe 
+	Declare @tempMV varchar(10) = @MaVe
+	while @@FETCH_STATUS = 0
+	begin
+		Declare @i int 
+		set @i = convert(int , substring('V01',2,2))
+		set @i += 1
+		Declare @MA varchar(5)
+		if(@i < 10)
+			set @MA = '0' + cast(@i as varchar(10))
+		else
+			set @MA = cast(@i as varchar(10))
+		set @tempMV = 'V' + @MA
+		fetch next from c into @MaVe 
+	end
+	Close c
+	Deallocate c
+	if(@tempMV is null)
+		Set @tempMV = 'V01'
+	return @tempMV
+end
+go
+create proc sp_MaVeMoi
+as
+	Select dbo.f_MaVeMoi()
+go
+
+create proc sp_LoadNguoiDat
+as
+	Select * From DanhSachNguoiDat
+go

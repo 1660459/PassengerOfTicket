@@ -73,7 +73,7 @@ namespace GIAODIEN
                   tempVe.gia_ve = float.Parse(txtGiaTienVe.Text);
                   tempVe.id_tuyen_id = cbIDTuyenXe.SelectedItem.ToString();
                   BUS_Ve ve = new BUS_Ve();
-                  if (txtGiaTienVe.Enabled == true)
+                  if (txtIDVe.Enabled == true)
                   {
                       if (ve.ThemGiaVe(tempVe) == 1)
                       {
@@ -98,7 +98,6 @@ namespace GIAODIEN
                       }
                       else
                       {
-                          MessageBox.Show("Không Sửa Được");
                           return;
                       }
                   }
