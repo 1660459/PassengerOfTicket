@@ -450,10 +450,10 @@ create proc sp_AddNguoiDat
 @id_ve varchar(10) , @stt int , @ten_khach_hang nvarchar(50) , @so_dt varchar(15) , @ghe_id_ghe varchar(10) , @chuyen_id_chuyen varchar(10) , @tinhtrang int , @giatien float , @ngayxuatve datetime , @ghichu nvarchar(40)
 as
 begin
-	ALTER TABLE DanhSachNguoiDat NOCHECK CONSTRAINT dsnd_Ve_fk
+	
 	insert into DanhSachNguoiDat
 	values(@id_ve, @stt ,@ten_khach_hang ,@so_dt ,@ghe_id_ghe ,@chuyen_id_chuyen, @tinhtrang, @giatien, @ngayxuatve ,@ghichu )
-	ALTER TABLE DanhSachNguoiDat CHECK CONSTRAINT dsnd_Ve_fk
+
 end
 go
 create function f_MaVeMoi ()

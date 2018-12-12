@@ -134,11 +134,7 @@ create table DanhSachNguoiDat
 	PRIMARY KEY (id_ve,stt)
 )
 --khoa ngoai 
-ALTER TABLE DanhSachNguoiDat
-ADD 
-CONSTRAINT dsnd_Ve_fk
-FOREIGN KEY(id_ve)
-REFERENCES Ve
+
 
 ALTER TABLE GiaVe
 ADD 
