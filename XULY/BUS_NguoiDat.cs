@@ -23,5 +23,13 @@ namespace XULY
             dt = nd.LoadNguoiDat();
             return dt;
         }
+        public int XoaNguoiDat(string id , int stt)
+        {
+            int kq = 0;
+            DAO_NguoiDat kh = new DAO_NguoiDat();
+            kq = kh.DelNguoiDat(id , stt);
+            return kq;
+        }
+        
     }
 }

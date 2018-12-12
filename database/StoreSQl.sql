@@ -6,6 +6,13 @@ begin
 	select* from KhachHang
 end
 go
+create proc sp_LoadIDKhachHang
+as
+begin 
+	select kh.id_khachhang from KhachHang kh
+end
+
+go
 create proc sp_IDKhachHang
 as
 begin 
@@ -156,7 +163,7 @@ end
 go
 
 alter proc sp_SuaTaiXe
-	@id_taixe varchar(10), @tentaixe nvarchar(100),@banglai nvarchar(100)
+@id_taixe varchar(10), @tentaixe nvarchar(100),@banglai nvarchar(100)
 as
 begin 
 	if(not exists (select * from Tai_Xe where id_taixe = @id_taixe))
@@ -456,7 +463,7 @@ begin
 
 end
 go
-create function f_MaVeMoi ()
+alter function f_MaVeMoi ()
 returns varchar(10)
 as
 begin
@@ -470,7 +477,38 @@ begin
 	while @@FETCH_STATUS = 0
 	begin
 		Declare @i int 
-		set @i = convert(int , substring('V01',2,2))
+		set @i = convert(int , substring(@MaVe,2,2))
+		set @i += 1
+		Declare @MA varchar(5)
+		if(@i < 10)
+			set @MA = '0' + cast(@i as varchar(10))
+		else
+			set @MA = cast(@i as varchar(10))
+		set @tempMV = 'V' + @MA
+		fetch next from c into @MaVe 
+	end
+	Close c
+	Deallocate c
+	if(@tempMV is null)
+		Set @tempMV = 'V01'
+	return @tempMV
+end
+go
+create function f_VeMoi ()
+returns varchar(10)
+as
+begin
+	Declare c cursor for
+	Select id_ve 
+	From Ve
+	Declare @MaVe varchar(10)
+	Open c
+	fetch next from c into @MaVe 
+	Declare @tempMV varchar(10) = @MaVe
+	while @@FETCH_STATUS = 0
+	begin
+		Declare @i int 
+		set @i = convert(int , substring(@MaVe,2,2))
 		set @i += 1
 		Declare @MA varchar(5)
 		if(@i < 10)
@@ -491,8 +529,47 @@ create proc sp_MaVeMoi
 as
 	Select dbo.f_MaVeMoi()
 go
+create proc sp_VeMoi
+as
+	Select dbo.f_VeMoi()
+go
 
+exec sp_MaVeMoi
+go
 create proc sp_LoadNguoiDat
 as
 	Select * From DanhSachNguoiDat
 go
+--exec sp_LoadNguoiDat
+create proc sp_LoadIDVe
+as
+begin
+	Select id_ve
+	From Ve
+end
+go
+alter proc sp_ThemVe
+@id_ve varchar(10) , @ghe_id_ghe varchar(10) , @chuyen_id_chuyen varchar(10), @tinhtrang int , @giatien money ,@khachhang_id_khachhang varchar(10) , @ngayxuatve datetime , @ghichu nvarchar(40)
+as
+begin 
+	if(exists( select * from Ve where id_ve = @id_ve))
+	begin
+		return 0
+	end
+	ALTER TABLE Ve NOCHECK CONSTRAINT ve_ghe_fk
+	insert into Ve
+	values (@id_ve , @ghe_id_ghe , @chuyen_id_chuyen , @tinhtrang ,@giatien ,@khachhang_id_khachhang ,@ngayxuatve ,@ghichu)
+	ALTER TABLE Ve CHECK CONSTRAINT ve_ghe_fk
+end
+go
+alter proc sp_DELNguoiDat
+@id_ve varchar(10) , @stt int
+as
+begin
+	if(not exists( select * from DanhSachNguoiDat where id_ve = @id_ve and stt = @stt))
+	begin
+		return 0
+	end
+	Delete from DanhSachNguoiDat
+	Where id_ve = @id_ve and stt = @stt
+end

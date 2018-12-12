@@ -39,7 +39,6 @@ namespace XULY
             kq = kh.ThemGiaVe(ve);
             return kq;
         }
-
         public int SuaGiaVe(GiaVe ve)
         {
             int kq = 0;
@@ -62,6 +61,28 @@ namespace XULY
             dt = ve.MaVeMoi();
             return dt;
         }
+        public string VeTuTang()
+        {
+            DAO_Ve ve = new DAO_Ve();
+            string dt = "";
+            dt = ve.VeMoi();
+            return dt;
+        }
         
+        public int ThemVe(Ve ve)
+        {
+            int kq = 0;
+            DAO_Ve kh = new DAO_Ve();
+            DataTable dt = kh.IDVe();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (ve.id_ve == row[0].ToString())
+                {
+                    return -1;
+                }
+            }
+            kq = kh.ThemVe(ve);
+            return kq;
+        }
     }
 }

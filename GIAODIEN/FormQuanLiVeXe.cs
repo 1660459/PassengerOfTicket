@@ -39,6 +39,12 @@ namespace GIAODIEN
         {
             LoadLoaiXe();
             LoadChuyenXe();
+            LoadKhachHang();
+        }
+        void LoadKhachHang()
+        {
+            BUS_KhachHang kh = new BUS_KhachHang();
+            cbTenKH.DataSource = kh.LoadTenKH();
         }
         void LoadLoaiXe()
         {
@@ -152,7 +158,8 @@ namespace GIAODIEN
 
         private void cbChuyenXe2_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            BUS_Ve ve = new BUS_Ve();
+            txtGiaTien2.Text = ve.GetGiaVe(cbChuyenXe2.SelectedItem.ToString());
         }
         bool KTRONG()
         {
@@ -182,6 +189,36 @@ namespace GIAODIEN
                 return false;
             } 
             if (string.IsNullOrEmpty(txtGhiChu.Text))
+            {
+                MessageBox.Show("hãy điền vào ghi chú");
+                return false;
+            }
+            return true;
+        }
+        bool KTRONG2()
+        {
+            
+            if (string.IsNullOrEmpty(txtMaGhe2.Text))
+            {
+                MessageBox.Show("hãy điền chọn ghế");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbChuyenXe2.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy chọn chuyến xe");
+                return false;
+            }
+            if (string.IsNullOrEmpty(cbTenKH.SelectedItem.ToString()))
+            {
+                MessageBox.Show("hãy chọn khach hang");
+                return false;
+            }
+            if (string.IsNullOrEmpty(dateTimePicker2.Value.ToString()))
+            {
+                MessageBox.Show("hãy chọn ngày xuất vé");
+                return false;
+            }
+            if (string.IsNullOrEmpty(txtGhiChu2.Text))
             {
                 MessageBox.Show("hãy điền vào ghi chú");
                 return false;
@@ -246,6 +283,41 @@ namespace GIAODIEN
             BUS_Ve ve = new BUS_Ve();
             string MaVe = "";
             MaVe = ve.MaVeMoi();
+            return MaVe;
+        }
+
+        private void btnXuatVe_Click(object sender, EventArgs e)
+        {
+            if (KTRONG2() == false)
+            {
+                return;
+            }
+            BUS_Ve NguoiD = new BUS_Ve();
+            Ve nd = new Ve();
+            nd.id_ve = VeTuTang();
+            nd.ghe_id_ghe = txtMaGhe2.Text;
+            BUS_ChuyenXe cx = new BUS_ChuyenXe();
+            nd.chuyen_id_chuyen = cx.GetIDChuyen(cbChuyenXe2.SelectedItem.ToString());
+            nd.khachhang_id_khachhang = cbTenKH.SelectedItem.ToString();
+            nd.tinhtrang = 1;
+            nd.giatien = float.Parse(txtGiaTien2.Text);
+            nd.ngayxuatve = dateTimePicker2.Value;
+            nd.ghichu = txtGhiChu2.Text;
+            if (NguoiD.ThemVe(nd) == 1)
+            {
+                MessageBox.Show("Mua Vé Thành Công !!");
+            }
+            else
+            {
+                MessageBox.Show("Vé đã tồn tại");
+                return;
+            }
+        }
+        string VeTuTang()
+        {
+            BUS_Ve ve = new BUS_Ve();
+            string MaVe = "";
+            MaVe = ve.VeTuTang();
             return MaVe;
         }
     }

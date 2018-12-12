@@ -42,6 +42,31 @@ namespace DULIEU
             }
             return flag;
         }
+        public int DelNguoiDat(string cm , int stt)
+        {
+            int flag = 0;
+            Provider provider = new Provider();
+            try
+            {
+                string SqlStr = "sp_DELNguoiDat";
+                provider.Connect();
+                provider.ExecuteNonQuery(CommandType.StoredProcedure, SqlStr,
+                        new SqlParameter { ParameterName = "@id_ve", Value = cm },
+                        new SqlParameter { ParameterName = "@stt", Value = stt }
+                         );
+                flag = 1;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                provider.Disconnect();
+            }
+            return flag;
+        }
+        
         public DataTable LoadNguoiDat()
         {
             Provider kn = new Provider();

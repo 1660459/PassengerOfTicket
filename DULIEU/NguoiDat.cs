@@ -57,9 +57,9 @@ namespace DULIEU
             get { return _stt; }
             set { _stt = value; }
         }
-        float _giatien;
+        double _giatien;
 
-        public float giatien
+        public double giatien
         {
             get { return _giatien; }
             set { _giatien = value; }

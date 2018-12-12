@@ -16,6 +16,19 @@ namespace XULY
             dt = kh.LoadKhachHang();
             return dt;
         }
+        public List<string> LoadTenKH()
+        {
+            List<string> list = new List<string>();
+            DAO_KhachHang kh = new DAO_KhachHang();
+            DataTable dt = new DataTable();
+            dt = kh.LoadIDKhachHang();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
+        
         public int ThemKhachHang(KhachHang a)
         {
             int kq = 0;

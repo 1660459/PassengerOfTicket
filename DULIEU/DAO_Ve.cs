@@ -72,6 +72,27 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable IDVe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadIDVe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        
         public string GetGiaVe(string idtuyen)
         {
             Provider kn = new Provider();
@@ -116,6 +137,28 @@ namespace DULIEU
             DataRow row = dt.Rows[0];
             return row[0].ToString();
         }
+        public string VeMoi()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_VeMoi";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            DataRow row = dt.Rows[0];
+            return row[0].ToString();
+        }
+        
         public int ThemVe(Ve cm)
         {
             int flag = 0;

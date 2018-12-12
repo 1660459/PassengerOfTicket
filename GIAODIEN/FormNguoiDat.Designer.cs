@@ -34,10 +34,6 @@
             this.btnXuatVe = new System.Windows.Forms.Button();
             this.btnXoaNguoiDat = new System.Windows.Forms.Button();
             this.dgvNguoiDat = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.id_ve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ten_khach_hang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +44,10 @@
             this.giatien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngayxuatve = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ghichu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDat)).BeginInit();
@@ -92,6 +92,7 @@
             this.btnXuatVe.TabIndex = 7;
             this.btnXuatVe.Text = "XUẤT VÉ";
             this.btnXuatVe.UseVisualStyleBackColor = false;
+            this.btnXuatVe.Click += new System.EventHandler(this.btnXuatVe_Click);
             // 
             // btnXoaNguoiDat
             // 
@@ -105,6 +106,7 @@
             this.btnXoaNguoiDat.TabIndex = 8;
             this.btnXoaNguoiDat.Text = "XÓA";
             this.btnXoaNguoiDat.UseVisualStyleBackColor = false;
+            this.btnXoaNguoiDat.Click += new System.EventHandler(this.btnXoaNguoiDat_Click);
             // 
             // dgvNguoiDat
             // 
@@ -132,56 +134,7 @@
             this.dgvNguoiDat.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNguoiDat.Size = new System.Drawing.Size(1464, 350);
             this.dgvNguoiDat.TabIndex = 6;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1463, 75);
-            this.panel2.TabIndex = 5;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(1395, 0);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 46);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(508, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(499, 46);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "DANH SÁCH VÉ ĐÃ ĐẶT";
+            this.dgvNguoiDat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguoiDat_CellClick);
             // 
             // id_ve
             // 
@@ -252,6 +205,56 @@
             this.ghichu.HeaderText = "Ghi Chú";
             this.ghichu.Name = "ghichu";
             this.ghichu.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1463, 75);
+            this.panel2.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(25, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.White;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Red;
+            this.button4.Location = new System.Drawing.Point(1395, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(65, 46);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "X";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(508, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(499, 46);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "DANH SÁCH VÉ ĐÃ ĐẶT";
             // 
             // FormNguoiDat
             // 
