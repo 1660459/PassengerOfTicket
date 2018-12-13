@@ -19,7 +19,8 @@ namespace GIAODIEN
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtMatKhau.Text == "1")
+            XULY.BUS_Users bususer = new XULY.BUS_Users();
+            if (bususer.User_Authen(txtTaiKhoang,txtMatKhau) != 0 )
             {
                 FormAdMin frm = new FormAdMin();
                 this.Hide();

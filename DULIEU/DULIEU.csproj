@@ -50,6 +50,7 @@
     <Compile Include="DAO_TaiXe.cs" />
     <Compile Include="DAO_Tram.cs" />
     <Compile Include="DAO_TuyenXe.cs" />
+    <Compile Include="DAO_Users.cs" />
     <Compile Include="DAO_Ve.cs" />
     <Compile Include="DAO_Xe.cs" />
     <Compile Include="Ghe.cs" />

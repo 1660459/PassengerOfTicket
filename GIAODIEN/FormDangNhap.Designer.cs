@@ -36,9 +36,9 @@
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtTaiKhoang = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -86,11 +86,11 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.txtTaiKhoang);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.txtMatKhau);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(54, 45);
             this.panel2.Name = "panel2";
@@ -133,17 +133,6 @@
             this.panel3.Size = new System.Drawing.Size(180, 1);
             this.panel3.TabIndex = 4;
             // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(185, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 15);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "ADMIN";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -164,6 +153,14 @@
             this.label1.Size = new System.Drawing.Size(131, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "ĐĂNG NHẬP";
+            // 
+            // txtTaiKhoang
+            // 
+            this.txtTaiKhoang.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTaiKhoang.Location = new System.Drawing.Point(145, 19);
+            this.txtTaiKhoang.Name = "txtTaiKhoang";
+            this.txtTaiKhoang.Size = new System.Drawing.Size(147, 13);
+            this.txtTaiKhoang.TabIndex = 8;
             // 
             // FormDangNhap
             // 
@@ -193,8 +190,8 @@
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTaiKhoang;
     }
 }

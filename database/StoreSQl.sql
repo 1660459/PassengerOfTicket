@@ -572,4 +572,14 @@ begin
 	end
 	Delete from DanhSachNguoiDat
 	Where id_ve = @id_ve and stt = @stt
-end
+END
+GO 
+CREATE PROC sp_CheckUser
+@ID varchar(50), @Pass VARCHAR(50)
+AS
+BEGIN
+	SELECT COUNT(*) AS KiemTra FROM dbo.Users WHERE UserName = @ID AND Password = @Pass
+
+END
+GO
+SELECT * FROM  dbo.Users

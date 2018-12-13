@@ -133,8 +133,21 @@ create table DanhSachNguoiDat
 	constraint dsnd_pk
 	PRIMARY KEY (id_ve,stt)
 )
---khoa ngoai 
 
+CREATE TABLE Users
+(
+	UserID INT,
+	UserName VARCHAR(50),
+	PassWord VARCHAR(50),
+	Email VARCHAR(50),
+	CreateDate DATETIME
+)
+--khoa ngoai 
+ALTER TABLE DanhSachNguoiDat
+ADD 
+CONSTRAINT dsnd_Ve_fk
+FOREIGN KEY(id_ve)
+REFERENCES Ve
 
 ALTER TABLE GiaVe
 ADD 
@@ -446,8 +459,22 @@ values
 (3,'T03',300.0),
 (4,'T04',300.0),
 (5,'T05',350.0),
-(6,'T06',350.0)
+(6,'T06',350)
 
+INSERT dbo.Users
+
+        ( UserID ,
+          UserName ,
+          Password ,
+          Email ,
+          CreateDate
+        )
+VALUES  ( 1 , -- UserID - int
+          'admin' , -- UserName - varchar(50)
+          '1234' , -- Password - varchar(50)
+          'nguyenthin230798@gmail.com' , -- Email - varchar(50)
+          GETDATE()  -- CreateDate - datetime
+        )
 
 
 
