@@ -300,5 +300,11 @@ namespace GIAODIEN
             MaVe = ve.VeTuTang();
             return MaVe;
         }
+
+        private void btnXenTenKH_Click(object sender, EventArgs e)
+        {
+            frmHOTRO_TenKH frm = new frmHOTRO_TenKH();
+            frm.Show();
+        }
     }
 }

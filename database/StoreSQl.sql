@@ -534,8 +534,8 @@ as
 	Select dbo.f_VeMoi()
 go
 
-exec sp_MaVeMoi
-go
+--exec sp_MaVeMoi
+
 create proc sp_LoadNguoiDat
 as
 	Select * From DanhSachNguoiDat
@@ -582,4 +582,13 @@ BEGIN
 
 END
 GO
-SELECT * FROM  dbo.Users
+--SELECT * FROM  dbo.Users
+
+--------------
+alter proc sp_FindKH
+@hoten varchar(10)
+as
+	Select id_khachhang , hoten 
+	From KhachHang 
+	Where hoten like '%'+@hoten+'%'
+exec sp_FindKH 'Nguy'

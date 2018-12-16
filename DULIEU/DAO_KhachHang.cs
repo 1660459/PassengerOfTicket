@@ -31,6 +31,30 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable FindKH(string tenKH)
+        {
+
+            Provider kn = new Provider();
+            string strSQL = "sp_FindKH";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter {ParameterName = "@hoten" , Value = tenKH }
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        
         public DataTable LoadIDKhachHang()
         {
 

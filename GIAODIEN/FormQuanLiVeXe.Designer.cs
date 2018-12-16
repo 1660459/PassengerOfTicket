@@ -84,6 +84,7 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
+            this.btnXenTenKH = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -428,6 +429,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cbTenKH);
+            this.panel1.Controls.Add(this.btnXenTenKH);
             this.panel1.Controls.Add(this.btnMaGhe2);
             this.panel1.Controls.Add(this.panel14);
             this.panel1.Controls.Add(this.button5);
@@ -745,6 +747,22 @@
             this.label19.TabIndex = 0;
             this.label19.Text = "HỆ THỐNG QUẢN LÍ VÉ XE";
             // 
+            // btnXenTenKH
+            // 
+            this.btnXenTenKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnXenTenKH.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.btnXenTenKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnXenTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXenTenKH.ForeColor = System.Drawing.Color.White;
+            this.btnXenTenKH.Location = new System.Drawing.Point(561, 425);
+            this.btnXenTenKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXenTenKH.Name = "btnXenTenKH";
+            this.btnXenTenKH.Size = new System.Drawing.Size(71, 33);
+            this.btnXenTenKH.TabIndex = 38;
+            this.btnXenTenKH.Text = "Xem";
+            this.btnXenTenKH.UseVisualStyleBackColor = false;
+            this.btnXenTenKH.Click += new System.EventHandler(this.btnXenTenKH_Click);
+            // 
             // FormQuanLiVeXe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -832,5 +850,6 @@
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox txtMaGhe1;
         private System.Windows.Forms.ComboBox cbTenKH;
+        private System.Windows.Forms.Button btnXenTenKH;
     }
 }
