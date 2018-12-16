@@ -30,6 +30,29 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable FindTaiXe(string TenTX)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_FindTaiXe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter { ParameterName = "tentaixe" , Value = TenTX}
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        
         public DataTable IDTaiXe()
         {
             Provider kn = new Provider();

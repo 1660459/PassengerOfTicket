@@ -182,11 +182,35 @@
     <Compile Include="FormXe.Designer.cs">
       <DependentUpon>FormXe.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHOTRO_TaiXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHOTRO_TaiXe.Designer.cs">
+      <DependentUpon>frmHOTRO_TaiXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHOTRO_Xe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHOTRO_Xe.Designer.cs">
+      <DependentUpon>frmHOTRO_Xe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHOTRO_TenKH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmHOTRO_TenKH.Designer.cs">
       <DependentUpon>frmHOTRO_TenKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHOTRO_TenTram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHOTRO_TenTram.Designer.cs">
+      <DependentUpon>frmHOTRO_TenTram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHOTRO_Tuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHOTRO_Tuyen.Designer.cs">
+      <DependentUpon>frmHOTRO_Tuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -259,8 +283,20 @@
     <EmbeddedResource Include="FormXe.resx">
       <DependentUpon>FormXe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHOTRO_TaiXe.resx">
+      <DependentUpon>frmHOTRO_TaiXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHOTRO_Xe.resx">
+      <DependentUpon>frmHOTRO_Xe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHOTRO_TenKH.resx">
       <DependentUpon>frmHOTRO_TenKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHOTRO_TenTram.resx">
+      <DependentUpon>frmHOTRO_TenTram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHOTRO_Tuyen.resx">
+      <DependentUpon>frmHOTRO_Tuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

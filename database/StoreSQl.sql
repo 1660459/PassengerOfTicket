@@ -29,7 +29,7 @@ begin
 end 
 go
 -- xoa khach hang 
-alter proc sp_XoaKhachHang @id_khachhang varchar(10)
+create proc sp_XoaKhachHang @id_khachhang varchar(10)
 as
 begin 
 	if(not exists (select * from KhachHang where id_khachhang = @id_khachhang))
@@ -136,7 +136,7 @@ begin
 	select id_taixe from Tai_Xe
 end
 go
-alter proc sp_ThemTaiXe 
+create proc sp_ThemTaiXe 
 	@id_taixe varchar(10), @tentaixe nvarchar(100),@banglai nvarchar(100)
 as
 begin 
@@ -146,7 +146,7 @@ begin
 end 
 go
 
-alter proc sp_XoaTaiXe @id_taixe varchar(10)
+create proc sp_XoaTaiXe @id_taixe varchar(10)
 as
 begin 
 	if(not exists (select * from Tai_Xe where id_taixe = @id_taixe))
@@ -162,7 +162,7 @@ begin
 end 
 go
 
-alter proc sp_SuaTaiXe
+create proc sp_SuaTaiXe
 @id_taixe varchar(10), @tentaixe nvarchar(100),@banglai nvarchar(100)
 as
 begin 
@@ -178,10 +178,6 @@ begin
 		end
 end
 go
-
---GHẾ
-
-
 -- TRẠM
 create proc sp_LoadTram 
 as
@@ -293,7 +289,7 @@ begin
 end
 go
 
-alter proc sp_ThemXe
+create proc sp_ThemXe
 @xe_id varchar(10) , @ten_xe nvarchar(4000) , @so_dang_ky varchar(4000) , @loaixe_id_loaixe varchar(10)
 as
 begin 
@@ -353,7 +349,7 @@ as
 	Select id_tuyen From Tuyen
 
 go
-alter proc sp_XoaTuyenXe
+create proc sp_XoaTuyenXe
 @id_tuyen varchar(10)
 as
 begin
@@ -366,7 +362,7 @@ begin
 end
 go
 
-alter proc sp_ThemTuyenXe
+create proc sp_ThemTuyenXe
 @id_tuyen varchar(10) , @khoang_cach float , @thoigianchay int , @tram_id_tram1 varchar(10) , @tram_id_tram varchar(10)
 as
 begin
@@ -379,7 +375,7 @@ begin
 end
 go
 
-alter proc sp_SuaTuyenXe
+create proc sp_SuaTuyenXe
 @id_tuyen varchar(10) , @khoang_cach float , @thoigianchay int , @tram_id_tram varchar(10) , @tram_id_tram1 varchar(10)
 as 
 begin
@@ -427,7 +423,7 @@ begin
 	Values( @id_ve , @id_tuyen_id , @gia_ve)
 end
 go
-alter proc sp_SuaGiaVe
+create proc sp_SuaGiaVe
 @id_ve int , @id_tuyen_id varchar(10) , @gia_ve float
 as
 begin 
@@ -463,7 +459,7 @@ begin
 
 end
 go
-alter function f_MaVeMoi ()
+create function f_MaVeMoi ()
 returns varchar(10)
 as
 begin
@@ -548,7 +544,7 @@ begin
 	From Ve
 end
 go
-alter proc sp_ThemVe
+create proc sp_ThemVe
 @id_ve varchar(10) , @ghe_id_ghe varchar(10) , @chuyen_id_chuyen varchar(10), @tinhtrang int , @giatien money ,@khachhang_id_khachhang varchar(10) , @ngayxuatve datetime , @ghichu nvarchar(40)
 as
 begin 
@@ -562,7 +558,7 @@ begin
 	ALTER TABLE Ve CHECK CONSTRAINT ve_ghe_fk
 end
 go
-alter proc sp_DELNguoiDat
+create proc sp_DELNguoiDat
 @id_ve varchar(10) , @stt int
 as
 begin
@@ -582,13 +578,46 @@ BEGIN
 
 END
 GO
---SELECT * FROM  dbo.Users
 
---------------
-alter proc sp_FindKH
-@hoten varchar(10)
+
+------------------------------FIND-------------------------
+create proc sp_FindKH
+@hoten nvarchar(4000)
 as
+begin
 	Select id_khachhang , hoten 
 	From KhachHang 
 	Where hoten like '%'+@hoten+'%'
-exec sp_FindKH 'Nguy'
+end
+go
+create proc sp_FindTram
+@ten_tram nvarchar(4000)
+as
+begin
+	Select *
+	From Tram 
+	Where ten_tram like '%'+@ten_tram+'%'
+end
+go
+
+create proc sp_FindXe
+@ten_xe nvarchar(4000)
+as
+begin
+	Select x.xe_id , x.ten_xe ,lx.tenloai
+	From Xe x , LoaiXe lx
+	Where ten_xe like '%'+@ten_xe+'%'
+	and x.loaixe_id_loaixe = lx.id_loaixe
+end
+go
+
+create proc sp_FindTaiXe
+@tentaixe nvarchar(100)
+as
+begin
+	Select *
+	From Tai_Xe
+	Where tentaixe like '%'+@tentaixe+'%'
+end
+go
+

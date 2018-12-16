@@ -40,6 +40,7 @@
             this.txtIDVe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.cbIDTuyenXe);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.txtGiaTienVe);
@@ -186,6 +188,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN  GIÁ VÉ";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(705, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Tra Cứu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FormGiaVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,5 +232,6 @@
         internal System.Windows.Forms.TextBox txtGiaTienVe;
         private System.Windows.Forms.Label label7;
         internal System.Windows.Forms.ComboBox cbIDTuyenXe;
+        private System.Windows.Forms.Button button1;
     }
 }

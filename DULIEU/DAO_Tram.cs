@@ -30,7 +30,29 @@ namespace DULIEU
             }
             return dt;
         }
-
+        public DataTable FindTram(string TenTram)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_FindTram";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter { ParameterName = "@ten_tram" , Value = TenTram}
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        
         public DataTable IDTram()
         {
             Provider kn = new Provider();

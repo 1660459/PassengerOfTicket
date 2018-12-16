@@ -17,6 +17,14 @@ namespace XULY
             dt = tram.LoadTram();
             return dt;
         }
+        public DataTable TraCuuTram(string tentram)
+        {
+            DAO_Tram tram = new DAO_Tram();
+            DataTable dt = new DataTable();
+            dt = tram.FindTram(tentram);
+            return dt;
+        }
+        
         public int ThemTram(Tram a)
         {
             int kq = 0;

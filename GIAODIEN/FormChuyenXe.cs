@@ -122,5 +122,24 @@ namespace GIAODIEN
             }
 
         }
+
+      
+        private void btnXemTuyen_Click(object sender, EventArgs e)
+        {
+            frmHOTRO_Tuyen tx = new frmHOTRO_Tuyen();
+            tx.Show();
+        }
+
+        private void btnTraXe_Click(object sender, EventArgs e)
+        {
+            frmHOTRO_Xe frm = new frmHOTRO_Xe();
+            frm.Show();
+        }
+
+        private void btnTraTaiXe_Click(object sender, EventArgs e)
+        {
+            frmHOTRO_TaiXe frm = new frmHOTRO_TaiXe();
+            frm.Show();
+        }
     }
 }

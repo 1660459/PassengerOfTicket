@@ -17,7 +17,14 @@ namespace XULY
             dt = tai_xe.LoadTaiXe();
             return dt;
         }
-
+        public DataTable TimTaiXe(string tenTX)
+        {
+            DAO_TaiXe tai_xe = new DAO_TaiXe();
+            DataTable dt = new DataTable();
+            dt = tai_xe.FindTaiXe(tenTX);
+            return dt;
+        }
+       
         public int ThemTaiXe(TaiXe a)
         {
             int kq = 0;

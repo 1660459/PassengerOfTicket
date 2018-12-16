@@ -36,8 +36,10 @@ namespace GIAODIEN
         private void frmHOTRO_TenKH_Load(object sender, EventArgs e)
         {
             BUS_KhachHang kh = new BUS_KhachHang();
-            dgvTimKH.DataSource = kh.LoadKH();
+            dgvTimKH.DataSource = kh.TimKhachHang(" ");
         }
+
+    
 
         
 

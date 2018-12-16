@@ -121,6 +121,12 @@ namespace GIAODIEN
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmHOTRO_Tuyen htt = new frmHOTRO_Tuyen();
+            htt.Show();
+        }
+
         
     }
 }

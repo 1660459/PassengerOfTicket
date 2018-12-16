@@ -122,6 +122,12 @@ namespace GIAODIEN
             cbTram02.DataSource = tx.LoadIDTram();
         }
 
+        private void btnTraCuuTram_Click(object sender, EventArgs e)
+        {
+            frmHOTRO_TenTram frm = new frmHOTRO_TenTram();
+            frm.Show();
+        }
+
         
     }
 }

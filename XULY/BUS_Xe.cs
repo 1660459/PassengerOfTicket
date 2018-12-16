@@ -16,6 +16,14 @@ namespace XULY
             dt = xe.LoadXe();
             return dt;
         }
+        public DataTable TimXe(string tenxe)
+        {
+            DAO_Xe xe = new DAO_Xe();
+            DataTable dt = new DataTable();
+            dt = xe.FindXe(tenxe);
+            return dt;
+        }
+        
         public int ThemXe(Xe a)
         {
             int kq = 0;
