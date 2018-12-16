@@ -116,7 +116,7 @@ namespace DULIEU
             DataRow row = dt.Rows[0];
             return row[0].ToString();
         }
-        public string MaVeMoi()
+        public string MaVeNDMoi()
         {
             Provider kn = new Provider();
             string strSQL = "sp_MaVeMoi";

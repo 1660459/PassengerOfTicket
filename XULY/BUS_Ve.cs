@@ -54,11 +54,11 @@ namespace XULY
             string dt = ve.GetGiaVe(idtuyen);
             return dt;
         }
-        public string MaVeMoi()
+        public string MaVeNDMoi()
         {
             DAO_Ve ve = new DAO_Ve();
             string dt = "";
-            dt = ve.MaVeMoi();
+            dt = ve.MaVeNDMoi();
             return dt;
         }
         public string VeTuTang()

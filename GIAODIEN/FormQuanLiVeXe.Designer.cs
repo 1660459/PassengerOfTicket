@@ -58,6 +58,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbLoaiXe1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbTenKH = new System.Windows.Forms.ComboBox();
             this.btnMaGhe2 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
             this.button5 = new System.Windows.Forms.Button();
@@ -83,7 +84,6 @@
             this.panel12 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
-            this.cbTenKH = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -455,6 +455,14 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // cbTenKH
+            // 
+            this.cbTenKH.FormattingEnabled = true;
+            this.cbTenKH.Location = new System.Drawing.Point(248, 428);
+            this.cbTenKH.Name = "cbTenKH";
+            this.cbTenKH.Size = new System.Drawing.Size(297, 24);
+            this.cbTenKH.TabIndex = 50;
+            // 
             // btnMaGhe2
             // 
             this.btnMaGhe2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
@@ -597,9 +605,9 @@
             this.label10.Location = new System.Drawing.Point(127, 428);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 24);
+            this.label10.Size = new System.Drawing.Size(69, 24);
             this.label10.TabIndex = 20;
-            this.label10.Text = "Tên KH:";
+            this.label10.Text = "ID KH:";
             // 
             // panel10
             // 
@@ -736,14 +744,6 @@
             this.label19.Size = new System.Drawing.Size(553, 46);
             this.label19.TabIndex = 0;
             this.label19.Text = "HỆ THỐNG QUẢN LÍ VÉ XE";
-            // 
-            // cbTenKH
-            // 
-            this.cbTenKH.FormattingEnabled = true;
-            this.cbTenKH.Location = new System.Drawing.Point(248, 428);
-            this.cbTenKH.Name = "cbTenKH";
-            this.cbTenKH.Size = new System.Drawing.Size(297, 24);
-            this.cbTenKH.TabIndex = 50;
             // 
             // FormQuanLiVeXe
             // 

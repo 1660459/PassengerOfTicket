@@ -58,6 +58,6 @@ namespace XULY
             kq = kh.SuaKhachHang(a);
             return kq;
         }
-
+      
     }
 }

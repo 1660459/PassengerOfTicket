@@ -10,7 +10,7 @@ namespace DULIEU
 {
     class Provider
     {
-        static string ConnectionString = @"Data Source=DESKTOP-CQPLCN5;Initial Catalog=QuanLyVeXe;User ID=sa;Password=thi3609539";
+        static string ConnectionString = @"Data Source=DESKTOP-N2G0LQ3\SQL;Initial Catalog=QuanLyVeXe;Integrated Security=True";
 
         SqlConnection Connection { get; set; }
 

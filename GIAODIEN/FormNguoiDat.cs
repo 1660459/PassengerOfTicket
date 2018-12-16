@@ -36,6 +36,9 @@ namespace GIAODIEN
 
         private void btnXuatVe_Click(object sender, EventArgs e)
         {
+            FormQuanLiVeXe qlve = new FormQuanLiVeXe();
+            IDDangChon.id_ve = qlve.VeTuTang();
+            IDDangChon.khachhang_id_khachhang = "KH00";
             BUS_Ve ve = new BUS_Ve();
             if (ve.ThemVe(IDDangChon) == 1)
             {
@@ -66,9 +69,15 @@ namespace GIAODIEN
             IDDangChon.giatien = double.Parse(dgvNguoiDat.Rows[num].Cells[7].Value.ToString());
             IDDangChon.ngayxuatve = DateTime.Parse(dgvNguoiDat.Rows[num].Cells[8].Value.ToString());
             IDDangChon.ghichu = dgvNguoiDat.Rows[num].Cells[9].Value.ToString();
-            IDDangChon.khachhang_id_khachhang = null;
         }
+        //public string MaKHTuTang()
+        //{
 
+        //    BUS_KhachHang kh = new BUS_KhachHang();
+        //    string MAKH = "";
+        //    MAKH = kh.MaKHTutang();
+        //    return MAKH;
+        //}
         private void btnXoaNguoiDat_Click(object sender, EventArgs e)
         {
             BUS_NguoiDat nd = new BUS_NguoiDat();

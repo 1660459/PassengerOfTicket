@@ -124,30 +124,10 @@ namespace GIAODIEN
         }
         public string MaVe()
         {
-            int dem = 0;
-            string temp = "V01";
-            FormNguoiDat nd = new FormNguoiDat();
-            dem = nd.dgvNguoiDat.RowCount;
-            if (dem == 0)
-            {
-                return temp;
-            }
-            else
-            {
-                int p = 0, n = 0;
-                foreach (DataGridViewRow row in nd.dgvNguoiDat.Rows)
-                {
-                    temp = row.Cells[0].Value.ToString();
-                    p = int.Parse(temp.Substring(2));
-                    if (n < p)
-                    {
-                        n = p;
-                    }
-                }
-                n += 1;
-                temp = "V" + n.ToString("00");
-                return temp;
-            }
+            BUS_Ve ve = new BUS_Ve();
+            string MaVe = "";
+            MaVe = ve.VeTuTang();
+            return MaVe;
         }
 
         private void cbChuyenXe1_SelectedIndexChanged(object sender, EventArgs e)
@@ -233,7 +213,7 @@ namespace GIAODIEN
             }
             BUS_NguoiDat NguoiD = new BUS_NguoiDat();
             NguoiDat nd = new NguoiDat();
-            nd.id_ve = MaVeTuTang();
+            nd.id_ve = MaVeNDTuTang();
             nd.stt = SttTang();
             nd.ten_khach_hang = txtTenKH1.Text;
             nd.so_dt = txtSDTKH1.Text;
@@ -278,11 +258,11 @@ namespace GIAODIEN
                 return temp;
             }
         }
-        string MaVeTuTang()
+        string MaVeNDTuTang()
         {
             BUS_Ve ve = new BUS_Ve();
             string MaVe = "";
-            MaVe = ve.MaVeMoi();
+            MaVe = ve.MaVeNDMoi();
             return MaVe;
         }
 
@@ -313,7 +293,7 @@ namespace GIAODIEN
                 return;
             }
         }
-        string VeTuTang()
+        public string VeTuTang()
         {
             BUS_Ve ve = new BUS_Ve();
             string MaVe = "";
