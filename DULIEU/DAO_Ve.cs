@@ -51,7 +51,27 @@ namespace DULIEU
             }
             return dt;
         }
-
+        public DataTable TrungVe()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_ChuyenGheOfVe";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        
         public DataTable IDGiaVe()
         {
             Provider kn = new Provider();

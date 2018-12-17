@@ -37,5 +37,31 @@ namespace GIAODIEN
         {
             this.Close();
         }
+
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                button1.PerformClick();
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                button2.PerformClick();
+            }
+        }
+
+        private void txtTaiKhoang_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtMatKhau.Focus();
+            }
+            if (e.KeyCode == Keys.Escape)
+            {
+                button2.PerformClick();
+            }
+        }
+
+      
     }
 }

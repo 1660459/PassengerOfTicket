@@ -621,3 +621,6 @@ begin
 end
 go
 
+create proc sp_ChuyenGheOfVe
+as
+	Select chuyen_id_chuyen , ghe_id_ghe From Ve

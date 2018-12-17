@@ -81,6 +81,14 @@ namespace XULY
                     return -1;
                 }
             }
+            dt = kh.TrungVe();
+            foreach (DataRow row in dt.Rows)
+            {
+                if (ve.chuyen_id_chuyen == row[0].ToString() && ve.ghe_id_ghe == row[1].ToString())
+                {
+                    return -2;
+                }
+            }
             kq = kh.ThemVe(ve);
             return kq;
         }

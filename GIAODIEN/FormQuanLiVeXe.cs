@@ -292,6 +292,10 @@ namespace GIAODIEN
             {
                 MessageBox.Show("Mua Vé Thành Công !!");
             }
+            else if (NguoiD.ThemVe(nd) == -2)
+            {
+                MessageBox.Show("Đã Có Người Đặt Ghế này trong Chuyến này !! ");
+            }
             else
             {
                 MessageBox.Show("Vé đã tồn tại");
