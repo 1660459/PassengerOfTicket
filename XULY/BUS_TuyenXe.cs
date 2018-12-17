@@ -14,6 +14,7 @@ namespace XULY
             DAO_TuyenXe txe = new DAO_TuyenXe();
             DataTable dt = new DataTable();
             dt = txe.LoadTuyenXe();
+
             return dt;
         }
 
