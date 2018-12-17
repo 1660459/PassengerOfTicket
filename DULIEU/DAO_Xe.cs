@@ -15,6 +15,7 @@ namespace DULIEU
         {
             Provider kn = new Provider();
             string strSQL = "sp_LoadXe";
+
             DataTable dt = new DataTable();
             try
             {
