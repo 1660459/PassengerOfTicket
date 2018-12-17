@@ -82,11 +82,16 @@ namespace XULY
             }
             return list;
         }
-        public string GetIDChuyen(string ghichu)
+        public List<string> GetIDChuyen(string ghichu)
         {
             DAO_ChuyenXe cx = new DAO_ChuyenXe();
-            string idchuyen = cx.GetIDChuyen(ghichu);
-            return idchuyen;
+            DataTable idchuyen = cx.GetIDChuyen(ghichu);
+            List<string> list = new List<string>();
+            foreach (DataRow row in idchuyen.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
         }
     }
 }

@@ -113,7 +113,7 @@ namespace DULIEU
             DataRow row = dt.Rows[0];
             return row[0].ToString();
         }
-        public string GetIDChuyen(string ghichu)
+        public DataTable GetIDChuyen(string ghichu)
         {
             Provider kn = new Provider();
             string strSQL = "sp_GetIDChuyen";
@@ -133,8 +133,7 @@ namespace DULIEU
             {
                 kn.Disconnect();
             }
-            DataRow row = dt.Rows[0];
-            return row[0].ToString();
+            return dt;
         }
         
         public DataTable LoadIDtx()

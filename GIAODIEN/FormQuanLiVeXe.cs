@@ -55,8 +55,8 @@ namespace GIAODIEN
         void LoadChuyenXe()
         {
             BUS_QuanLiVeXe qlve = new BUS_QuanLiVeXe();
-            cbChuyenXe1.DataSource = qlve.LoadGCChuyenXe();
-            cbChuyenXe2.DataSource = qlve.LoadGCChuyenXe();
+            cbTuyenXe1.DataSource = qlve.LoadGCChuyenXe();
+            cbTuyenXe2.DataSource = qlve.LoadGCChuyenXe();
         }
 
         private void btnMaGhe1_Click(object sender, EventArgs e)
@@ -130,16 +130,21 @@ namespace GIAODIEN
             return MaVe;
         }
 
-        private void cbChuyenXe1_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbTuyenXe1_SelectedIndexChanged(object sender, EventArgs e)
         {
             BUS_Ve ve = new BUS_Ve();
-            txtGiaTien1.Text = ve.GetGiaVe(cbChuyenXe1.SelectedItem.ToString());
+            txtGiaTien1.Text = ve.GetGiaVe(cbTuyenXe1.SelectedItem.ToString());
+            BUS_ChuyenXe c = new BUS_ChuyenXe();
+            cbChuyenXe1.DataSource = c.GetIDChuyen(cbTuyenXe1.SelectedItem.ToString());
         }
+        
 
-        private void cbChuyenXe2_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbTuyenXe2_SelectedIndexChanged(object sender, EventArgs e)
         {
             BUS_Ve ve = new BUS_Ve();
-            txtGiaTien2.Text = ve.GetGiaVe(cbChuyenXe2.SelectedItem.ToString());
+            txtGiaTien2.Text = ve.GetGiaVe(cbTuyenXe2.SelectedItem.ToString());
+            BUS_ChuyenXe c = new BUS_ChuyenXe();
+            cbChuyenXe2.DataSource = c.GetIDChuyen(cbTuyenXe2.SelectedItem.ToString());
         }
         bool KTRONG()
         {
@@ -158,7 +163,7 @@ namespace GIAODIEN
                 MessageBox.Show("hãy điền chọn ghế");
                 return false;
             }
-            if (string.IsNullOrEmpty(cbChuyenXe1.SelectedItem.ToString()))
+            if (string.IsNullOrEmpty(cbTuyenXe1.SelectedItem.ToString()))
             {
                 MessageBox.Show("hãy chọn chuyến xe");
                 return false;
@@ -183,7 +188,7 @@ namespace GIAODIEN
                 MessageBox.Show("hãy điền chọn ghế");
                 return false;
             }
-            if (string.IsNullOrEmpty(cbChuyenXe2.SelectedItem.ToString()))
+            if (string.IsNullOrEmpty(cbTuyenXe2.SelectedItem.ToString()))
             {
                 MessageBox.Show("hãy chọn chuyến xe");
                 return false;
@@ -219,7 +224,7 @@ namespace GIAODIEN
             nd.so_dt = txtSDTKH1.Text;
             nd.ghe_id_ghe = txtMaGhe1.Text;
             BUS_ChuyenXe cx = new BUS_ChuyenXe();
-            nd.chuyen_id_chuyen = cx.GetIDChuyen(cbChuyenXe1.SelectedItem.ToString());
+            nd.chuyen_id_chuyen = cbChuyenXe1.SelectedItem.ToString();
             nd.tinhtrang = 0;
             nd.giatien = float.Parse(txtGiaTien1.Text);
             nd.ngayxuatve = dateTimePicker1.Value;
@@ -277,7 +282,7 @@ namespace GIAODIEN
             nd.id_ve = VeTuTang();
             nd.ghe_id_ghe = txtMaGhe2.Text;
             BUS_ChuyenXe cx = new BUS_ChuyenXe();
-            nd.chuyen_id_chuyen = cx.GetIDChuyen(cbChuyenXe2.SelectedItem.ToString());
+            nd.chuyen_id_chuyen = cbChuyenXe2.SelectedItem.ToString();
             nd.khachhang_id_khachhang = cbTenKH.SelectedItem.ToString();
             nd.tinhtrang = 1;
             nd.giatien = float.Parse(txtGiaTien2.Text);
@@ -306,5 +311,7 @@ namespace GIAODIEN
             frmHOTRO_TenKH frm = new frmHOTRO_TenKH();
             frm.Show();
         }
+
+      
     }
 }

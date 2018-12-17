@@ -43,6 +43,7 @@ namespace GIAODIEN
             }
             return true;
         }
+
         private void btnThem_Click(object sender, EventArgs e)
         {
             if (KTRONG() == false)
