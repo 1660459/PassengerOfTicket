@@ -12,9 +12,11 @@ namespace GIAODIEN
 {
     public partial class FormAdMin : Form
     {
-        public FormAdMin()
+        string TK;
+        public FormAdMin(string tk)
         {
             InitializeComponent();
+            TK = tk;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -86,6 +88,12 @@ namespace GIAODIEN
         {
             FormQLGiaVe frm = new FormQLGiaVe();
             frm.Show();
+        }
+
+        private void btnDoiMk_Click(object sender, EventArgs e)
+        {
+            FormDoiMK frm = new FormDoiMK(TK);
+            frm.ShowDialog();
         }
 
 

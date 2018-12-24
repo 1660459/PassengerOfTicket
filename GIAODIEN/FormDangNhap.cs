@@ -22,7 +22,7 @@ namespace GIAODIEN
             XULY.BUS_Users bususer = new XULY.BUS_Users();
             if (bususer.User_Authen(txtTaiKhoang,txtMatKhau) != 0 )
             {
-                FormAdMin frm = new FormAdMin();
+                FormAdMin frm = new FormAdMin(txtTaiKhoang.Text);
                 this.Hide();
                 frm.Show();
             }

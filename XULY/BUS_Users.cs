@@ -14,5 +14,20 @@ namespace XULY
             DAO_Users user = new DAO_Users();
             return user.Authenticate(id.Text, pass.Text);
         }
+        public int User_AuthenDoiMK(string id,TextBox pass)
+        {
+            DAO_Users user = new DAO_Users();
+            return user.Authenticate(id, pass.Text);
+        }
+        public void User_ChangePass(TextBox MkMoi,int ID)
+        {
+            DAO_Users daUser = new DAO_Users();
+            daUser.UpdateMatKhau(ID, MkMoi.Text);
+        }
+        public int User_FindID(string tk,TextBox MkCu)
+        {
+            DAO_Users daUser = new DAO_Users();
+            return daUser.FindIDUser(tk, MkCu.Text);
+        }
     }
 }

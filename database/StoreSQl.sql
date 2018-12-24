@@ -624,3 +624,22 @@ go
 create proc sp_ChuyenGheOfVe
 as
 	Select chuyen_id_chuyen , ghe_id_ghe From Ve
+
+
+-- Đổi mật khẩu
+
+Alter proc sp_UpdateMK
+@Pass varchar(50), @ID int
+as
+begin
+	update Users
+	set PassWord =@Pass
+	where UserID=@ID
+end
+go
+create proc sp_FindUsers
+@Pass varchar(50), @ID varchar(50)
+as
+begin
+	select * from Users where UserName = @ID and PassWord = @Pass
+end

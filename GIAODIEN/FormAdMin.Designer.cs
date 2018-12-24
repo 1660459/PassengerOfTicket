@@ -39,6 +39,7 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.btnDoiMk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -168,12 +169,26 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // btnDoiMk
+            // 
+            this.btnDoiMk.BackColor = System.Drawing.Color.DarkTurquoise;
+            this.btnDoiMk.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoiMk.ForeColor = System.Drawing.Color.White;
+            this.btnDoiMk.Location = new System.Drawing.Point(653, 63);
+            this.btnDoiMk.Name = "btnDoiMk";
+            this.btnDoiMk.Size = new System.Drawing.Size(218, 70);
+            this.btnDoiMk.TabIndex = 12;
+            this.btnDoiMk.Text = "ĐỔI MẬT KHẨU";
+            this.btnDoiMk.UseVisualStyleBackColor = false;
+            this.btnDoiMk.Click += new System.EventHandler(this.btnDoiMk_Click);
+            // 
             // FormAdMin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(1026, 725);
+            this.Controls.Add(this.btnDoiMk);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -206,6 +221,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnDoiMk;
 
 
 
