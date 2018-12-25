@@ -36,23 +36,30 @@ namespace GIAODIEN
 
         private void btnXuatVe_Click(object sender, EventArgs e)
         {
-            FormQuanLiVeXe qlve = new FormQuanLiVeXe();
-            IDDangChon.id_ve = qlve.VeTuTang();
-            IDDangChon.khachhang_id_khachhang = "KH00";
-            BUS_Ve ve = new BUS_Ve();
-            if (ve.ThemVe(IDDangChon) == 1)
+            if (IDDangChon == null || SOTT == -1)
             {
-                MessageBox.Show("Mua Vé Thành Công !!");
+                MessageBox.Show("Click vào vé muốn xuất !");
+                return;
             }
             else
             {
-                MessageBox.Show("Vé đã tồn tại");
-                return;
+                FormQuanLiVeXe qlve = new FormQuanLiVeXe();
+                IDDangChon.id_ve = qlve.VeTuTang();
+                IDDangChon.khachhang_id_khachhang = "KH00";
+                BUS_Ve ve = new BUS_Ve();
+                if (ve.ThemVe(IDDangChon) == 1)
+                {
+                    MessageBox.Show("Mua Vé Thành Công !!");
+                }
+                else
+                {
+                    MessageBox.Show("Vé đã tồn tại");
+                    return;
+                }
             }
-
         }
         static public Ve IDDangChon = new Ve() ;
-        static public int SOTT = 1;
+        static public int SOTT = -1;
         private void dgvNguoiDat_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int num;
@@ -81,6 +88,11 @@ namespace GIAODIEN
         private void btnXoaNguoiDat_Click(object sender, EventArgs e)
         {
             BUS_NguoiDat nd = new BUS_NguoiDat();
+            if (IDDangChon == null || SOTT == -1)
+            {
+                MessageBox.Show("Click vào dòng muốn xoá !");
+                return;
+            }
             if(nd.XoaNguoiDat(IDDangChon.id_ve , SOTT) == 1)
             {
                 MessageBox.Show("Xoá Thành Công");

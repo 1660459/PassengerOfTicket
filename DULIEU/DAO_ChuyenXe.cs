@@ -90,6 +90,27 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable LoadIDTuyenFromChuyen()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_IDTuyenFromChuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        
         public string GetIDTuyen(string ghichu)
         {
             Provider kn = new Provider();

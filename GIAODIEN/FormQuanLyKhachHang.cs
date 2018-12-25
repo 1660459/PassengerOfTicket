@@ -79,15 +79,23 @@ namespace GIAODIEN
 
         private void btnXoaQLKH_Click(object sender, EventArgs e)
         {
-            BUS_KhachHang kh = new BUS_KhachHang();
-            if (kh.XoaKhachHang(IDDangChon) == 1)
+            if (string.IsNullOrEmpty(IDDangChon))
             {
-                MessageBox.Show("Xoa Thanh Cong");
-                LoadQLKhachHang();
+                MessageBox.Show("Click Vào Dòng Muốn Xoá");
+                return;
             }
             else
             {
-                MessageBox.Show("Không Xoá Được");
+                BUS_KhachHang kh = new BUS_KhachHang();
+                if (kh.XoaKhachHang(IDDangChon) == 1)
+                {
+                    MessageBox.Show("Xoa Thanh Cong");
+                    LoadQLKhachHang();
+                }
+                else
+                {
+                    MessageBox.Show("Không Xoá Được");
+                }
             }
         }
 

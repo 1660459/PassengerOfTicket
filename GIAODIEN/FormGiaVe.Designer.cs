@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.cbIDTuyenXe = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtGiaTienVe = new System.Windows.Forms.TextBox();
@@ -40,7 +41,6 @@
             this.txtIDVe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,18 @@
             this.panel2.Size = new System.Drawing.Size(823, 566);
             this.panel2.TabIndex = 4;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(705, 208);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 36);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Tra Cứu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // cbIDTuyenXe
             // 
             this.cbIDTuyenXe.FormattingEnabled = true;
@@ -73,6 +85,7 @@
             this.cbIDTuyenXe.Name = "cbIDTuyenXe";
             this.cbIDTuyenXe.Size = new System.Drawing.Size(406, 24);
             this.cbIDTuyenXe.TabIndex = 2;
+            this.cbIDTuyenXe.SelectedIndexChanged += new System.EventHandler(this.cbIDTuyenXe_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -187,18 +200,6 @@
             this.label1.Size = new System.Drawing.Size(354, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "THÔNG TIN  GIÁ VÉ";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(705, 208);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 36);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Tra Cứu";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormGiaVe
             // 

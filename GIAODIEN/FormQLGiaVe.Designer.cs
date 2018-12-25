@@ -151,7 +151,7 @@
             this.btnSuaDSXe.Name = "btnSuaDSXe";
             this.btnSuaDSXe.Size = new System.Drawing.Size(240, 48);
             this.btnSuaDSXe.TabIndex = 9;
-            this.btnSuaDSXe.Text = "SỬA";
+            this.btnSuaDSXe.Text = "Sửa Giá Tiền";
             this.btnSuaDSXe.UseVisualStyleBackColor = false;
             this.btnSuaDSXe.Click += new System.EventHandler(this.btnSuaGiaVe_Click);
             // 
@@ -165,7 +165,7 @@
             this.btnThemDSXe.Name = "btnThemDSXe";
             this.btnThemDSXe.Size = new System.Drawing.Size(237, 48);
             this.btnThemDSXe.TabIndex = 8;
-            this.btnThemDSXe.Text = "THÊM";
+            this.btnThemDSXe.Text = "Thêm Giá Vé";
             this.btnThemDSXe.UseVisualStyleBackColor = false;
             this.btnThemDSXe.Click += new System.EventHandler(this.Them_GiaVe);
             // 
@@ -179,7 +179,7 @@
             this.btnXoaDSXe.Name = "btnXoaDSXe";
             this.btnXoaDSXe.Size = new System.Drawing.Size(247, 48);
             this.btnXoaDSXe.TabIndex = 10;
-            this.btnXoaDSXe.Text = "XÓA";
+            this.btnXoaDSXe.Text = "Xoá ";
             this.btnXoaDSXe.UseVisualStyleBackColor = false;
             this.btnXoaDSXe.Click += new System.EventHandler(this.btnXoaGiaVe_Click);
             // 

@@ -70,6 +70,13 @@ begin
 	select* from Chuyen
 end
 go
+create proc sp_IDTuyenFromChuyen 
+as
+begin 
+	select distinct tuyen_id_tuyen from Chuyen
+end
+go
+
 create proc sp_LoadIDChuyenXe 
 as
 begin 
@@ -237,14 +244,14 @@ begin
 		end
 end
 go
-
+--Loai Xe
 create proc sp_LayTenLoaiXe
 as
 begin
 	Select tenloai  From LoaiXe
 end
 go
-
+--Chuyen Xe
 create proc sp_LoadGhiChuChuyenXe
 as
 begin

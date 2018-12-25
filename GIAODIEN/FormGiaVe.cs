@@ -31,8 +31,8 @@ namespace GIAODIEN
         }
         void LoadCBTuyenXe()
         {
-            BUS_TuyenXe tx = new BUS_TuyenXe();
-            cbIDTuyenXe.DataSource = tx.LoadIDTuyenXe();
+            BUS_ChuyenXe tx = new BUS_ChuyenXe();
+            cbIDTuyenXe.DataSource = tx.LoadIDTuyenFromChuyen();
         }
 
         private void Thoat(object sender, EventArgs e)
@@ -125,6 +125,11 @@ namespace GIAODIEN
         {
             frmHOTRO_Tuyen htt = new frmHOTRO_Tuyen();
             htt.Show();
+        }
+
+        private void cbIDTuyenXe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         

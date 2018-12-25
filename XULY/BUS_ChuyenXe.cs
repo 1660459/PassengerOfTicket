@@ -70,6 +70,19 @@ namespace XULY
             }
             return list;
         }
+        public List<string> LoadIDTuyenFromChuyen()
+        {
+            DAO_ChuyenXe Cxe = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = Cxe.LoadIDTuyenFromChuyen();
+            List<string> list = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
+        
         public List<string> LoadIDTaiXe()
         {
             DAO_ChuyenXe Cxe = new DAO_ChuyenXe();

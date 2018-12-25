@@ -59,8 +59,9 @@
             this.panel1.Controls.Add(this.dgvQLTuyenXe);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1101, 432);
+            this.panel1.Size = new System.Drawing.Size(1467, 531);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -71,9 +72,10 @@
             this.panel3.Controls.Add(this.btnSuaQLTuyenXe);
             this.panel3.Controls.Add(this.btnThemQLTuyenXe);
             this.panel3.Controls.Add(this.btnXoaQLTuyenXe);
-            this.panel3.Location = new System.Drawing.Point(3, 357);
+            this.panel3.Location = new System.Drawing.Point(4, 439);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1093, 72);
+            this.panel3.Size = new System.Drawing.Size(1457, 88);
             this.panel3.TabIndex = 13;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -82,11 +84,12 @@
             this.btnSuaQLTuyenXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSuaQLTuyenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSuaQLTuyenXe.ForeColor = System.Drawing.Color.White;
-            this.btnSuaQLTuyenXe.Location = new System.Drawing.Point(442, 13);
+            this.btnSuaQLTuyenXe.Location = new System.Drawing.Point(589, 16);
+            this.btnSuaQLTuyenXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSuaQLTuyenXe.Name = "btnSuaQLTuyenXe";
-            this.btnSuaQLTuyenXe.Size = new System.Drawing.Size(199, 41);
+            this.btnSuaQLTuyenXe.Size = new System.Drawing.Size(265, 50);
             this.btnSuaQLTuyenXe.TabIndex = 12;
-            this.btnSuaQLTuyenXe.Text = "SỬA";
+            this.btnSuaQLTuyenXe.Text = "Sửa Tuyến Xe";
             this.btnSuaQLTuyenXe.UseVisualStyleBackColor = false;
             this.btnSuaQLTuyenXe.Click += new System.EventHandler(this.btnSuaQLTuyenXe_Click);
             // 
@@ -95,11 +98,12 @@
             this.btnThemQLTuyenXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnThemQLTuyenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemQLTuyenXe.ForeColor = System.Drawing.Color.White;
-            this.btnThemQLTuyenXe.Location = new System.Drawing.Point(181, 13);
+            this.btnThemQLTuyenXe.Location = new System.Drawing.Point(241, 16);
+            this.btnThemQLTuyenXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThemQLTuyenXe.Name = "btnThemQLTuyenXe";
-            this.btnThemQLTuyenXe.Size = new System.Drawing.Size(195, 41);
+            this.btnThemQLTuyenXe.Size = new System.Drawing.Size(260, 50);
             this.btnThemQLTuyenXe.TabIndex = 10;
-            this.btnThemQLTuyenXe.Text = "THÊM";
+            this.btnThemQLTuyenXe.Text = "Thêm Tuyến Xe";
             this.btnThemQLTuyenXe.UseVisualStyleBackColor = false;
             this.btnThemQLTuyenXe.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -108,9 +112,10 @@
             this.btnXoaQLTuyenXe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnXoaQLTuyenXe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoaQLTuyenXe.ForeColor = System.Drawing.Color.White;
-            this.btnXoaQLTuyenXe.Location = new System.Drawing.Point(727, 13);
+            this.btnXoaQLTuyenXe.Location = new System.Drawing.Point(969, 16);
+            this.btnXoaQLTuyenXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoaQLTuyenXe.Name = "btnXoaQLTuyenXe";
-            this.btnXoaQLTuyenXe.Size = new System.Drawing.Size(182, 41);
+            this.btnXoaQLTuyenXe.Size = new System.Drawing.Size(243, 50);
             this.btnXoaQLTuyenXe.TabIndex = 11;
             this.btnXoaQLTuyenXe.Text = "XÓA";
             this.btnXoaQLTuyenXe.UseVisualStyleBackColor = false;
@@ -129,12 +134,13 @@
             this.thoigianchay,
             this.tram_id_tram,
             this.tram_id_tram1});
-            this.dgvQLTuyenXe.Location = new System.Drawing.Point(3, 59);
+            this.dgvQLTuyenXe.Location = new System.Drawing.Point(4, 73);
+            this.dgvQLTuyenXe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvQLTuyenXe.MultiSelect = false;
             this.dgvQLTuyenXe.Name = "dgvQLTuyenXe";
             this.dgvQLTuyenXe.ReadOnly = true;
             this.dgvQLTuyenXe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvQLTuyenXe.Size = new System.Drawing.Size(1093, 299);
+            this.dgvQLTuyenXe.Size = new System.Drawing.Size(1457, 368);
             this.dgvQLTuyenXe.TabIndex = 1;
             this.dgvQLTuyenXe.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvQLTuyenXe_CellClick);
             // 
@@ -180,18 +186,20 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(3, 1);
+            this.panel2.Location = new System.Drawing.Point(4, 1);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1093, 56);
+            this.panel2.Size = new System.Drawing.Size(1457, 68);
             this.panel2.TabIndex = 0;
             this.panel2.Click += new System.EventHandler(this.panel2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 1);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(83, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(111, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -201,9 +209,10 @@
             this.button4.BackColor = System.Drawing.Color.White;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Red;
-            this.button4.Location = new System.Drawing.Point(1039, 3);
+            this.button4.Location = new System.Drawing.Point(1385, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 31);
+            this.button4.Size = new System.Drawing.Size(67, 38);
             this.button4.TabIndex = 5;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
@@ -214,19 +223,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(393, 12);
+            this.label1.Location = new System.Drawing.Point(524, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(300, 33);
+            this.label1.Size = new System.Drawing.Size(379, 42);
             this.label1.TabIndex = 1;
             this.label1.Text = "QUẢN LÍ TUYẾN XE";
             // 
             // FormQLTuyenXe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 434);
+            this.ClientSize = new System.Drawing.Size(1468, 534);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormQLTuyenXe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQLTuyenXe";

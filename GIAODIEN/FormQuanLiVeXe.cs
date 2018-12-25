@@ -129,7 +129,6 @@ namespace GIAODIEN
             MaVe = ve.VeTuTang();
             return MaVe;
         }
-
         private void cbTuyenXe1_SelectedIndexChanged(object sender, EventArgs e)
         {
             BUS_Ve ve = new BUS_Ve();
@@ -137,8 +136,6 @@ namespace GIAODIEN
             BUS_ChuyenXe c = new BUS_ChuyenXe();
             cbChuyenXe1.DataSource = c.GetIDChuyen(cbTuyenXe1.SelectedItem.ToString());
         }
-        
-
         private void cbTuyenXe2_SelectedIndexChanged(object sender, EventArgs e)
         {
             BUS_Ve ve = new BUS_Ve();
