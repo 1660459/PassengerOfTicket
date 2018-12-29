@@ -16,7 +16,20 @@ namespace XULY
             dt = CX.LoadChuyenXe();
             return dt;
         }
-        
+        public DataTable LoadChuyenXeTheoTuyen(string Tuyen)
+        {
+            DAO_ChuyenXe CX = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = CX.LoadChuyenTheoTuyen(Tuyen);
+            return dt;
+        }
+        public DataTable LoadChuyenXeTheoThoiGian(string Tuyen , DateTime a , DateTime b)
+        {
+            DAO_ChuyenXe CX = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = CX.LayChuyenTheoThoiGian(Tuyen, a, b);
+            return dt;
+        }
         public int ThemChuyenXe(ChuyenXe a)
         {
             int kq = 0;
@@ -105,6 +118,12 @@ namespace XULY
                 list.Add(row[0].ToString());
             }
             return list;
+        }
+        public string GetIDTuyen(string ghichu)
+        {
+            DAO_ChuyenXe cx = new DAO_ChuyenXe();
+            string kq = cx.GetIDTuyen(ghichu);
+            return kq;
         }
     }
 }

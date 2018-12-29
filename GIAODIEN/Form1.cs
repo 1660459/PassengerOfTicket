@@ -97,6 +97,12 @@ namespace GIAODIEN
         {
 
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            FormQLReport frm = new FormQLReport();
+            frm.Show();
+        }
     }
 }
 

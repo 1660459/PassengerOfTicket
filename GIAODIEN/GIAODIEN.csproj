@@ -32,8 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +51,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CRView_ChuyenXe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRView_ChuyenXe.Designer.cs">
+      <DependentUpon>CRView_ChuyenXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CR_ChuyenXe.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_ChuyenXe.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet_ChuyenXe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_ChuyenXe.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +91,12 @@
     </Compile>
     <Compile Include="FormQLGiaVe.Designer.cs">
       <DependentUpon>FormQLGiaVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLReport.Designer.cs">
+      <DependentUpon>FormQLReport.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuanLiVeXe.cs">
       <SubType>Form</SubType>
@@ -226,6 +256,13 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CRView_ChuyenXe.resx">
+      <DependentUpon>CRView_ChuyenXe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_ChuyenXe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_ChuyenXe.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +274,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLGiaVe.resx">
       <DependentUpon>FormQLGiaVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLReport.resx">
+      <DependentUpon>FormQLReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLiVeXe.resx">
       <DependentUpon>FormQuanLiVeXe.cs</DependentUpon>
@@ -325,6 +365,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DataSet_ChuyenXe.xsc">
+      <DependentUpon>DataSet_ChuyenXe.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_ChuyenXe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_ChuyenXe.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_ChuyenXe.xss">
+      <DependentUpon>DataSet_ChuyenXe.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -347,6 +398,9 @@
       <Project>{69a660af-aa69-487f-9817-76495ae9ef1b}</Project>
       <Name>XULY</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

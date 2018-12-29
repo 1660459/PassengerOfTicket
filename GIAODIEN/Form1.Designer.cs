@@ -44,6 +44,7 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnReport = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -124,6 +125,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.LightCyan;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnReport);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.panel6);
@@ -138,10 +140,10 @@
             this.button6.BackColor = System.Drawing.Color.MintCream;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Teal;
-            this.button6.Location = new System.Drawing.Point(991, 4);
+            this.button6.Location = new System.Drawing.Point(1102, 4);
             this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(356, 64);
+            this.button6.Size = new System.Drawing.Size(245, 64);
             this.button6.TabIndex = 10;
             this.button6.Text = "ADMIN";
             this.button6.UseVisualStyleBackColor = false;
@@ -222,6 +224,20 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.MintCream;
+            this.btnReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.ForeColor = System.Drawing.Color.Teal;
+            this.btnReport.Location = new System.Drawing.Point(725, 4);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(356, 64);
+            this.btnReport.TabIndex = 10;
+            this.btnReport.Text = "REPORT";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -265,6 +281,7 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnReport;
     }
 }
 

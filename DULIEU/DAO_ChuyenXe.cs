@@ -30,6 +30,52 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable LoadChuyenTheoTuyen(string Tuyen)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadChuyenTheoTuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL ,
+                    new SqlParameter { ParameterName = "@tuyen_id_tuyen" , Value = Tuyen}
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        public DataTable LayChuyenTheoThoiGian(string Tuyen , DateTime batdau , DateTime ketthuc)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LayChuyenTheoThoiGian";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter { ParameterName = "@tuyen_id_tuyen", Value = Tuyen },
+                    new SqlParameter { ParameterName = "@NgayBD", Value = batdau },
+                    new SqlParameter { ParameterName = "@NgayKT", Value = ketthuc }
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
         public DataTable LoadIDXe()
         {
             Provider kn = new Provider();

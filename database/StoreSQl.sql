@@ -70,6 +70,25 @@ begin
 	select* from Chuyen
 end
 go
+create proc sp_LoadChuyenTheoTuyen
+@tuyen_id_tuyen varchar(10)
+as
+begin 
+	select id_chuyen , giokhoihanh , ghichu , xe_xeid , tai_xe_id_taixe from Chuyen Where tuyen_id_tuyen = @tuyen_id_tuyen 
+end
+go
+create proc sp_LayChuyenTheoThoiGian
+@tuyen_id_tuyen varchar(10) , @NgayBD datetime , @NgayKT datetime
+as
+begin 
+	select id_chuyen , giokhoihanh , ghichu , xe_xeid , tai_xe_id_taixe 
+	from Chuyen 
+	Where tuyen_id_tuyen = @tuyen_id_tuyen 
+	and giokhoihanh >= @NgayBD 
+	and giokhoihanh <= @NgayKT
+end
+go
+
 create proc sp_IDTuyenFromChuyen 
 as
 begin 
@@ -109,7 +128,7 @@ begin
 end 
 go
 
-alter proc sp_SuaChuyenXe
+create proc sp_SuaChuyenXe
 @id_chuyen varchar(10), @tuyen_id_tuyen varchar(10),@giokhoihanh datetime,@xe_xeid varchar(10),@ghichu nvarchar(4000),@tai_xe_id_taixe varchar(10)
 as
 begin 
