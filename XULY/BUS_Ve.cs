@@ -31,7 +31,7 @@ namespace XULY
             DataTable dt = kh.IDGiaVe();
             foreach (DataRow row in dt.Rows)
             {
-                if (ve.stt == int.Parse(row[0].ToString()) && ve.id_tuyen_id == row[1].ToString())
+                if (ve.id_tuyen_id == row[1].ToString())
                 {
                     return -1;
                 }

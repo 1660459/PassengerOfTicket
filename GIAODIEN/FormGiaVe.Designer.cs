@@ -65,6 +65,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(823, 566);
             this.panel2.TabIndex = 4;
+          
             // 
             // button1
             // 
@@ -85,7 +86,7 @@
             this.cbIDTuyenXe.Name = "cbIDTuyenXe";
             this.cbIDTuyenXe.Size = new System.Drawing.Size(406, 24);
             this.cbIDTuyenXe.TabIndex = 2;
-            this.cbIDTuyenXe.SelectedIndexChanged += new System.EventHandler(this.cbIDTuyenXe_SelectedIndexChanged);
+           
             // 
             // panel1
             // 

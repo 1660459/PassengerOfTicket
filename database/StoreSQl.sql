@@ -218,7 +218,6 @@ begin
 	select id_tram from Tram
 end
 go
--- Thêm trạm
 create proc sp_ThemTram 
 	@id_tram varchar(10),@ten_tram nvarchar(4000),@dia_diem nvarchar(4000)
 as
@@ -271,10 +270,11 @@ begin
 end
 go
 --Chuyen Xe
-create proc sp_LoadGhiChuChuyenXe
+alter proc sp_LoadGhiChuChuyenXe
+@id_tuyen_id varchar(10)
 as
 begin
-	Select distinct ghichu From Chuyen
+	Select distinct ghichu From Chuyen Where tuyen_id_tuyen = @id_tuyen_id
 end
 go
 create proc sp_GetIDTuyen
@@ -461,10 +461,10 @@ begin
 	Where stt =@id_ve and id_tuyen_id = @id_tuyen_id
 end
 go
-create proc sp_LoadIDGiaVe
+alter proc sp_LoadIDGiaVe
 as
 begin
-	Select stt , id_tuyen_id From GiaVe
+	Select id_tuyen_id From GiaVe
 end
 go
 create proc sp_GetGiaVe
@@ -668,4 +668,11 @@ create proc sp_FindUsers
 as
 begin
 	select * from Users where UserName = @ID and PassWord = @Pass
+end
+go
+------GiaVe-----------
+create proc sp_IDTuyenFromGiaVe
+as
+begin
+	Select id_tuyen_id From GiaVe
 end

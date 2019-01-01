@@ -223,7 +223,7 @@ namespace DULIEU
             }
             return dt;
         }
-        public DataTable LoadGhiChuChuyenXe()
+        public string LoadGhiChuChuyenXe(string idTuyen)
         {
             Provider kn = new Provider();
             string strSQL = "sp_LoadGhiChuChuyenXe"; // Stored Nay Nho' Distinct nhe'
@@ -231,7 +231,9 @@ namespace DULIEU
             try
             {
                 kn.Connect();
-                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter {ParameterName = "@id_tuyen_id" , Value =idTuyen}
+                    );
             }
             catch (SqlException ex)
             {
@@ -241,7 +243,9 @@ namespace DULIEU
             {
                 kn.Disconnect();
             }
-            return dt;
+            DataRow row = dt.Rows[0];
+            return row[0].ToString();
+            
         }
        
         public int ThemChuyenXe(ChuyenXe cm)

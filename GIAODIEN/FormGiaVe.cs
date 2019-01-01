@@ -127,10 +127,7 @@ namespace GIAODIEN
             htt.Show();
         }
 
-        private void cbIDTuyenXe_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+      
 
         
     }

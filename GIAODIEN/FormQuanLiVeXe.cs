@@ -38,7 +38,7 @@ namespace GIAODIEN
         private void FormQuanLiVeXe_Load(object sender, EventArgs e)
         {
             LoadLoaiXe();
-            LoadChuyenXe();
+            LoadTuyenXe();
             LoadKhachHang();
         }
         void LoadKhachHang()
@@ -52,7 +52,7 @@ namespace GIAODIEN
             cbLoaiXe1.DataSource = qlve.LoadTenLoaiXe();
             cbLoaiXe2.DataSource = qlve.LoadTenLoaiXe();
         }
-        void LoadChuyenXe()
+        void LoadTuyenXe()
         {
             BUS_QuanLiVeXe qlve = new BUS_QuanLiVeXe();
             cbTuyenXe1.DataSource = qlve.LoadGCChuyenXe();
