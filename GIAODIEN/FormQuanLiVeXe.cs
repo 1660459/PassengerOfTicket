@@ -313,6 +313,12 @@ namespace GIAODIEN
             frm.Show();
         }
 
+        private void btnGKH1_Click(object sender, EventArgs e)
+        {
+            frmHOTRO_GioKhoiHanh frm = new frmHOTRO_GioKhoiHanh();
+            frm.Show();
+        }
+
       
     }
 }

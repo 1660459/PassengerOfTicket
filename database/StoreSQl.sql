@@ -647,6 +647,16 @@ begin
 end
 go
 
+create proc sp_FindGioKhoiHanhChuyen
+@id_chuyen varchar(10)
+as
+begin
+	Select distinct id_chuyen , giokhoihanh
+	From Chuyen
+	Where id_chuyen like '%'+@id_chuyen+'%'
+end
+go
+------------------------------------
 create proc sp_ChuyenGheOfVe
 as
 	Select chuyen_id_chuyen , ghe_id_ghe From Ve
@@ -676,3 +686,10 @@ as
 begin
 	Select id_tuyen_id From GiaVe
 end
+go
+---Gio Khoi Hanh-----------
+create proc sp_LoadGioKhoiHanh
+as
+	Select distinct id_chuyen , giokhoihanh
+	From Chuyen
+go

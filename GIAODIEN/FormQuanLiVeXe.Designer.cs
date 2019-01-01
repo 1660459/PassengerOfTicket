@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormQuanLiVeXe));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnGKH1 = new System.Windows.Forms.Button();
             this.btnMaGhe1 = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btnDSND = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.cbLoaiXe1 = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnGKH2 = new System.Windows.Forms.Button();
             this.cbTenKH = new System.Windows.Forms.ComboBox();
             this.btnXenTenKH = new System.Windows.Forms.Button();
             this.btnMaGhe2 = new System.Windows.Forms.Button();
@@ -102,6 +104,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnGKH1);
             this.panel2.Controls.Add(this.btnMaGhe1);
             this.panel2.Controls.Add(this.panel13);
             this.panel2.Controls.Add(this.btnDSND);
@@ -134,6 +137,21 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(782, 723);
             this.panel2.TabIndex = 2;
+            // 
+            // btnGKH1
+            // 
+            this.btnGKH1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnGKH1.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.btnGKH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGKH1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGKH1.Location = new System.Drawing.Point(552, 210);
+            this.btnGKH1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGKH1.Name = "btnGKH1";
+            this.btnGKH1.Size = new System.Drawing.Size(150, 34);
+            this.btnGKH1.TabIndex = 4;
+            this.btnGKH1.Text = "Giờ Khởi Hành";
+            this.btnGKH1.UseVisualStyleBackColor = false;
+            this.btnGKH1.Click += new System.EventHandler(this.btnGKH1_Click);
             // 
             // btnMaGhe1
             // 
@@ -456,6 +474,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnGKH2);
             this.panel1.Controls.Add(this.cbTenKH);
             this.panel1.Controls.Add(this.btnXenTenKH);
             this.panel1.Controls.Add(this.btnMaGhe2);
@@ -483,9 +502,24 @@
             this.panel1.Location = new System.Drawing.Point(780, 68);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(686, 723);
+            this.panel1.Size = new System.Drawing.Size(695, 723);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnGKH2
+            // 
+            this.btnGKH2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnGKH2.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
+            this.btnGKH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGKH2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnGKH2.Location = new System.Drawing.Point(542, 216);
+            this.btnGKH2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnGKH2.Name = "btnGKH2";
+            this.btnGKH2.Size = new System.Drawing.Size(148, 34);
+            this.btnGKH2.TabIndex = 4;
+            this.btnGKH2.Text = "Giờ Khởi Hành";
+            this.btnGKH2.UseVisualStyleBackColor = false;
+            this.btnGKH2.Click += new System.EventHandler(this.btnGKH1_Click);
             // 
             // cbTenKH
             // 
@@ -787,7 +821,7 @@
             this.panel12.Location = new System.Drawing.Point(3, 6);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1463, 60);
+            this.panel12.Size = new System.Drawing.Size(1472, 60);
             this.panel12.TabIndex = 4;
             // 
             // button3
@@ -795,7 +829,7 @@
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(1399, 4);
+            this.button3.Location = new System.Drawing.Point(1404, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 38);
@@ -820,7 +854,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1465, 788);
+            this.ClientSize = new System.Drawing.Size(1475, 788);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
@@ -909,5 +943,7 @@
         private System.Windows.Forms.ComboBox cbChuyenXe2;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox cbChuyenXe1;
+        private System.Windows.Forms.Button btnGKH1;
+        private System.Windows.Forms.Button btnGKH2;
     }
 }

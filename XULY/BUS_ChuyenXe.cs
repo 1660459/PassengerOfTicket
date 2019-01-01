@@ -23,6 +23,13 @@ namespace XULY
             dt = CX.LoadChuyenTheoTuyen(Tuyen);
             return dt;
         }
+        public DataTable LoadGioKhoiHanh()
+        {
+            DAO_ChuyenXe CX = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = CX.LoadGioKH();
+            return dt;
+        }
         public DataTable LoadChuyenXeTheoThoiGian(string Tuyen , DateTime a , DateTime b)
         {
             DAO_ChuyenXe CX = new DAO_ChuyenXe();
@@ -125,5 +132,13 @@ namespace XULY
             string kq = cx.GetIDTuyen(ghichu);
             return kq;
         }
+        public DataTable TimGioKhoiHanh(string tenT)
+        {
+            DAO_ChuyenXe c = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = c.FindGioKhoiHanh(tenT);
+            return dt;
+        }
+        
     }
 }

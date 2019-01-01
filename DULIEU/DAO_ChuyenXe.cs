@@ -52,6 +52,27 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable LoadGioKH()
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadGioKhoiHanh";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+       
         public DataTable LayChuyenTheoThoiGian(string Tuyen , DateTime batdau , DateTime ketthuc)
         {
             Provider kn = new Provider();
@@ -116,6 +137,29 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable FindGioKhoiHanh(string IDCHUYEN)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_FindGioKhoiHanhChuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                    new SqlParameter{ParameterName = "@id_chuyen" , Value = IDCHUYEN}
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
+        
         public DataTable LoadIDTuyen()
         {
             Provider kn = new Provider();
