@@ -270,7 +270,7 @@ begin
 end
 go
 --Chuyen Xe
-alter proc sp_LoadGhiChuChuyenXe
+create proc sp_LoadGhiChuChuyenXe
 @id_tuyen_id varchar(10)
 as
 begin
@@ -425,6 +425,11 @@ end
 go
 ----Gia Ve
 
+create proc sp_LoadVe
+as
+	Select *
+	From Ve
+go
 create proc sp_LoadGiaVe
 as
 	Select * From GiaVe
@@ -461,7 +466,7 @@ begin
 	Where stt =@id_ve and id_tuyen_id = @id_tuyen_id
 end
 go
-alter proc sp_LoadIDGiaVe
+create proc sp_LoadIDGiaVe
 as
 begin
 	Select id_tuyen_id From GiaVe
@@ -660,11 +665,11 @@ go
 create proc sp_ChuyenGheOfVe
 as
 	Select chuyen_id_chuyen , ghe_id_ghe From Ve
-
+go
 
 -- Đổi mật khẩu
 
-Alter proc sp_UpdateMK
+create proc sp_UpdateMK
 @Pass varchar(50), @ID int
 as
 begin
@@ -693,3 +698,23 @@ as
 	Select distinct id_chuyen , giokhoihanh
 	From Chuyen
 go
+
+create proc sp_LoadVeTheoChuyen
+@id_chuyen varchar(10)
+as
+	Select  *
+	From Ve
+	where chuyen_id_chuyen = @id_chuyen
+go
+create proc sp_LoadVeTheoTG
+@id_chuyen varchar(10) , @ngay_bd datetime , @ngay_kt datetime
+as
+begin
+	Select  *
+	From Ve
+	where chuyen_id_chuyen = @id_chuyen 
+	and ngayxuatve <= @ngay_bd
+	and ngayxuatve <= @ngay_kt
+end
+go
+

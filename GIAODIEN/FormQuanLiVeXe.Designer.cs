@@ -135,7 +135,7 @@
             this.panel2.Location = new System.Drawing.Point(3, 68);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(782, 723);
+            this.panel2.Size = new System.Drawing.Size(743, 723);
             this.panel2.TabIndex = 2;
             // 
             // btnGKH1
@@ -157,10 +157,9 @@
             // 
             this.btnMaGhe1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnMaGhe1.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.btnMaGhe1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMaGhe1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaGhe1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnMaGhe1.Location = new System.Drawing.Point(473, 281);
+            this.btnMaGhe1.Location = new System.Drawing.Point(552, 280);
             this.btnMaGhe1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaGhe1.Name = "btnMaGhe1";
             this.btnMaGhe1.Size = new System.Drawing.Size(72, 34);
@@ -172,10 +171,10 @@
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel13.Location = new System.Drawing.Point(261, 306);
+            this.panel13.Location = new System.Drawing.Point(261, 297);
             this.panel13.Margin = new System.Windows.Forms.Padding(4);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(203, 1);
+            this.panel13.Size = new System.Drawing.Size(271, 1);
             this.panel13.TabIndex = 37;
             // 
             // btnDSND
@@ -186,7 +185,7 @@
             this.btnDSND.Location = new System.Drawing.Point(371, 641);
             this.btnDSND.Margin = new System.Windows.Forms.Padding(4);
             this.btnDSND.Name = "btnDSND";
-            this.btnDSND.Size = new System.Drawing.Size(360, 49);
+            this.btnDSND.Size = new System.Drawing.Size(342, 49);
             this.btnDSND.TabIndex = 36;
             this.btnDSND.Text = "DANH SÁCH NGƯỜI ĐẶT";
             this.btnDSND.UseVisualStyleBackColor = false;
@@ -242,10 +241,10 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel8.Location = new System.Drawing.Point(277, 555);
+            this.panel8.Location = new System.Drawing.Point(261, 552);
             this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(288, 1);
+            this.panel8.Size = new System.Drawing.Size(271, 1);
             this.panel8.TabIndex = 28;
             // 
             // txtGhiChu
@@ -272,7 +271,7 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(263, 491);
+            this.panel6.Location = new System.Drawing.Point(260, 491);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(273, 1);
@@ -282,7 +281,7 @@
             // 
             this.txtTenKH1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtTenKH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKH1.Location = new System.Drawing.Point(264, 469);
+            this.txtTenKH1.Location = new System.Drawing.Point(261, 469);
             this.txtTenKH1.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenKH1.Name = "txtTenKH1";
             this.txtTenKH1.Size = new System.Drawing.Size(269, 23);
@@ -323,17 +322,17 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel5.Location = new System.Drawing.Point(267, 428);
+            this.panel5.Location = new System.Drawing.Point(260, 428);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(288, 1);
+            this.panel5.Size = new System.Drawing.Size(271, 1);
             this.panel5.TabIndex = 19;
             // 
             // txtSDTKH1
             // 
             this.txtSDTKH1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSDTKH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSDTKH1.Location = new System.Drawing.Point(264, 405);
+            this.txtSDTKH1.Location = new System.Drawing.Point(256, 407);
             this.txtSDTKH1.Margin = new System.Windows.Forms.Padding(4);
             this.txtSDTKH1.Name = "txtSDTKH1";
             this.txtSDTKH1.Size = new System.Drawing.Size(277, 23);
@@ -356,7 +355,7 @@
             this.panel4.Location = new System.Drawing.Point(260, 370);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(292, 1);
+            this.panel4.Size = new System.Drawing.Size(271, 1);
             this.panel4.TabIndex = 16;
             // 
             // txtMaGhe1
@@ -499,7 +498,7 @@
             this.panel1.Controls.Add(this.cbLoaiXe2);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.txtMaGhe2);
-            this.panel1.Location = new System.Drawing.Point(780, 68);
+            this.panel1.Location = new System.Drawing.Point(743, 68);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(695, 723);
@@ -527,17 +526,16 @@
             this.cbTenKH.Location = new System.Drawing.Point(248, 428);
             this.cbTenKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbTenKH.Name = "cbTenKH";
-            this.cbTenKH.Size = new System.Drawing.Size(297, 24);
+            this.cbTenKH.Size = new System.Drawing.Size(285, 24);
             this.cbTenKH.TabIndex = 16;
             // 
             // btnXenTenKH
             // 
             this.btnXenTenKH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnXenTenKH.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.btnXenTenKH.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnXenTenKH.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXenTenKH.ForeColor = System.Drawing.Color.White;
-            this.btnXenTenKH.Location = new System.Drawing.Point(561, 425);
+            this.btnXenTenKH.Location = new System.Drawing.Point(545, 422);
             this.btnXenTenKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXenTenKH.Name = "btnXenTenKH";
             this.btnXenTenKH.Size = new System.Drawing.Size(71, 33);
@@ -550,10 +548,9 @@
             // 
             this.btnMaGhe2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnMaGhe2.FlatAppearance.BorderColor = System.Drawing.Color.DarkKhaki;
-            this.btnMaGhe2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnMaGhe2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaGhe2.ForeColor = System.Drawing.Color.White;
-            this.btnMaGhe2.Location = new System.Drawing.Point(467, 281);
+            this.btnMaGhe2.Location = new System.Drawing.Point(545, 281);
             this.btnMaGhe2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaGhe2.Name = "btnMaGhe2";
             this.btnMaGhe2.Size = new System.Drawing.Size(71, 33);
@@ -568,7 +565,7 @@
             this.panel14.Location = new System.Drawing.Point(253, 305);
             this.panel14.Margin = new System.Windows.Forms.Padding(4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(203, 1);
+            this.panel14.Size = new System.Drawing.Size(275, 1);
             this.panel14.TabIndex = 37;
             // 
             // button5
@@ -720,7 +717,7 @@
             this.panel10.Location = new System.Drawing.Point(253, 372);
             this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(292, 1);
+            this.panel10.Size = new System.Drawing.Size(275, 1);
             this.panel10.TabIndex = 38;
             // 
             // txtGiaTien2
@@ -821,7 +818,7 @@
             this.panel12.Location = new System.Drawing.Point(3, 6);
             this.panel12.Margin = new System.Windows.Forms.Padding(4);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1472, 60);
+            this.panel12.Size = new System.Drawing.Size(1435, 60);
             this.panel12.TabIndex = 4;
             // 
             // button3
@@ -829,7 +826,7 @@
             this.button3.BackColor = System.Drawing.Color.White;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(1404, 0);
+            this.button3.Location = new System.Drawing.Point(1371, 0);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(64, 38);
@@ -854,7 +851,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1475, 788);
+            this.ClientSize = new System.Drawing.Size(1439, 788);
             this.Controls.Add(this.panel12);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);

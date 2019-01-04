@@ -27,5 +27,11 @@ namespace GIAODIEN
             CRView_ChuyenXe frm = new CRView_ChuyenXe();
             frm.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CRView_DoanhThuChuyen frm = new CRView_DoanhThuChuyen();
+            frm.Show();
+        }
     }
 }

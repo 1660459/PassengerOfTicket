@@ -10,6 +10,29 @@ namespace XULY
     public class BUS_Ve
     {
 
+        public DataTable LoadVe()
+        {
+            DAO_Ve ve = new DAO_Ve();
+            DataTable dt = new DataTable();
+            dt = ve.LoadVe();
+            return dt;
+        }
+        public DataTable LoadVeTheoTG(string idchuyen , DateTime bd , DateTime kt)
+        {
+            DAO_Ve ve = new DAO_Ve();
+            DataTable dt = new DataTable();
+            dt = ve.LoadVeTheoTG(idchuyen , bd , kt);
+            return dt;
+        }
+        
+        public DataTable LoadVeTheoChuyen(string idchuyen)
+        {
+            DAO_Ve ve = new DAO_Ve();
+            DataTable dt = new DataTable();
+            dt = ve.LoadVeTheoChuyen(idchuyen);
+            return dt;
+        }
+        
         public DataTable LoadGiaVe()
         {
             DAO_Ve ve = new DAO_Ve();

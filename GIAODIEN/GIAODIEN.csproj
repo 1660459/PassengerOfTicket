@@ -57,16 +57,33 @@
     <Compile Include="CRView_ChuyenXe.Designer.cs">
       <DependentUpon>CRView_ChuyenXe.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRView_DoanhThuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRView_DoanhThuChuyen.Designer.cs">
+      <DependentUpon>CRView_DoanhThuChuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CR_ChuyenXe.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CR_ChuyenXe.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CR_Ve.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CR_Ve.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSet_ChuyenXe.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_ChuyenXe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Ve.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Ve.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -259,9 +276,16 @@
     <EmbeddedResource Include="CRView_ChuyenXe.resx">
       <DependentUpon>CRView_ChuyenXe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CRView_DoanhThuChuyen.resx">
+      <DependentUpon>CRView_DoanhThuChuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CR_ChuyenXe.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CR_ChuyenXe.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CR_Ve.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CR_Ve.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -375,6 +399,17 @@
     </None>
     <None Include="DataSet_ChuyenXe.xss">
       <DependentUpon>DataSet_ChuyenXe.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Ve.xsc">
+      <DependentUpon>DataSet_Ve.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Ve.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Ve.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Ve.xss">
+      <DependentUpon>DataSet_Ve.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

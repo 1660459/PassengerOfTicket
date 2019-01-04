@@ -30,6 +30,7 @@
         {
             this.button1 = new System.Windows.Forms.Button();
             this.btnChuyenXe = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -58,12 +59,26 @@
             this.btnChuyenXe.UseVisualStyleBackColor = false;
             this.btnChuyenXe.Click += new System.EventHandler(this.btnChuyenXe_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(0, 177);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(439, 183);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Doanh Thu\r\ntheo chuyến\r\n";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // FormQLReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(440, 587);
             this.ControlBox = false;
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnChuyenXe);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -77,5 +92,6 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnChuyenXe;
+        private System.Windows.Forms.Button button2;
     }
 }
