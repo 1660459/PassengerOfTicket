@@ -1,6 +1,6 @@
 ﻿namespace GIAODIEN
 {
-    partial class CRView_DoanhThuChuyen
+    partial class CRView_DoanhThuTuyen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRView_DoanhThuChuyen));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CRView_DoanhThuTuyen));
             this.btnTim = new System.Windows.Forms.Button();
             this.dpKetThuc = new System.Windows.Forms.DateTimePicker();
             this.dpBatDau = new System.Windows.Forms.DateTimePicker();
@@ -99,9 +99,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(61, 46);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.Size = new System.Drawing.Size(48, 17);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Chuyến";
+            this.label1.Text = "Tuyến";
             // 
             // cbChuyenXe
             // 
@@ -112,7 +112,7 @@
             this.cbChuyenXe.TabIndex = 14;
             this.cbChuyenXe.SelectedIndexChanged += new System.EventHandler(this.cbChuyenXe_SelectedIndexChanged);
             // 
-            // CRView_DoanhThuChuyen
+            // CRView_DoanhThuTuyen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -127,7 +127,7 @@
             this.Controls.Add(this.CRV_CX);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "CRView_DoanhThuChuyen";
+            this.Name = "CRView_DoanhThuTuyen";
             this.Load += new System.EventHandler(this.CRView_DoanhThuChuyen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

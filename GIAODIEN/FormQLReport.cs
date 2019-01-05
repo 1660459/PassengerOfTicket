@@ -30,7 +30,7 @@ namespace GIAODIEN
 
         private void button2_Click(object sender, EventArgs e)
         {
-            CRView_DoanhThuChuyen frm = new CRView_DoanhThuChuyen();
+            CRView_DoanhThuTuyen frm = new CRView_DoanhThuTuyen();
             frm.Show();
         }
     }

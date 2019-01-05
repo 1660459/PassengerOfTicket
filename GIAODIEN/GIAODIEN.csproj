@@ -57,11 +57,11 @@
     <Compile Include="CRView_ChuyenXe.Designer.cs">
       <DependentUpon>CRView_ChuyenXe.cs</DependentUpon>
     </Compile>
-    <Compile Include="CRView_DoanhThuChuyen.cs">
+    <Compile Include="CRView_DoanhThuTuyen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CRView_DoanhThuChuyen.Designer.cs">
-      <DependentUpon>CRView_DoanhThuChuyen.cs</DependentUpon>
+    <Compile Include="CRView_DoanhThuTuyen.Designer.cs">
+      <DependentUpon>CRView_DoanhThuTuyen.cs</DependentUpon>
     </Compile>
     <Compile Include="CR_ChuyenXe.cs">
       <AutoGen>True</AutoGen>
@@ -276,8 +276,8 @@
     <EmbeddedResource Include="CRView_ChuyenXe.resx">
       <DependentUpon>CRView_ChuyenXe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CRView_DoanhThuChuyen.resx">
-      <DependentUpon>CRView_DoanhThuChuyen.cs</DependentUpon>
+    <EmbeddedResource Include="CRView_DoanhThuTuyen.resx">
+      <DependentUpon>CRView_DoanhThuTuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CR_ChuyenXe.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

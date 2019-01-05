@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using XULY;
 namespace GIAODIEN
 {
-    public partial class CRView_DoanhThuChuyen : Form
+    public partial class CRView_DoanhThuTuyen : Form
     {
-        public CRView_DoanhThuChuyen()
+        public CRView_DoanhThuTuyen()
         {
             InitializeComponent();
         }
