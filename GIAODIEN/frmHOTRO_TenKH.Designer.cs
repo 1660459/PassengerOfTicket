@@ -30,10 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHOTRO_TenKH));
             this.dgvTimKH = new System.Windows.Forms.DataGridView();
-            this.id_khachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.id_khachhang = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTimKH)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,8 @@
             this.dgvTimKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTimKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_khachhang,
-            this.hoten});
+            this.hoten,
+            this.loai});
             this.dgvTimKH.Location = new System.Drawing.Point(2, 78);
             this.dgvTimKH.Name = "dgvTimKH";
             this.dgvTimKH.ReadOnly = true;
@@ -53,20 +55,6 @@
             this.dgvTimKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvTimKH.Size = new System.Drawing.Size(818, 480);
             this.dgvTimKH.TabIndex = 0;
-            // 
-            // id_khachhang
-            // 
-            this.id_khachhang.DataPropertyName = "id_khachhang";
-            this.id_khachhang.HeaderText = "ID Khách Hàng";
-            this.id_khachhang.Name = "id_khachhang";
-            this.id_khachhang.ReadOnly = true;
-            // 
-            // hoten
-            // 
-            this.hoten.DataPropertyName = "hoten";
-            this.hoten.HeaderText = "Họ Tên Khách Hàng";
-            this.hoten.Name = "hoten";
-            this.hoten.ReadOnly = true;
             // 
             // txtTimKiem
             // 
@@ -84,6 +72,27 @@
             this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "Tìm Kiếm";
+            // 
+            // id_khachhang
+            // 
+            this.id_khachhang.DataPropertyName = "id_khachhang";
+            this.id_khachhang.HeaderText = "ID Khách Hàng";
+            this.id_khachhang.Name = "id_khachhang";
+            this.id_khachhang.ReadOnly = true;
+            // 
+            // hoten
+            // 
+            this.hoten.DataPropertyName = "hoten";
+            this.hoten.HeaderText = "Họ Tên Khách Hàng";
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
+            // 
+            // loai
+            // 
+            this.loai.DataPropertyName = "loai";
+            this.loai.HeaderText = "Loại KH";
+            this.loai.Name = "loai";
+            this.loai.ReadOnly = true;
             // 
             // frmHOTRO_TenKH
             // 
@@ -110,5 +119,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_khachhang;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loai;
     }
 }
