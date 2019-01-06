@@ -319,6 +319,18 @@ namespace GIAODIEN
             frm.Show();
         }
 
+        private void btnGiamGia_Click(object sender, EventArgs e)
+        {
+            FormQLGiamGia frm = new FormQLGiamGia();
+            frm.eGiamGia += eGiamGia_Event;
+            frm.Show();
+        }
+        void eGiamGia_Event(double a)
+        {
+            double Tien = double.Parse(txtGiaTien2.Text);
+            double kq = Tien - (Tien * a);
+            txtGiaTien2.Text = kq.ToString();
+        }
       
     }
 }

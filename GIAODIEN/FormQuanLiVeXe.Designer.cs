@@ -66,7 +66,7 @@
             this.btnXenTenKH = new System.Windows.Forms.Button();
             this.btnMaGhe2 = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnGiamGia = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
             this.txtGhiChu2 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
@@ -477,7 +477,7 @@
             this.panel1.Controls.Add(this.btnXenTenKH);
             this.panel1.Controls.Add(this.btnMaGhe2);
             this.panel1.Controls.Add(this.panel14);
-            this.panel1.Controls.Add(this.button5);
+            this.panel1.Controls.Add(this.btnGiamGia);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.txtGhiChu2);
             this.panel1.Controls.Add(this.label17);
@@ -567,18 +567,19 @@
             this.panel14.Size = new System.Drawing.Size(275, 1);
             this.panel14.TabIndex = 37;
             // 
-            // button5
+            // btnGiamGia
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(373, 641);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(285, 49);
-            this.button5.TabIndex = 49;
-            this.button5.Text = "XÓA";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnGiamGia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGiamGia.ForeColor = System.Drawing.Color.White;
+            this.btnGiamGia.Location = new System.Drawing.Point(373, 641);
+            this.btnGiamGia.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGiamGia.Name = "btnGiamGia";
+            this.btnGiamGia.Size = new System.Drawing.Size(285, 49);
+            this.btnGiamGia.TabIndex = 49;
+            this.btnGiamGia.Text = "GIẢM GIÁ";
+            this.btnGiamGia.UseVisualStyleBackColor = false;
+            this.btnGiamGia.Click += new System.EventHandler(this.btnGiamGia_Click);
             // 
             // panel11
             // 
@@ -923,7 +924,7 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnDSND;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnGiamGia;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtGiaTien1;
         private System.Windows.Forms.Button btnMaGhe1;
