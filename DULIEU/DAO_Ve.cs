@@ -30,6 +30,28 @@ namespace DULIEU
             }
             return dt;
         }
+        public DataTable LoadVeTheoTuyen(string ghichu)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadVeTheoTuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                     new SqlParameter { ParameterName = "@ghichu", Value = ghichu }
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
         public DataTable LoadVeTheoChuyen(string idchuyen)
         {
             Provider kn = new Provider();
@@ -76,7 +98,30 @@ namespace DULIEU
             }
             return dt;
         }
-        
+        public DataTable LoadVeTheoTGTuyen(string ghichu, DateTime bd, DateTime kt)
+        {
+            Provider kn = new Provider();
+            string strSQL = "sp_LoadVeTheoTGTuyen";
+            DataTable dt = new DataTable();
+            try
+            {
+                kn.Connect();
+                dt = kn.Select(CommandType.StoredProcedure, strSQL,
+                     new SqlParameter { ParameterName = "@ghichu", Value = ghichu },
+                     new SqlParameter { ParameterName = "@ngay_bd", Value = bd },
+                     new SqlParameter { ParameterName = "@ngay_kt", Value = kt }
+                    );
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                kn.Disconnect();
+            }
+            return dt;
+        }
         public DataTable LoadGiaVe()
         {
             Provider kn = new Provider();

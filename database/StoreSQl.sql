@@ -698,14 +698,34 @@ as
 	Select distinct id_chuyen , giokhoihanh
 	From Chuyen
 go
-
-create proc sp_LoadVeTheoChuyen
+--
+create function f_IDChuyenTheoGhiChu (@GhiChu nvarchar(4000))
+returns table
+as
+	return(select id_chuyen from Chuyen where ghichu = @GhiChu)
+go
+--Select * from dbo.f_IDChuyenTheoGhiChu(N'ĐÀ NẴNG-TPHCM' )
+create function f_LoadVeTheoChuyen (@idChuyen varchar(10))
+returns Table
+as
+	return(Select  *
+	From Ve
+	where chuyen_id_chuyen = @idChuyen)
+go
+alter proc sp_LoadVeTheoChuyen
 @id_chuyen varchar(10)
 as
 	Select  *
-	From Ve
-	where chuyen_id_chuyen = @id_chuyen
+	From dbo.f_LoadVeTheoChuyen(@id_chuyen)
 go
+create proc sp_LoadVeTheoTuyen
+@ghichu nvarchar(4000)
+as
+	Select  *
+	From Ve
+	Where chuyen_id_chuyen in (select id_chuyen from dbo.f_IDChuyenTheoGhiChu(@ghichu))
+go
+--exec sp_LoadVeTheoTuyen N'ĐÀ NẴNG-TPHCM' 
 create proc sp_LoadVeTheoTG
 @id_chuyen varchar(10) , @ngay_bd datetime , @ngay_kt datetime
 as
@@ -713,8 +733,18 @@ begin
 	Select  *
 	From Ve
 	where chuyen_id_chuyen = @id_chuyen 
-	and ngayxuatve <= @ngay_bd
+	and ngayxuatve >= @ngay_bd
 	and ngayxuatve <= @ngay_kt
 end
 go
-
+create proc sp_LoadVeTheoTGTuyen
+@ghichu nvarchar(4000) , @ngay_bd datetime , @ngay_kt datetime
+as
+begin
+	Select  *
+	From Ve
+	where chuyen_id_chuyen in (select id_chuyen from dbo.f_IDChuyenTheoGhiChu(@ghichu)) 
+	and ngayxuatve >= @ngay_bd
+	and ngayxuatve <= @ngay_kt
+end
+go

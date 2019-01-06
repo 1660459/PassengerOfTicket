@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using XULY;
 namespace GIAODIEN
 {
-    public partial class CRView_DoanhThuTuyen : Form
+    public partial class CRView_DoanhThuChuyen : Form
     {
-        public CRView_DoanhThuTuyen()
+        public CRView_DoanhThuChuyen()
         {
             InitializeComponent();
         }
@@ -22,15 +22,6 @@ namespace GIAODIEN
             LoadCRView();
             LoadComboBox();
         }
-        void LoadComboBox()
-        {
-            List<string> list = new List<string>();
-            BUS_QuanLiVeXe qlve = new BUS_QuanLiVeXe();
-            list = qlve.LoadGCChuyenXe();
-            list.Add("ALL");
-            list.Reverse();
-            cbChuyenXe.DataSource = list;
-        }
         void LoadCRView()
         {
             BUS_Ve ve = new BUS_Ve();
@@ -39,10 +30,18 @@ namespace GIAODIEN
             crVe.SetDataSource(dt);
             CRV_CX.ReportSource = crVe;
         }
-        void LoadCRViewTheoTuyen(string a)
+        void LoadComboBox()
+        {
+            List<string> list = new List<string>();
+            BUS_ChuyenXe cx = new BUS_ChuyenXe();
+            list = cx.LoadIDChuyenXe();
+            list.Insert(0,"ALL");
+            cbChuyenXe.DataSource = list;
+        }
+        void LoadCRViewTheoChuyen(string idchuyen)
         {
             BUS_Ve ve = new BUS_Ve();
-            DataTable dt = ve.LoadVeTheoTuyen(a);
+            DataTable dt = ve.LoadVeTheoChuyen(idchuyen);
             CR_Ve crVe = new CR_Ve();
             crVe.SetDataSource(dt);
             CRV_CX.ReportSource = crVe;
@@ -51,23 +50,18 @@ namespace GIAODIEN
         {
             if (cbChuyenXe.SelectedItem.ToString() == "ALL")
             {
-                MessageBox.Show("Chọn Tuyến Cụ Thể Để Report Theo Ngày");
+                MessageBox.Show("Chọn Chuyến Cụ Thể Để Report Theo Ngày");
                 return;
             }
             else
             {
                 BUS_Ve ve = new BUS_Ve();
-                DataTable dt = ve.LoadVeTheoTGTuyen(cbChuyenXe.SelectedItem.ToString(), dpBatDau.Value, dpKetThuc.Value);
+                DataTable dt = ve.LoadVeTheoTG(cbChuyenXe.SelectedItem.ToString(), dpBatDau.Value, dpKetThuc.Value);
                 CR_Ve crVe = new CR_Ve();
                 crVe.SetDataSource(dt);
                 CRV_CX.ReportSource = crVe;
             }
         }
-        private void btnTim_Click(object sender, EventArgs e)
-        {
-            LoadCRViewTheoTG();
-        }
-
         private void cbChuyenXe_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbChuyenXe.SelectedItem.ToString() == "ALL")
@@ -76,8 +70,13 @@ namespace GIAODIEN
             }
             else
             {
-                LoadCRViewTheoTuyen(cbChuyenXe.SelectedItem.ToString());
+                LoadCRViewTheoChuyen(cbChuyenXe.SelectedItem.ToString());
             }
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            LoadCRViewTheoTG();
         }
     }
 }

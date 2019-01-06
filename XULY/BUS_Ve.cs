@@ -24,12 +24,25 @@ namespace XULY
             dt = ve.LoadVeTheoTG(idchuyen , bd , kt);
             return dt;
         }
-        
+        public DataTable LoadVeTheoTGTuyen(string ghichu, DateTime bd, DateTime kt)
+        {
+            DAO_Ve ve = new DAO_Ve();
+            DataTable dt = new DataTable();
+            dt = ve.LoadVeTheoTGTuyen(ghichu, bd, kt);
+            return dt;
+        }
         public DataTable LoadVeTheoChuyen(string idchuyen)
         {
             DAO_Ve ve = new DAO_Ve();
             DataTable dt = new DataTable();
             dt = ve.LoadVeTheoChuyen(idchuyen);
+            return dt;
+        }
+        public DataTable LoadVeTheoTuyen(string ghichu)
+        {
+            DAO_Ve ve = new DAO_Ve();
+            DataTable dt = new DataTable();
+            dt = ve.LoadVeTheoTuyen(ghichu);
             return dt;
         }
         

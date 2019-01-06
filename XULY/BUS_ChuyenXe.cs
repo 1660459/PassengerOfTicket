@@ -37,6 +37,18 @@ namespace XULY
             dt = CX.LayChuyenTheoThoiGian(Tuyen, a, b);
             return dt;
         }
+        public List<string> LoadIDChuyenXe()
+        {
+            DAO_ChuyenXe Cxe = new DAO_ChuyenXe();
+            DataTable dt = new DataTable();
+            dt = Cxe.LoadIDChuyenXe();
+            List<string> list = new List<string>();
+            foreach (DataRow row in dt.Rows)
+            {
+                list.Add(row[0].ToString());
+            }
+            return list;
+        }
         public int ThemChuyenXe(ChuyenXe a)
         {
             int kq = 0;
